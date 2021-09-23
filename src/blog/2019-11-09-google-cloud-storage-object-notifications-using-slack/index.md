@@ -18,9 +18,16 @@ keywords:
   - "terraform"
 ---
 
+import Gist from 'react-gist';
 import ImageWithCaption from '/js/ImageWithCaption/ImageWithCaption.js';
 import SetupImage1 from './images/slack-notifications-setup-1.png';
 import SetupImage2 from './images/slack-notifications-setup-2.png';
+import SetupImage3 from './images/slack-notifications-setup-3.png';
+import SetupImage4 from './images/slack-notifications-setup-4.png';
+import SetupImage5 from './images/slack-notifications-setup-5.png';
+import SetupImage6 from './images/slack-notifications-setup-6.png';
+import SetupImage7 from './images/output-onlinepngtools.png';
+import SetupImage8 from './images/slack-notification.png';
 
 This article describes the steps to integrate Slack with Google Cloud Functions to get notified about object events within a specified Google Cloud Storage bucket.
 
@@ -52,29 +59,34 @@ altText="Give the app a name and associate it with an existing Slack workspace"
 
 2. Next you need to Enable and Activate Incoming Webhooks to your app and add this to your workspace. The following screenshots demonstrate this process:
 
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-3.png?fit=840%2C648&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-3.png)
+<ImageWithCaption 
+imageSrc={SetupImage3}
+altText="Enable Incoming Web Hooks for the app"
+/>
 
-Enable Incoming Web Hooks for the app
+<ImageWithCaption 
+imageSrc={SetupImage4}
+altText="Activate incoming webhooks"
+/>
 
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-4.png?fit=840%2C648&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-4.png)
+<ImageWithCaption 
+imageSrc={SetupImage5}
+altText="Add the webhook to your workspace"
+/>
 
-Activate incoming webhooks
+3. Next you need to specify a channel for notifications generated from object events.
 
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-5.png?fit=840%2C648&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-5.png)
+<ImageWithCaption 
+imageSrc={SetupImage6}
+altText="Select a channel for the webhook"
+/>
 
-Add the webhook to your workspace
+4. Now you need to copy the Webhook url provided, you will use this later in your Cloud Function.
 
-3\. Next you need to specify a channel for notifications generated from object events.
-
-[![](https://i2.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-6.png?fit=840%2C648&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-6.png)
-
-Select a channel for the webhook
-
-4\. Now you need to copy the Webhook url provided, you will use this later in your Cloud Function.
-
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/output-onlinepngtools.png?fit=840%2C648&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/output-onlinepngtools.png)
-
-Copy the webhook URL to the clipboard
+<ImageWithCaption 
+imageSrc={SetupImage7}
+altText="Copy the webhook URL to the clipboard"
+/>
 
 > Treat your webhook url as a secret, do not upload this to a public source code repository
 
@@ -82,15 +94,18 @@ Next you need to create your Cloud Function, this example uses Python but you ca
 
 This example templates the source code using the Terraform `template_file` data source. The function source code is shown here:
 
-<script src="https://gist.github.com/jeffreyaven/e248abd1af393e58de84e8776161c8cb.js"></script>
+<Gist id="e248abd1af393e58de84e8776161c8cb" 
+/>
 
 Within your Terraform code you need to render your Cloud Function code substituting the `slack_webhook_url` for it's value which you will supply as a Terraform variable. The rendered template file is then placed in a local directory along with a `requirements.txt` file and zipped up. The resulting Zip archive is uploaded to a specified bucket where it will be sourced to create the Cloud Function.
 
-<script src="https://gist.github.com/jeffreyaven/e247d09d33a4aca9154de081f3063978.js"></script>
+<Gist id="e247d09d33a4aca9154de081f3063978" 
+/>
 
 Now you need to create the Cloud Function, the following HCL snippet demonstrates this:
 
-<script src="https://gist.github.com/jeffreyaven/87e2e83e5b2b800d685a8d239280ca13.js"></script>
+<Gist id="87e2e83e5b2b800d685a8d239280ca13" 
+/>
 
 The `event_trigger` block in particular specifies which GCS bucket to watch and what events will trigger invocation of the function. Bucket events include:
 
@@ -109,8 +124,9 @@ terraform apply -var="slack_webhook_url=https://hooks.slack.com/services/XXXXXXX
 
 Now once you upload a file named `test-object.txt`, voilà!:
 
-[![](https://i0.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notification.png?fit=840%2C630&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notification.png)
-
-Slack notification for a new object created
+<ImageWithCaption 
+imageSrc={SetupImage8}
+altText="Slack notification for a new object created"
+/>
 
 > Full source code is available at: [https://github.com/gamma-data/gcs-object-notifications-using-slack](https://github.com/gamma-data/gcs-object-notifications-using-slack)
