@@ -1,16 +1,26 @@
 ---
+slug: "change-data-capture-at-scale-using-spark"
 title: "Change Data Capture at Scale using Spark"
-date: "2019-06-28"
-categories: 
-  - "big-data-design-patterns"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/CDC-using-Spark.png"
 tags: 
   - "big-data"
   - "cdc"
   - "pyspark"
   - "python"
   - "spark"
-coverImage: "CDC-using-Spark.png"
+keywords:	
+  - "big-data"
+  - "cdc"
+  - "pyspark"
+  - "python"
+  - "spark"
 ---
+
+import Gist from 'react-gist';
 
 Change Data Capture (CDC) is one of the most challenging processing patterns to implement at scale. I personally have had several cracks at this using various different frameworks and approaches, the most recent of which was implemented using Spark – and I think I have finally found the best approach. Even though the code examples referenced use Spark, the pattern is language agnostic – the focus is on the approach not the specific implementation (as this could be applied to any framework or runtime).
 
@@ -28,9 +38,7 @@ This pattern (and all my other recent attempts) is fundamentally based upon calc
 
 A high-level flowchart representing the basic pattern is shown here:
 
-[![](https://i0.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/06/CDC.png?fit=350%2C1024&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/06/CDC.png)
-
-CDC Flowchart
+[![CDC Flowchart](images/CDC.png)](images/CDC.png)
 
 ## The Example
 
@@ -49,15 +57,18 @@ You should see the following output from running the preceding commands for day 
 
 ### Day 1:
 
-<script src="https://gist.github.com/jeffreyaven/b75edc7825b46c12b328d78d47b4b902.js"></script>
+<Gist id="b75edc7825b46c12b328d78d47b4b902" 
+/>
 
 ### Day 2:
 
-<script src="https://gist.github.com/jeffreyaven/ca92e132105fb5bb381bf9dfca562bf4.js"></script>
+<Gist id="ca92e132105fb5bb381bf9dfca562bf4" 
+/>
 
 A summary analysis of the resultant dataset should show:
 
-<script src="https://gist.github.com/jeffreyaven/ded1f98dc4fce13c9bb3d12a51a46b94.js"></script>
+<Gist id="ded1f98dc4fce13c9bb3d12a51a46b94" 
+/>
 
 ## Pattern Details
 

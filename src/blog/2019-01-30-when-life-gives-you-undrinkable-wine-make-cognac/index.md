@@ -1,15 +1,23 @@
 ---
+slug: "when-life-gives-you-undrinkable-wine-make-cognac"
 title: "When Life Gives you Undrinkable Wine – Make Cognac…"
-date: "2019-01-30"
-categories: 
-  - "reflections-and-thoughts"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/shutterstock_425848342.jpg"
 tags: 
   - "cloud"
   - "creativity"
   - "lateral-thinking"
   - "open-source-software"
   - "technology"
-coverImage: "shutterstock_425848342.jpg"
+keywords:	
+  - "cloud"
+  - "creativity"
+  - "lateral-thinking"
+  - "open-source-software"
+  - "technology"
 ---
 
 ![Make Cognac](images/shutterstock_425848342.jpg)

@@ -1,16 +1,28 @@
 ---
-title: "Really Simple Terraform – S3 Object Notifications using Lambda and SES"
-date: "2019-01-18"
-categories: 
-  - "cloud-deployment-templates"
+slug: "s3-object-notifications-using-lambda-and-ses"
+title: "S3 Object Notifications using Lambda and SES"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+description: "Simple pattern for formatted emails from S3 object notifications using AWS Lambda and SES, built with Terraform and Python"
+image: "images/s3-object-notifications-using-Lambda-and-SES-with-Terraform.png"
 tags: 
+  - "aws"
   - "boto3"
   - "lambda"
   - "python"
   - "s3"
   - "ses"
   - "terraform"
-coverImage: "s3-object-notifications-using-Lambda-and-SES-with-Terraform.png"
+keywords:	
+  - "aws"
+  - "boto3"
+  - "lambda"
+  - "python"
+  - "s3"
+  - "ses"
+  - "terraform"
 ---
 
 import Gist from 'react-gist';
@@ -19,7 +31,7 @@ Following on from the previous post in the Really Simple Terraform series [simpl
 
 S3 event notifications can be published directly to an SNS topic which you could create an email subscription, this is quite straightforward. However the email notifications you get look something like this:
 
-![Email Notification sent via an SNS Topic Subscription](images/sns-object-notification-email-1024x575.png)
+![Email Notification sent via an SNS Topic Subscription](images/sns-object-notification-email.png)
 
 There is very little you can do about this.
 
@@ -33,7 +45,7 @@ Much easier on the eye!
 
 You will need verified AWS SES (Simple Email Service) email addresses for the sender and recipient’s addresses used for your object notification emails. This can be done via the console as shown here:
 
-![SES Email Address Verification](images/ses-verify-1024x728.png)
+![SES Email Address Verification](images/ses-verify.png)
 
 _Note that SES is not available in every AWS region, pick one that is generally closest to your particular reason (but it really doesn't matter for this purpose)._
 

@@ -1,10 +1,15 @@
 ---
+slug: "ansible-tower-for-continuous-infrastructure"
 title: "Ansible Tower for Continuous Infrastructure"
-date: "2019-08-29"
-categories: 
-  - "cloud-deployment-templates"
-  - "engineering-patterns"
+authors:	
+  - chrisottinger
+draft: false
+hide_table_of_contents: true
 tags: 
+  - "ansible"
+  - "ci-cd"
+  - "continuous-infrastructure"
+keywords:	
   - "ansible"
   - "ci-cd"
   - "continuous-infrastructure"
@@ -27,7 +32,7 @@ Some continuous convergence workflow characteristics can include:
 
 One way to achieve a continuous convergence workflow combines the Ansible Tower components according to the following conceptual model.
 
-[![](https://i2.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/08/Ansible-AWX-Continuous-Convergence.png?fit=840%2C412&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/08/Ansible-AWX-Continuous-Convergence.png)
+[![](images/Ansible-AWX-Continuous-Convergence.png)](images/Ansible-AWX-Continuous-Convergence.png)
 
 ## The Workflow Components
 

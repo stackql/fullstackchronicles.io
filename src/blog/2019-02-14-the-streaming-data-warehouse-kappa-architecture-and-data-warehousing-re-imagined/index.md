@@ -1,16 +1,23 @@
 ---
+slug: "the-streaming-data-warehouse-kappa-architecture-and-data-warehousing-re-imagined"
 title: "The Streaming Data Warehouse"
-date: "2019-02-14"
+authors:	
+  - jeffreyaven
+draft: false
 hide_table_of_contents: true
-categories: 
-  - "big-data-design-patterns"
+image: "images/sdw.png"
 tags: 
   - "data-warehousing"
   - "kafka"
   - "kappa-architecture"
   - "stream-processing"
   - "streaming-analytics"
-coverImage: "sdw.png"
+keywords:	
+  - "data-warehousing"
+  - "kafka"
+  - "kappa-architecture"
+  - "stream-processing"
+  - "streaming-analytics"
 ---
 
 ### Kappa Architecture and Data Warehousing re-imagined

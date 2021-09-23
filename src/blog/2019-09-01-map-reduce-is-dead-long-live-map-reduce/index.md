@@ -1,13 +1,19 @@
 ---
+slug: "map-reduce-is-dead-long-live-map-reduce"
 title: "Map Reduce is Dead, Long Live Map Reduce"
-date: "2019-09-01"
-categories: 
-  - "reflections-and-thoughts"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/image.png"
 tags: 
   - "big-data"
   - "hadoop"
   - "map-reduce"
-coverImage: "image.png"
+keywords:	
+  - "big-data"
+  - "hadoop"
+  - "map-reduce"
 ---
 
 Firstly, this is not another Hadoop obituary, there are enough of those out there already.

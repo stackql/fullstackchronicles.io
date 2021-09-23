@@ -1,13 +1,21 @@
 ---
+slug: "synthetic-cdc-data-generator"
 title: "Synthetic CDC Data Generator"
-date: "2019-06-28"
-categories: 
-  - "big-data-design-patterns"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
 tags: 
   - "cdc"
   - "python"
   - "spark"
+keywords:	
+  - "cdc"
+  - "python"
+  - "spark"
 ---
+
+import Gist from 'react-gist';
 
 This is a simple routine to generate random data with a configurable number or records, key fields and non key fields to be used to create synthetic data for source change data capture (CDC) processing. The output includes an initial directory containing CSV files representing an initial data load, and an incremental directory containing CSV files representing incremental data.
 
@@ -39,7 +47,8 @@ $ spark-submit synthetic-cdc-data-generator.py 100000 100000 2 3 0.2 0.4 0.4 dat
 
 Example output from the **_day1_** run for the above configuration would look like this:
 
-<script src="https://gist.github.com/jeffreyaven/befb034da2b4f25a1dbbc0e9b4b8eef6.js"></script>
+<Gist id="befb034da2b4f25a1dbbc0e9b4b8eef6" 
+/>
 
 Note that this routine can be run subsequent times producing different key and non key values each time, as the keys are UUIDs and the values are random numbers.
 

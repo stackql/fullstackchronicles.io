@@ -1,8 +1,11 @@
 ---
+slug: "scalable-secure-application-load-balancing-with-vpc-native-gke-and-istio"
 title: "Scalable, Secure Application Load Balancing with VPC Native GKE and Istio"
-date: "2019-05-18"
-categories: 
-  - "cloud-deployment-templates"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/istio-blog-feature-image.png"
 tags: 
   - "cloud"
   - "gcp"
@@ -10,7 +13,13 @@ tags:
   - "istio"
   - "load-balancing"
   - "vpc-native"
-coverImage: "istio-blog-freatured-image.png"
+keywords:	
+  - "cloud"
+  - "gcp"
+  - "google-cloud-platform"
+  - "istio"
+  - "load-balancing"
+  - "vpc-native"
 ---
 
 At the time of this writing, GCP does not have a generally available non-public facing Layer 7 load balancer. While this is sure to change in the future, this article outlines a design pattern which has been proven to provide scalable and extensible application load balancing services for multiple applications running in Kubernetes pods on GKE.
@@ -31,9 +40,7 @@ Using [Istio](https://istio.io/) deployed on GKE along with the [Istio Ingress G
 
 An abstract depiction of this architecture is shown here:
 
-[![](images/istio-ingress-blog-1.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/05/istio-ingress-blog-1.png)
-
-Istio Ingress Design Pattern for VPC Native GKE Clusters
+[![Istio Ingress Design Pattern for VPC Native GKE Clusters](images/istio-ingress-blog.png)](images/istio-ingress-blog.png)
 
 This can be deployed with a combination of [Terraform](https://www.terraform.io/) and kubectl. The steps to deploy at a high level are:
 

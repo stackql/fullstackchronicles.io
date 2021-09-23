@@ -1,12 +1,17 @@
 ---
+slug: "aws-professional-and-speciality-exam-tips"
 title: "AWS Professional and Speciality Exam Tips"
-date: "2019-04-04"
-categories: 
-  - "cloud-learnings"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/aws-pro-and-specialty-certs.png"
 tags: 
   - "aws"
   - "certification"
-coverImage: "aws-pro-and-specialty-certs.png"
+keywords:	
+  - "aws"
+  - "certification"
 ---
 
 One you get beyond the Associate level AWS certification exams into the Professional or Speciality track exams the degree of difficulty rises significantly. As a veteran of the Certified Solutions Architect Professional and Big Data Specialty exams, I thought I would share my experiences which I believe are applicable to all the certification streams and tracks in the AWS certification program.

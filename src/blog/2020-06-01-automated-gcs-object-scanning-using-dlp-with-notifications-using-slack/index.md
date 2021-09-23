@@ -26,7 +26,7 @@ As DLP scans are “jobs”, meaning they run asynchronously, we will need to tr
 
 The process is described using the sequence diagram below:
 
-[![](images/Automated-GCS-Object-Scanning-with-Notifications-using-Slack-1024x386.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/10/Automated-GCS-Object-Scanning-with-Notifications-using-Slack.png)
+[![](images/dlp-notifications-using-slack-1024x386.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/10/Automated-GCS-Object-Scanning-with-Notifications-using-Slack.png)
 
 ## The Code
 

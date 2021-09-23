@@ -1,21 +1,30 @@
 ---
+slug: "google-cloud-storage-object-notifications-using-slack"
 title: "Google Cloud Storage Object Notifications using Slack"
-date: "2019-11-09"
-categories: 
-  - "cloud-deployment-templates"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/Slack-GCS-Image.png"
 tags: 
   - "gcp"
   - "googlecloudplatform"
   - "slack"
   - "terraform"
-coverImage: "Slack-GCS-Image.png"
+keywords:	
+  - "gcp"
+  - "googlecloudplatform"
+  - "slack"
+  - "terraform"
 ---
+
+import ImageWithCaption from '/js/ImageWithCaption/ImageWithCaption.js';
+import SetupImage1 from './images/slack-notifications-setup-1.png';
+import SetupImage2 from './images/slack-notifications-setup-2.png';
 
 This article describes the steps to integrate Slack with Google Cloud Functions to get notified about object events within a specified Google Cloud Storage bucket.
 
-[![](images/Slack-GCS.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/Slack-GCS.png)
-
-Google Cloud Storage Object Notifications using Slack
+[![Google Cloud Storage Object Notifications using Slack](images/Slack-GCS.png)](images/Slack-GCS.png)
 
 Events could include the creation of new objects, as well as delete, archive or metadata operations performed on a given bucket.
 
@@ -29,17 +38,19 @@ More information can be found at [https://cloud.google.com/functions/docs/concep
 
 The prerequisite steps to configure Slack are provided here:
 
-1\. First you will need to create a Slack app (assuming you have already set up an account and a workspace). The following screenshots demonstrate this process:
+1. First you will need to create a Slack app (assuming you have already set up an account and a workspace). The following screenshots demonstrate this process:
 
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-1.png?fit=840%2C648&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-1.png)
+<ImageWithCaption 
+imageSrc={SetupImage1}
+altText="Create a Slack app"
+/>
 
-Create a Slack app
+<ImageWithCaption 
+imageSrc={SetupImage2}
+altText="Give the app a name and associate it with an existing Slack workspace"
+/>
 
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-2.png?fit=840%2C648&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-2.png)
-
-Give the app a name and associate it with an existing Slack workspace
-
-2\. Next you need to Enable and Activate Incoming Webhooks to your app and add this to your workspace. The following screenshots demonstrate this process:
+2. Next you need to Enable and Activate Incoming Webhooks to your app and add this to your workspace. The following screenshots demonstrate this process:
 
 [![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-3.png?fit=840%2C648&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/11/slack-notifications-setup-3.png)
 

@@ -1,15 +1,24 @@
 ---
+slug: "gcp-networking-for-aws-professionals"
 title: "GCP Networking for AWS Professionals"
-date: "2019-02-21"
-categories: 
-  - "cloud-learnings"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+description: "A primer on GCP networking for AWS engineers and architects"
+image: "images/gcp-aws-networking.png"
 tags: 
   - "aws"
   - "cloud"
   - "gcp"
   - "google-cloud-platform"
   - "networking"
-coverImage: "gcp-for-aws.png"
+keywords:	
+  - "aws"
+  - "cloud"
+  - "gcp"
+  - "google-cloud-platform"
+  - "networking"
 ---
 
 GCP and AWS share many similarities, they both provide similar services and both leverage containerization, virtualization and software defined networking.
@@ -41,9 +50,7 @@ With all of that said, here are the key differences when it comes to networking 
 
 This is the first fundamental difference between the two providers. Each GCP project is allocated one VPC network with Subnets in each of the 18 GCP Regions. Whereas each AWS Account is allocated one Default VPC in each AWS Region with a Subnet in each AWS Availability Zone for that Region, that is each account has 17 VPCs in each of the 17 Regions (excluding GovCloud regions).
 
-[![](images/gcp-default-network-1024x576.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/02/gcp-default-network.png)
-
-Default Global VPC Network in GCP
+[![Default Global VPC Network in GCP](images/gcp-default-network.png)](images/gcp-default-network.png)
 
 It is entirely possible to create VPCs in GCP which are Regional, but they are Global by default.
 

@@ -1,15 +1,23 @@
 ---
+slug: "managing-secrets-in-cicd-pipelines"
 title: "Managing Secrets in CICD Pipelines"
-date: "2019-07-16"
-categories: 
-  - "engineering-patterns"
+authors:	
+  - chrisottinger
+draft: false
+hide_table_of_contents: true
+image: "images/Gitlab-Vault.png"
 tags: 
   - "ci-cd"
   - "gitlab-ci"
   - "hashicorp-vault"
   - "jenkins"
   - "secrets-management"
-coverImage: "Gitlab-Vault.png"
+keywords:	
+  - "ci-cd"
+  - "gitlab-ci"
+  - "hashicorp-vault"
+  - "jenkins"
+  - "secrets-management"
 ---
 
 ## Overview
@@ -38,9 +46,7 @@ The following objectives have been considered in designing a secrets automation 
 - CICD jobs retrieve secrets from Vault and configure the application deployment environment.
 - Deployed applications use the secrets supplied by CICD job to access backend services.
 
-[![](images/Screen-Shot-2019-07-16-at-17.03.47.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2019/07/Screen-Shot-2019-07-16-at-17.03.47.png)
-
-CICD Secrets with Vault
+[![CICD Secrets with Vault](images/Screen-Shot-2019-07-16-at-17.03.47.png)](images/Screen-Shot-2019-07-16-at-17.03.47.png)
 
 ## Storing Secrets
 
@@ -89,46 +95,56 @@ Add a secret to Vault at the location `secret/fake-app/users/fake-users` with 
 
 Add a Vault policy for the CICD job (or set of CICD jobs) that includes 'read' access to the secret.
 
-\# cicd-fake-app-policy 
+```
+# cicd-fake-app-policy 
 path "secret/data/fake-app/users/fake-user" {
-    capabilities = \["read"\]
+    capabilities = ["read"]
 }
 
 path "secret/metadata/fake-app/users/fake-user" {
-    capabilities = \["list"\]
+    capabilities = ["list"]
 }
+```
 
 ### Add a Vault appRole
 
 Add a Vault appRole linked to the new policy.  This example specifies a new appRole with an secret-id TTL of 60 days and non-renewable access tokens with a TTL of 5 minutes.  The CICD job uses the access token to read secrets.
 
-vault write auth/approle/role/fake-role \\
-    secret\_id\_ttl=1440h \\
-    token\_ttl=5m \\
-    token\_max\_ttl=5m \\
+```
+vault write auth/approle/role/fake-role \
+    secret_id_ttl=1440h \
+    token_ttl=5m \
+    token_max_ttl=5m \
     policies=cicd-fake-app-policy
+```
 
 ### Read the Vault approle-id
 
 Retrieve the approle-id of the new appRole taking note of the returned approle-id.
 
+```
 vault read auth/approle/role/fake-role
+```
 
 ### Add a Vault appRole secret-id
 
 Add a secret-id for the appRole, taking note of the returned secret-id
 
+```
 vault write -f auth/approle/role/fake-role/secret-id
+```
 
 ### Add CICD Job Steps
 
 In the CICD job definition insert job steps to retrieve secrets values a set variables in the job execution environment. These are the steps to add in a gitlab-ci.yml CICD job.
 
+```
 ...
 script:
-- get-vault-secrets-by-approle > ${VAULT\_VAR\_FILE}
-- source ${VAULT\_VAR\_FILE} && rm ${VAULT\_VAR\_FILE}
+- get-vault-secrets-by-approle > ${VAULT_VAR_FILE}
+- source ${VAULT_VAR_FILE} && rm ${VAULT_VAR_FILE}
 ...
+```
 
 The helper script `get-vault-secrets-by-approle` could be executed and sourced in a single step, e.g. `source $(get-vault-secrets-by-approle)`.  However, when executed in a single statement all script output is processed by the `source` command and script error messages don't get printed and captured in the job logs.  Splitting the read and environment var sourcing into 2 steps aids in troubleshooting.
 
@@ -136,17 +152,20 @@ The helper script `get-vault-secrets-by-approle` could be executed and sourced i
 
 In the CICD job configuration add Vault access environment variables.
 
-VAULT\_ADDR=https://vault.example.com:8200
-VAULT\_ROLE\_ID=db02de05-fa39-4855-059b-67221c5c2f63
-VAULT\_SECRET\_ID=6a174c20-f6de-a53c-74d2-6018fcceff64
-VAULT\_VAR\_FILE=/var/tmp/vault-vars.sh
+```
+VAULT_ADDR=https://vault.example.com:8200
+VAULT_ROLE_ID=db02de05-fa39-4855-059b-67221c5c2f63
+VAULT_SECRET_ID=6a174c20-f6de-a53c-74d2-6018fcceff64
+VAULT_VAR_FILE=/var/tmp/vault-vars.sh
+```
 
 ### Add CICD job vars for Vault secrets
 
 In the CICD job configuration add environment variables for the items to be sourced from vault secrets.  The secret path follows the convention of `<secret-mount-path>/<secret-path>/<secret-key>`
 
-V\_FAKE\_PASSWORD=secret/fake-app/users/fake-user/password
-
+```
+V_FAKE_PASSWORD=secret/fake-app/users/fake-user/password
+```
 ### Remove CICD job vars
 
 In the CICD job configuration remove the previously used `FAKE_APP_PASSWORD` variable.

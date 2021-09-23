@@ -1,13 +1,20 @@
 ---
+slug: "multi-stage-etl-framework-using-spark-sql"
 title: "Multi Stage ETL Framework using Spark SQL"
-date: "2019-01-09"
-categories: 
-  - "big-data-design-patterns"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+description: "A simple configuration driven Spark SQL ETL framework"
+image: "images/spark-sql-etl-framework.png"
 tags: 
   - "etl"
   - "spark"
   - "sql"
-coverImage: "spark-sql-etl-framework.png"
+keywords:	
+  - "etl"
+  - "spark"
+  - "sql"
 ---
 
 import Gist from 'react-gist';
@@ -21,7 +28,6 @@ Most traditional data warehouse or datamart ETL routines consist of multi stage 
 [Advanced Analytics Using Apache Spark](https://academy.alphazetta.ai/advanced-analytics-using-apache-spark/)
 
 :::
-
 
 The initial challenge when moving from a SQL/MPP based ETL framework platformed on Oracle, Teradata, SQL Server, etc to a Spark based ETL framework is what to do with this…
 

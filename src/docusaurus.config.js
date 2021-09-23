@@ -11,8 +11,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook',
-  projectName: 'docusaurus',
+  organizationName: 'cloudywithachanceofbigdata',
+  projectName: 'cloudywithachanceofbigdata.github.io',
 
   presets: [
     [
@@ -23,17 +23,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           routeBasePath: '/',
           showReadingTime: true,
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+            'https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io/tree/main/src/blog',
             blogTitle: 'Cloudy with a chance of Big Data',
             blogDescription: 'Cloud and data design patterns',
             postsPerPage: 5,
-            blogSidebarTitle: 'All posts',
-            blogSidebarCount: 'ALL',
+            blogSidebarTitle: 'Recent Posts',
+            blogSidebarCount: 10,
             feedOptions: {
               type: 'all',
               title: 'Cloudy with a chance of Big Data Blog Feed',
               description: 'Cloud and data design patterns',
-              //copyright: `Copyright © ${new Date().getFullYear()} InfraQL Technologies Pty Ltd`,
             },
           },
         theme: {
@@ -54,63 +53,70 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           src: 'img/cloud1.svg',
         },
         items: [
+          {to: '/', label: 'Home', position: 'right'}, 
           {
             type: 'dropdown',
-            to: 'authors',
-            label: 'Authors',
+            to: 'tags',
+            label: 'Topics',
             position: 'right',
             items: [
-              {to: 'authors', label: 'Authors'},
-              {to: 'become-an-author', label: 'Become an Author'},
+              {to: 'tags', label: 'All Topics'},
+              {to: 'tags/gcp', label: 'Google Cloud Platform'},
+              {to: 'tags/aws', label: 'AWS'},
+              {to: 'tags/azure', label: 'Azure'},
+              {to: 'tags/ci-cd', label: 'CI/CD'},
             ],
-          },
-          {to: 'contact-us', label: 'Contact Us', position: 'right'},        
-          // {
-         //   type: 'doc',
-         //   docId: 'authors',
-         //   position: 'left',
-         //   label: 'Authors',
-         // },
-         // {to: '/blog', label: 'Blog', position: 'left'},
-          //{
-          //  href: 'https://github.com/facebook/docusaurus',
-          //  label: 'GitHub',
-          //  position: 'right',
-          //},
+          },          
+          {to: 'archive', label: 'Archive', position: 'right'},
           {
-            href: 'https://github.com/infraql',
+            href: 'https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
           },
+          // {
+          //  type: 'dropdown',
+          //  to: 'authors',
+          //  label: 'Authors',
+          //  position: 'right',
+          //  items: [
+          //    {to: 'authors', label: 'Authors'},
+          //    {to: 'become-an-author', label: 'Become an Author'},
+          //  ],
+          // },
+          // {to: 'contact-us', label: 'Contact Us', position: 'right'},
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Blog',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Home',
+                to: '/',
               },
+              {
+                label: 'Archive',
+                to: 'archive',
+              },
+              {
+                label: 'Tags',
+                to: 'tags',
+              },                            
             ],
           },
           {
-            title: 'Community',
+            title: 'Sponsors',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'InfraQL',
+                href: 'https://infraql.io/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Gamma Data',
+                href: 'https://gammadata.io/',
               },
             ],
           },
@@ -118,17 +124,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        //copyright: `Copyright © ${new Date().getFullYear()} Cloudy with a chance of Big Data.`,
       },
       prism: {
         theme: lightCodeTheme,

@@ -1,8 +1,11 @@
 ---
+slug: "test-driven-infrastructure-and-test-automation-with-ansible-molecule-and-azure"
 title: "Test Driven Infrastructure and Test Automation with Ansible, Molecule and Azure"
-date: "2019-01-31"
-categories: 
-  - "cloud-deployment-templates"
+authors:	
+  - chrisottinger
+draft: false
+hide_table_of_contents: true
+image: "images/molecule-ansible-azure.png"
 tags: 
   - "ansible"
   - "azure"
@@ -11,7 +14,14 @@ tags:
   - "molecule"
   - "python"
   - "test-automation"
-coverImage: "molecule-ansible-azure.png"
+keywords:	
+  - "ansible"
+  - "azure"
+  - "cloud"
+  - "infrastructure-code"
+  - "molecule"
+  - "python"
+  - "test-automation"
 ---
 
 import Gist from 'react-gist';

@@ -1,9 +1,14 @@
 ---
-title: "Really Simple Terraform - Infrastructure Automation using AWS Lambda"
-date: "2019-01-15"
-categories: 
-  - "cloud-deployment-templates"
+slug: "infrastructure-automation-using-aws-lambda"
+title: "Infrastructure Automation using AWS Lambda"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+description: "Simple pattern for automating EC2 tasks using AWS Lambda and Terraform"
+image: "images/automate-infrastructure-tasks-using-lambda-with-terraform.png"
 tags: 
+  - "aws"
   - "automation"
   - "boto3"
   - "cloudwatch"
@@ -12,7 +17,16 @@ tags:
   - "python"
   - "scheduled-tasks"
   - "terraform"
-coverImage: "automate-infrastructure-tasks-using-lambda-with-terraform.png"
+keywords:	
+  - "aws"
+  - "automation"
+  - "boto3"
+  - "cloudwatch"
+  - "ec2"
+  - "lambda"
+  - "python"
+  - "scheduled-tasks"
+  - "terraform"
 ---
 
 import Gist from 'react-gist';

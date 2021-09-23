@@ -116,7 +116,7 @@ Once the failover is initiated, the client connection is dropped (as the server 
 
 The connection can be immediately re-established afterwards, the state of the running query is lost - **_importantly no data is lost_** however. If your application clients had retry logic in their code and they weren't executing a long running query, chances are no one would notice! Once reconnecting normal database activities can be resumed:
 
-[![](images/cloud-sql-ha-screenshot-5-1024x555.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-5.png)
+[![](images/cloud-sql-ha-5-1024x555.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-5.png)
 
 A quick check of the instance logs will show that the failover event has occured:
 

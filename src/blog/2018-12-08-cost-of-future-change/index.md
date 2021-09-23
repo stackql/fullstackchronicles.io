@@ -1,13 +1,11 @@
 ---
+slug: "cost-of-future-change"
 title: "The Cost of Future Change"
-slug:	"2018-12-08-cost-of-future-change"
 authors:	
   - jeffreyaven
-date: "2018-12-08"
 draft: false
 hide_table_of_contents: true
-categories: 
-  - "reflections-and-thoughts"
+image: "images/changes-ahead.jpg"
 tags: 
   - "change"
   - "open-source-software"
@@ -16,7 +14,6 @@ keywords:
   - "change"
   - "open-source-software"
   - "technology"
-image: "changes-ahead.jpg"
 ---
 
 ### what we should really be focused on (but no one is…)
