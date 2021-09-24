@@ -2,315 +2,315 @@
 <rss version="2.0">
     <channel>
         <title>Cloudy with a chance of Big Data Blog Feed</title>
-        <link>https://cloudywithachanceofbigdata.github.io/</link>
+        <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/</link>
         <description>Cloud and data design patterns</description>
         <lastBuildDate>Thu, 24 Jun 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Using Jsonnet to Configure Multiple Environments]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/using-jsonnet-to-configure-multiple-environments</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/using-jsonnet-to-configure-multiple-environments</link>
             <guid>using-jsonnet-to-configure-multiple-environments</guid>
             <pubDate>Thu, 24 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Everytime I start a new project I try and optimise how the application can work across multiple envronments. For those who don't have the luxury of developing everything in docker containers or isolated spaces, you will know my pain. How do I write code that can run on my local dev environment, migrate to the shared test and ci environment and ultimately still work in production.]]></description>
         </item>
         <item>
             <title><![CDATA[Use BigQuery to trigger Cloud Run]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/use-bigquery-to-trigger-cloud-run</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/use-bigquery-to-trigger-cloud-run</link>
             <guid>use-bigquery-to-trigger-cloud-run</guid>
             <pubDate>Sat, 19 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[So you're using BigQuery (BQ). It's all set up and humming perfectly. Maybe now, you want to run an ELT job whenever a new table partition is created, or maybe you want to retrain your ML model whenever new rows are inserted into the BQ table.]]></description>
         </item>
         <item>
             <title><![CDATA[Azure Static Web App Review]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/azure-static-web-app-review</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/azure-static-web-app-review</link>
             <guid>azure-static-web-app-review</guid>
             <pubDate>Fri, 18 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[The Azure Static Web App feature is relatively new in the Azure estate which has recently become generally available, I thought I would take it for a test drive and discuss my findings.]]></description>
         </item>
         <item>
             <title><![CDATA[Introducing the Metadata Hub (MDH)]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/introducing-the-metadata-hub-mdh</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/introducing-the-metadata-hub-mdh</link>
             <guid>introducing-the-metadata-hub-mdh</guid>
             <pubDate>Tue, 15 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Metadata Hub (MDH) is intended to be the source of truth for metadata around the Company’s platform. It has the ability to load metadata configuration from yaml, and serve that information up via API. It will also be the store of information for pipeline information while ingesting files into the platform.]]></description>
         </item>
         <item>
             <title><![CDATA[Masking Private Keys in CI/CD Pipelines in GitLab]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/masking-private-keys-in-ci-cd-pipelines-in-gitlab</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/masking-private-keys-in-ci-cd-pipelines-in-gitlab</link>
             <guid>masking-private-keys-in-ci-cd-pipelines-in-gitlab</guid>
             <pubDate>Tue, 15 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Big fan of GitLab (and GitLab CI in particular). I had a recent requirement to push changes to a wiki repo associated with a GitLab project through a GitLab CI pipeline (using the SaaS version of GitLab) and ran into a conundrum…]]></description>
         </item>
         <item>
             <title><![CDATA[Simple Tasker: Configuration driven orchestration]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/simple-tasker-configuration-driven-orchestration</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/simple-tasker-configuration-driven-orchestration</link>
             <guid>simple-tasker-configuration-driven-orchestration</guid>
             <pubDate>Tue, 15 Jun 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Recently I found myself at a client that were using a third party tool to scan all their enterprise applications in order to collate their data lineage. They had spent two years onboarding applications to the tool, resulting in a large technical mess that was hard to debug and impossible to extend. As new applications were integrated onto the platform, developers were forced to think of new ways of connecting and tranforming the data so it could be consumed.]]></description>
         </item>
         <item>
             <title><![CDATA[Okta Admin Command Line Interface]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/okta-admin-command-line-interface</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/okta-admin-command-line-interface</link>
             <guid>okta-admin-command-line-interface</guid>
             <pubDate>Sun, 30 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Identity and Access Management is a critical component of any application or SaaS architecture. I’m currently doing a spike of the Okta solution for an application development project I am on. Okta is a comprehensive solution built on the open OAuth2 and OIDC protocols, as well as supporting more conventional identity federation approaches such as SAML.]]></description>
         </item>
         <item>
             <title><![CDATA[Enumerating all roles for a user in Snowflake]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/enumerating-all-roles-for-a-user-in-snowflake</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/enumerating-all-roles-for-a-user-in-snowflake</link>
             <guid>enumerating-all-roles-for-a-user-in-snowflake</guid>
             <pubDate>Tue, 23 Mar 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Snowflake allows roles to be assigned to other roles, so when a user is assigned to a role, they may inherit the ability to use countless other roles.]]></description>
         </item>
         <item>
             <title><![CDATA[EventArc: The state of eventing in Google Cloud]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/eventarc-the-state-of-eventing-in-google-cloud</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/eventarc-the-state-of-eventing-in-google-cloud</link>
             <guid>eventarc-the-state-of-eventing-in-google-cloud</guid>
             <pubDate>Sun, 28 Feb 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[When defining event-driven architectures, it's always good to keep up with how the landscape is changing. How do you connect microservices in your architecture? Is Pub/Sub the end-game for all events? To dive a bit deeper, let's talk through the benefits of having a single orchestrator, or perhaps a choreographer is better?]]></description>
         </item>
         <item>
             <title><![CDATA[Microservices Concepts: Orchestration versus Choreography]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/microservices-concepts-orchestration-versus-choreography</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/microservices-concepts-orchestration-versus-choreography</link>
             <guid>microservices-concepts-orchestration-versus-choreography</guid>
             <pubDate>Fri, 26 Feb 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[One of the foundational concepts in microservices architecture and design patterns is the concept of Orchestration versus Choreography. Before we look at a reference implementation of each of these patterns, it is worthwhile starting with an analogy.]]></description>
         </item>
         <item>
             <title><![CDATA[Using the Azure CLI to Create an API using a Function App within API Management]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/using-the-azure-cli-to-create-an-api-using-a-function-app-within-api-management</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/using-the-azure-cli-to-create-an-api-using-a-function-app-within-api-management</link>
             <guid>using-the-azure-cli-to-create-an-api-using-a-function-app-within-api-management</guid>
             <pubDate>Wed, 06 Jan 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Function Apps, Logic Apps and App Services can be used to expose APIs within Azure API Management which is an easy way to deploy serverless microservices. You can see this capability in the Azure portal below within API Management:]]></description>
         </item>
         <item>
             <title><![CDATA[Great Expectations (for your data...)]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/great-expectations-for-your-data</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/great-expectations-for-your-data</link>
             <guid>great-expectations-for-your-data</guid>
             <pubDate>Fri, 27 Nov 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[This article provides an introduction to the Great Expectations Python library for data quality management (https://github.com/great-expectations/great\expectations).]]></description>
         </item>
         <item>
             <title><![CDATA[Multi Cloud Diagramming with PlantUML]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/multi-cloud-diagramming-with-plantuml</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/multi-cloud-diagramming-with-plantuml</link>
             <guid>multi-cloud-diagramming-with-plantuml</guid>
             <pubDate>Mon, 26 Oct 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Following on from the recent post GCP Templates for C4 Diagrams using PlantUML, cloud architects are often challenged with producing diagrams for architectures spanning multiple cloud providers, particularly as you elevate to enterprise level diagrams.]]></description>
         </item>
         <item>
             <title><![CDATA[Cloud Bigtable Primer Part II – Row Key Selection and Schema Design]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/cloud-bigtable-primer-part-ii-row-key-selection-and-schema-design</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/cloud-bigtable-primer-part-ii-row-key-selection-and-schema-design</link>
             <guid>cloud-bigtable-primer-part-ii-row-key-selection-and-schema-design</guid>
             <pubDate>Sun, 13 Sep 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[This is a follow up to the original Cloud Bigtable primer where we discussed the basics of Cloud Bigtable:]]></description>
         </item>
         <item>
             <title><![CDATA[GCP Templates for C4 Diagrams using PlantUML]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/gcp-templates-for-c4-diagrams-using-plantuml</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/gcp-templates-for-c4-diagrams-using-plantuml</link>
             <guid>gcp-templates-for-c4-diagrams-using-plantuml</guid>
             <pubDate>Fri, 14 Aug 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[I am a believer in the mantra of **“Everything-as-Code”**, this includes diagrams and other architectural artefacts. Enter PlantUML…]]></description>
         </item>
         <item>
             <title><![CDATA[Cloud Bigtable Primer - Part I]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/cloud-bigtable-primer-part-i</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/cloud-bigtable-primer-part-i</link>
             <guid>cloud-bigtable-primer-part-i</guid>
             <pubDate>Tue, 04 Aug 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Bigtable is one of the foundational services in the Google Cloud Platform and to this day one of the greatest contributions to the big data ecosystem at large. It is also one of the least known services available, with all the headlines and attention going to more widely used services such as BigQuery.]]></description>
         </item>
         <item>
             <title><![CDATA[Automated GCS Object Scanning Using DLP with Notifications Using Slack]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/automated-gcs-object-scanning-using-dlp-with-notifications-using-slack</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/automated-gcs-object-scanning-using-dlp-with-notifications-using-slack</link>
             <guid>automated-gcs-object-scanning-using-dlp-with-notifications-using-slack</guid>
             <pubDate>Mon, 01 Jun 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[This is a follow up to a previous blog, Google Cloud Storage Object Notifications using Slack in which we used Slack to notify us of new objects being uploaded to GCS.]]></description>
         </item>
         <item>
             <title><![CDATA[JSON Wrangling with Go]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/json-wrangling-with-go</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/json-wrangling-with-go</link>
             <guid>json-wrangling-with-go</guid>
             <pubDate>Wed, 22 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Golang is a fantastic language but at first glance it is a bit clumsy when it comes to JSON in contrast to other languages such as Python or Javascript. Having said that once you master the concepts involved with JSON wrangling using Go it is equally as functional – with added type safety and performance.]]></description>
         </item>
         <item>
             <title><![CDATA[Forseti Terraform Validator: Enforcing resource policy compliance in your CI pipeline]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/forseti-terraform-validator-enforcing-resource-policy-compliance-in-your-ci-pipeline</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/forseti-terraform-validator-enforcing-resource-policy-compliance-in-your-ci-pipeline</link>
             <guid>forseti-terraform-validator-enforcing-resource-policy-compliance-in-your-ci-pipeline</guid>
             <pubDate>Sat, 18 Apr 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Terraform is a powerful tool for managing your Infrastructure as Code. Declare your resources once, define their variables per environment and sleep easy knowing your CI pipeline will take care of the rest.]]></description>
         </item>
         <item>
             <title><![CDATA[Creating a Site to Site VPN Connection Between GCP and Azure with Google Private Access]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/creating-a-site-to-site-vpn-connection-between-gcp-and-azure-with-google-private-access</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/creating-a-site-to-site-vpn-connection-between-gcp-and-azure-with-google-private-access</link>
             <guid>creating-a-site-to-site-vpn-connection-between-gcp-and-azure-with-google-private-access</guid>
             <pubDate>Fri, 27 Mar 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[This article demonstrates creating a site to site IPSEC VPN connection between a GCP VPC network and an Azure Virtual Network, enabling private RFC1918 network connectivity between virtual networks in both clouds. This is done using a single PowerShell script leveraging Azure PowerShell and gcloud commands in the Google SDK.]]></description>
         </item>
         <item>
             <title><![CDATA[Spark in the Google Cloud Platform Part 2]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/spark-in-the-google-cloud-platform-part-2</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/spark-in-the-google-cloud-platform-part-2</link>
             <guid>spark-in-the-google-cloud-platform-part-2</guid>
             <pubDate>Sat, 29 Feb 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[In the previous post in this series Spark in the Google Cloud Platform Part 1, we started to explore the various ways in which we could deploy Apache Spark applications in GCP. The first option we looked at was deploying Spark using Cloud DataProc, a managed Hadoop cluster with various ecosystem components included.]]></description>
         </item>
         <item>
             <title><![CDATA[Spark in the Google Cloud Platform Part 1]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/spark-in-the-google-cloud-platform-part-1</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/spark-in-the-google-cloud-platform-part-1</link>
             <guid>spark-in-the-google-cloud-platform-part-1</guid>
             <pubDate>Fri, 14 Feb 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[I have been an avid Spark enthusiast since 2014 (the early days..). Spark has featured heavily in every project I have been involved with from data warehousing, ETL, feature extraction, advanced analytics to event processing and IoT applications. I like to think of it as a Swiss army knife for distributed processing.]]></description>
         </item>
         <item>
             <title><![CDATA[Query Cloud SQL through Big Query]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/query-cloud-sql-through-big-query</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/query-cloud-sql-through-big-query</link>
             <guid>query-cloud-sql-through-big-query</guid>
             <pubDate>Sat, 08 Feb 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[This article demonstrates Cloud SQL federated queries for Big Query, a neat and simple to use feature.]]></description>
         </item>
         <item>
             <title><![CDATA[Google Cloud SQL – Availability for PostgreSQL – Part II (Read Replicas)]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/google-cloud-sql-availability-for-postgresql-read-replicas</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/google-cloud-sql-availability-for-postgresql-read-replicas</link>
             <guid>google-cloud-sql-availability-for-postgresql-read-replicas</guid>
             <pubDate>Fri, 24 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[In this post we will look at read replicas as an additional method to achieve multi zone availability for Cloud SQL, which gives us - in turn - the ability to offload (potentially expensive) IO operations such as user created backups or read operations without adding load to the master instance.]]></description>
         </item>
         <item>
             <title><![CDATA[Introducing Service Mesh Part II]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/introducing-service-mesh-part-ii</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/introducing-service-mesh-part-ii</link>
             <guid>introducing-service-mesh-part-ii</guid>
             <pubDate>Tue, 21 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[This is a follow up to the previous post:]]></description>
         </item>
         <item>
             <title><![CDATA[Google Cloud SQL – Availability, Replication, Failover for PostgreSQL – Part I]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/google-cloud-sql-ha-backup-and-recovery-replication-failover-and-security-for-postgresql</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/google-cloud-sql-ha-backup-and-recovery-replication-failover-and-security-for-postgresql</link>
             <guid>google-cloud-sql-ha-backup-and-recovery-replication-failover-and-security-for-postgresql</guid>
             <pubDate>Fri, 17 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[In this multi part blog we will explore the features available in Google Cloud SQL for High Availability, Backup and Recovery, Replication and Failover and Security (at rest and in transit) for the PostgreSQL DBMS engine. Some of these features are relatively hot of the press and in Beta – which still makes them available for general use.]]></description>
         </item>
         <item>
             <title><![CDATA[Sick of hearing about Service Mesh? Here’s what you need to know...]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/sick-of-hearing-about-service-mesh-heres-what-you-need-to-know</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/sick-of-hearing-about-service-mesh-heres-what-you-need-to-know</link>
             <guid>sick-of-hearing-about-service-mesh-heres-what-you-need-to-know</guid>
             <pubDate>Thu, 09 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[So you’ve started delivering a new project and it’s all about this “Cloud Native” or “Microservices” thing. You’re a Delivery Manager or Software Engineer at some type of company and someone has lightly peppered a meeting with a term, ‘Mesh’.]]></description>
         </item>
         <item>
             <title><![CDATA[The Ultimate AWS to GCP Thesaurus]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/ultimate-aws-to-gcp-thesaurus</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/ultimate-aws-to-gcp-thesaurus</link>
             <guid>ultimate-aws-to-gcp-thesaurus</guid>
             <pubDate>Mon, 30 Dec 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[There are many posts available which map analogous services between the different cloud providers, but this post attempts to go a step further and map additional concepts, terms, and configuration options to be the definitive thesaurus for cloud practitioners familiar with AWS looking to fast track their familiarisation with GCP.]]></description>
         </item>
         <item>
             <title><![CDATA[Google Cloud Storage Object Notifications using Slack]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/google-cloud-storage-object-notifications-using-slack</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/google-cloud-storage-object-notifications-using-slack</link>
             <guid>google-cloud-storage-object-notifications-using-slack</guid>
             <pubDate>Sat, 09 Nov 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[This article describes the steps to integrate Slack with Google Cloud Functions to get notified about object events within a specified Google Cloud Storage bucket.]]></description>
         </item>
         <item>
             <title><![CDATA[Map Reduce is Dead, Long Live Map Reduce]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/map-reduce-is-dead-long-live-map-reduce</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/map-reduce-is-dead-long-live-map-reduce</link>
             <guid>map-reduce-is-dead-long-live-map-reduce</guid>
             <pubDate>Sun, 01 Sep 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Firstly, this is not another Hadoop obituary, there are enough of those out there already.]]></description>
         </item>
         <item>
             <title><![CDATA[Ansible Tower for Continuous Infrastructure]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/ansible-tower-for-continuous-infrastructure</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/ansible-tower-for-continuous-infrastructure</link>
             <guid>ansible-tower-for-continuous-infrastructure</guid>
             <pubDate>Thu, 29 Aug 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[As infrastructure and teams scale, effective and robust configuration management requires growing beyond manual processes and local conventions. Fortunately, Ansible Tower (or the upstream Open Source project Ansible AWX) provides a perfect platform for configuration management at scale.]]></description>
         </item>
         <item>
             <title><![CDATA[Managing Secrets in CICD Pipelines]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/managing-secrets-in-cicd-pipelines</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/managing-secrets-in-cicd-pipelines</link>
             <guid>managing-secrets-in-cicd-pipelines</guid>
             <pubDate>Tue, 16 Jul 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Overview]]></description>
         </item>
         <item>
             <title><![CDATA[Change Data Capture at Scale using Spark]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/change-data-capture-at-scale-using-spark</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/change-data-capture-at-scale-using-spark</link>
             <guid>change-data-capture-at-scale-using-spark</guid>
             <pubDate>Fri, 28 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Change Data Capture (CDC) is one of the most challenging processing patterns to implement at scale. I personally have had several cracks at this using various different frameworks and approaches, the most recent of which was implemented using Spark – and I think I have finally found the best approach. Even though the code examples referenced use Spark, the pattern is language agnostic – the focus is on the approach not the specific implementation (as this could be applied to any framework or runtime).]]></description>
         </item>
         <item>
             <title><![CDATA[Synthetic CDC Data Generator]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/synthetic-cdc-data-generator</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/synthetic-cdc-data-generator</link>
             <guid>synthetic-cdc-data-generator</guid>
             <pubDate>Fri, 28 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[This is a simple routine to generate random data with a configurable number or records, key fields and non key fields to be used to create synthetic data for source change data capture (CDC) processing. The output includes an initial directory containing CSV files representing an initial data load, and an incremental directory containing CSV files representing incremental data.]]></description>
         </item>
         <item>
             <title><![CDATA[Scalable, Secure Application Load Balancing with VPC Native GKE and Istio]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/scalable-secure-application-load-balancing-with-vpc-native-gke-and-istio</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/scalable-secure-application-load-balancing-with-vpc-native-gke-and-istio</link>
             <guid>scalable-secure-application-load-balancing-with-vpc-native-gke-and-istio</guid>
             <pubDate>Sat, 18 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[At the time of this writing, GCP does not have a generally available non-public facing Layer 7 load balancer. While this is sure to change in the future, this article outlines a design pattern which has been proven to provide scalable and extensible application load balancing services for multiple applications running in Kubernetes pods on GKE.]]></description>
         </item>
         <item>
             <title><![CDATA[AWS Professional and Speciality Exam Tips]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/aws-professional-and-speciality-exam-tips</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/aws-professional-and-speciality-exam-tips</link>
             <guid>aws-professional-and-speciality-exam-tips</guid>
             <pubDate>Thu, 04 Apr 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[One you get beyond the Associate level AWS certification exams into the Professional or Speciality track exams the degree of difficulty rises significantly. As a veteran of the Certified Solutions Architect Professional and Big Data Specialty exams, I thought I would share my experiences which I believe are applicable to all the certification streams and tracks in the AWS certification program.]]></description>
         </item>
         <item>
             <title><![CDATA[GCP Networking for AWS Professionals]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/gcp-networking-for-aws-professionals</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/gcp-networking-for-aws-professionals</link>
             <guid>gcp-networking-for-aws-professionals</guid>
             <pubDate>Thu, 21 Feb 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[A primer on GCP networking for AWS engineers and architects]]></description>
         </item>
         <item>
             <title><![CDATA[The Streaming Data Warehouse]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/the-streaming-data-warehouse-kappa-architecture-and-data-warehousing-re-imagined</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/the-streaming-data-warehouse-kappa-architecture-and-data-warehousing-re-imagined</link>
             <guid>the-streaming-data-warehouse-kappa-architecture-and-data-warehousing-re-imagined</guid>
             <pubDate>Thu, 14 Feb 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Kappa Architecture and Data Warehousing re-imagined]]></description>
         </item>
         <item>
             <title><![CDATA[Test Driven Infrastructure and Test Automation with Ansible, Molecule and Azure]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/test-driven-infrastructure-and-test-automation-with-ansible-molecule-and-azure</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/test-driven-infrastructure-and-test-automation-with-ansible-molecule-and-azure</link>
             <guid>test-driven-infrastructure-and-test-automation-with-ansible-molecule-and-azure</guid>
             <pubDate>Thu, 31 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[A few years back, before the rise of the hyper-scalers, I had my first infracode 'aha moment' with OpenStack. The second came with Kitchen.]]></description>
         </item>
         <item>
             <title><![CDATA[When Life Gives you Undrinkable Wine – Make Cognac…]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/when-life-gives-you-undrinkable-wine-make-cognac</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/when-life-gives-you-undrinkable-wine-make-cognac</link>
             <guid>when-life-gives-you-undrinkable-wine-make-cognac</guid>
             <pubDate>Wed, 30 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Make Cognac]]></description>
         </item>
         <item>
             <title><![CDATA[S3 Object Notifications using Lambda and SES]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/s3-object-notifications-using-lambda-and-ses</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/s3-object-notifications-using-lambda-and-ses</link>
             <guid>s3-object-notifications-using-lambda-and-ses</guid>
             <pubDate>Fri, 18 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Simple pattern for formatted emails from S3 object notifications using AWS Lambda and SES, built with Terraform and Python]]></description>
         </item>
         <item>
             <title><![CDATA[Infrastructure Automation using AWS Lambda]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/infrastructure-automation-using-aws-lambda</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/infrastructure-automation-using-aws-lambda</link>
             <guid>infrastructure-automation-using-aws-lambda</guid>
             <pubDate>Tue, 15 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Simple pattern for automating EC2 tasks using AWS Lambda and Terraform]]></description>
         </item>
         <item>
             <title><![CDATA[Multi Stage ETL Framework using Spark SQL]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/multi-stage-etl-framework-using-spark-sql</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/multi-stage-etl-framework-using-spark-sql</link>
             <guid>multi-stage-etl-framework-using-spark-sql</guid>
             <pubDate>Wed, 09 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[A simple configuration driven Spark SQL ETL framework]]></description>
         </item>
         <item>
             <title><![CDATA[The Cost of Future Change]]></title>
-            <link>https://cloudywithachanceofbigdata.github.io/cost-of-future-change</link>
+            <link>https://cloudywithachanceofbigdata.github.io/cloudywithachanceofbigdata.github.io/cost-of-future-change</link>
             <guid>cost-of-future-change</guid>
             <pubDate>Sat, 08 Dec 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[what we should really be focused on (but no one is…)]]></description>

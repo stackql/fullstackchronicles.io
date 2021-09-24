@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[7169],{87701:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/map-reduce","name":"map-reduce","count":1,"permalink":"/tags/map-reduce"}')}}]);
