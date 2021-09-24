@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[3136],{88430:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/okta","name":"okta","count":1,"permalink":"/tags/okta"}')}}]);
