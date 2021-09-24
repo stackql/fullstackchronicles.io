@@ -15,13 +15,21 @@ keywords:
   - "metadata"
 ---
 
+import ImageWithCaption from '/js/ImageWithCaption/ImageWithCaption.js';
+import MdhImage from './images/mdhoverview.png';
+
 Metadata Hub (MDH) is intended to be the source of truth for metadata around the Company’s platform. It has the ability to load metadata configuration from yaml, and serve that information up via API. It will also be the store of information for pipeline information while ingesting files into the platform.
 
 ## Key philosophies:
 
 > **Config-Driven**. Anyone who has been authorized to do so, should be able to add another ‘table-info.yaml’ in to MDH without the need to update any code in the system
 
-Here’s how table information makes its way into MDH: [![mdh-overview](images/mdh-overview.png)](images/mdh-overview.png)  
+Here’s how table information makes its way into MDH:  
+
+<ImageWithCaption 
+imageSrc={MdhImage}
+altText="Metadata Hub"
+/>
 
 ### Paths
 
