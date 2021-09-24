@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[9250],{30721:function(a){a.exports=JSON.parse('{"allTagsPath":"/cloudywithachanceofbigdata.github.io/tags","slug":"/cloudywithachanceofbigdata.github.io/tags/ses","name":"ses","count":1,"permalink":"/cloudywithachanceofbigdata.github.io/tags/ses"}')}}]);
