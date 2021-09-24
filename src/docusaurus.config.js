@@ -48,10 +48,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       navbar: {
         title: 'Cloudy with a chance of Big Data',
         hideOnScroll: true,
-        logo: {
-          alt: 'Cloudy with a chance of Big Data',
-          src: 'img/cloud1.svg',
-        },
+        //logo: {
+        //  alt: 'Cloudy with a chance of Big Data',
+        //  src: 'img/cloud1.svg',
+        //},
         items: [
           {to: '/', label: 'Home', position: 'right'}, 
           {

@@ -1,9 +1,17 @@
 ---
+slug: "use-bigquery-to-trigger-cloud-run"
 title: "Use BigQuery to trigger Cloud Run"
-date: "2021-06-19"
-categories: 
-  - "big-data-design-patterns"
+authors:	
+  - tomklimovski
+draft: false
+hide_table_of_contents: true
 tags: 
+  - "big-query"
+  - "bigquery"
+  - "gcp"
+  - "google-cloud-platform"
+  - "googlecloudplatform"
+keywords:	
   - "big-query"
   - "bigquery"
   - "gcp"
@@ -47,7 +55,7 @@ VALUES('2021-06-18', 'Australia', 3, 1000)
 
 Now, in another browser tab let's navigate to [BQ Audit Events](https://console.cloud.google.com/logs/query;query=bigquery.v2?_ga=2.187390252.-505923201.1592376029) and look for our `INSERT INTO` event:
 
-![BQ-insert-event](images/bq-insert-event.png)
+[![BQ-insert-event](images/bq-insert-event.png)](images/bq-insert-event.png)
 
 There will be several audit logs for any given BQ action. Only after a query is parsed does BQ know which table we want to interact with, so the initial log will, for e.g., not have the table name.
 
@@ -161,6 +169,6 @@ INSERT INTO tmp_bq_to_cr.cloud_run_trigger
 VALUES('2021-06-18', 'Australia', 5, 25000)
 ```
 
-Watch as a new table called created\_by\_trigger gets created! You have successfully triggered a Cloud Run action on a database event in BigQuery.
+Watch as a new table called `created_by_trigger` gets created! You have successfully triggered a Cloud Run action on a database event in BigQuery.
 
 Enjoy!

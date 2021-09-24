@@ -1,8 +1,11 @@
 ---
+slug: "okta-admin-command-line-interface"
 title: "Okta Admin Command Line Interface"
-date: "2021-05-30"
-categories: 
-  - "cloud-deployment-templates"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/Dev_Logo-02_Large-thumbnail.png"
 tags: 
   - "cli"
   - "command-line"
@@ -11,7 +14,14 @@ tags:
   - "oauth-2-0"
   - "oidc"
   - "okta"
-coverImage: "Dev_Logo-02_Large-thumbnail.png"
+keywords:	
+  - "cli"
+  - "command-line"
+  - "golang"
+  - "identity"
+  - "oauth-2-0"
+  - "oidc"
+  - "okta"
 ---
 
 Identity and Access Management is a critical component of any application or SaaS architecture. I’m currently doing a spike of the Okta solution for an application development project I am on. Okta is a comprehensive solution built on the open OAuth2 and OIDC protocols, as well as supporting more conventional identity federation approaches such as SAML.
@@ -24,9 +34,7 @@ Fortunately, prior to doing this I had created an API token for my user. So, I w
 
 Being in lockdown and having some free time on my hands, I decided to create a simple open source command line tool which could be used to administer an Okta organisation. The result of this weekend lockdown is `okta-admin`…
 
-![](images/okta-admin-screenshot-1024x476.png)
-
-okta-admin cli
+[![okta-admin cli](images/okta-admin-screenshot.png)](images/okta-admin-screenshot.png)
 
 For this project I used the [Golang SDK for Okta](https://github.com/okta/okta-sdk-golang), along with the [Cobra](https://github.com/spf13/cobra) and [Viper](https://github.com/spf13/viper) Golang packages (used by `docker`, `kubectl` and other popular command line utilities). To provide a query interface to JSON response payloads I use [GJson](https://github.com/tidwall/gjson).
 

@@ -1,11 +1,15 @@
 ---
+slug: "microservices-concepts-orchestration-versus-choreography"
 title: "Microservices Concepts: Orchestration versus Choreography"
-date: "2021-02-26"
-categories: 
-  - "engineering-patterns"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/service-mesh-1.png"
 tags: 
   - "microservices"
-coverImage: "service-mesh-1.png"
+keywords:	
+  - "microservices"
 ---
 
 One of the foundational concepts in microservices architecture and design patterns is the concept of Orchestration versus Choreography. Before we look at a reference implementation of each of these patterns, it is worthwhile starting with an analogy.
@@ -20,14 +24,10 @@ _Now back to technology and microservices…_
 
 In the Orchestration model, there is a central orchestration service which controls the interactions between other services, in other words the flow and control of communication and/or message passing between services is controlled by an orchestrator (much like the conductor in a symphony orchestra). On the plus side, this model enables easier monitoring and policy enforcement across the system. A generalisation of the Orchestration model is shown below:
 
-![](images/orchestration.png)
-
-Orchestration model
+[![Orchestration model](images/orchestration.png)](images/orchestration.png)
 
 By contrast, in the Choreography model, each service works independently and interacts with other services through events. In this model each service registers and emits events as they need to. The flow (of communication between services) is not predefined, much like a Jazz band. This model often includes a central broker for message passing between services, but the services operate independently of each other and are not controlled by a central service (an orchestrator). A generalisation of the Choreography model is shown below:
 
-![](images/choreography.png)
-
-Choreography model
+[![Choreography model](images/choreography.png)](images/choreography.png)
 
 We will post subsequent articles with implementations of these patterns, but it is worthwhile getting a foundational understanding first.

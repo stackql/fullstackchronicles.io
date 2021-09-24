@@ -1,8 +1,11 @@
 ---
+slug: "cloud-bigtable-primer-part-i"
 title: "Cloud Bigtable Primer - Part I"
-date: "2020-08-04"
-categories: 
-  - "cloud-learnings"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/cbt-featured-image.png"
 tags: 
   - "bigtable"
   - "cloud-bigtable"
@@ -10,7 +13,13 @@ tags:
   - "google-cloud-platform"
   - "googlecloudplatform"
   - "nosql"
-coverImage: "cbt-featured-image.png"
+keywords:	
+  - "bigtable"
+  - "cloud-bigtable"
+  - "gcp"
+  - "google-cloud-platform"
+  - "googlecloudplatform"
+  - "nosql"
 ---
 
 Bigtable is one of the foundational services in the Google Cloud Platform and to this day one of the greatest contributions to the big data ecosystem at large. It is also one of the least known services available, with all the headlines and attention going to more widely used services such as BigQuery.
@@ -19,9 +28,7 @@ Bigtable is one of the foundational services in the Google Cloud Platform and to
 
 In 2006 (pre Google Cloud Platform), Google released a white paper called _**“Bigtable: A Distributed Storage System for Structured Data”**_, this paper set out the reference architecture for what was to become Cloud Bigtable. This followed several other whitepapers including the GoogleFS and MapReduce whitepapers released in 2003 and 2004 which provided abstract reference architectures for the Google File System (now known as **_Colossus_**) and the MapReduce algorithm. These whitepapers inspired a generation of open source distributed processing systems including Hadoop. Google has long had a pattern of publicising a generalized overview of their approach to solving different storage and processing challenges at scale through white papers.
 
-[![](images/bigtable-whitepaper.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/08/bigtable-osdi06.pdf)
-
-Bigtable Whitepaper 2006
+[![Bigtable Whitepaper 2006](images/bigtable-whitepaper.png)](assets/bigtable-osdi06.pdf)
 
 The Bigtable white paper inspired a wave of open source distributed key/value oriented NoSQL data stores including Apache HBase and Apache Cassandra.
 
@@ -61,7 +68,14 @@ All values are versioned with a timestamp (or configurable integer). Data is not
 
 The following table compares and contrasts Bigtable against relational databases (both transaction oriented and analytic oriented databases):
 
-\[table id=6 /\]
+&nbsp;| Bigtable | RDBMS (OLTP) | RDBMS (DSS/MPP)
+--|--|--|-- 
+Data Layout | Column Family Oriented | Row Oriented | Column Oriented
+Transaction Support | Single Row Only | Yes | Depends (but usually no)
+Query DSL | get/put/scan/delete | SQL | SQL
+Indexes | Row Key Only | Yes | Yes (typically PI based)
+Max Data Size | PB+ | '00s GB  to TB | TB+
+Read/Write Throughput | "'000 | 000s queries/s" | '000s queries/s | '000s queries/s
 
 ## Bigtable Data Model
 
@@ -69,9 +83,7 @@ The following table compares and contrasts Bigtable against relational databases
 
 **_Columns_** belong to **_Column Families_** and only exist when inserted, NULLs are not stored - this is where it starts to differ from a traditional RDBMS. The following image demonstrates the data model for a fictitious table in Bigtable.
 
-[![](images/bigtable-data-model.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/08/bigtable-data-model.png)
-
-Bigtable Data Model
+[![Bigtable Data Model](images/bigtable-data-model.png)](images/bigtable-data-model.png)
 
 In the previous example, we created two Column Families (**_cf1_** and **_cf2_**). These are created during table definition or update operations (akin to DDL operations in the relational world). In this case, we have chosen to store primary attributes, like name, etc in cf1 and features (or derived attributes) in cf2 like indicators.
 
@@ -81,23 +93,23 @@ Each cell has a timestamp/version associated with it, multiple versions of a row
 
 Properties such as the max age for a cell or the maximum number of versions to be stored for any given cell are set on the Column Family. Versions are compacted through a process called **_Garbage Collection_** - not to be confused with Java Garbage Collection (albeit same idea).
 
-\[table id=7 /\]
+Row Key | Column | Value | Timestamp
+--|--|--|--
+123 | cf1:status | ACTIVE | 2020-06-30T08.58.27.560
+123 | cf1:status | PENDING | 2020-06-28T06.20.18.330
+123 | cf1:status | INACTIVE | 2020-06-27T07.59.20.460
 
 ## Bigtable Instances, Clusters, Nodes and Tables
 
 Bigtable is a "no-ops" service, meaning you do not need to configure machine types or details about the underlying infrastructure, save a few sizing or performance options - such as the number of nodes in a cluster or whether to use solid state hard drives (SSD) or the magnetic alternative (HDD). The following diagram shows the relationships and cardinality for Cloud Bigtable.
 
-[![](images/bigtable-instances-and-nodes.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/08/bigtable-instances-and-nodes.png)
-
-Bigtable Instances, Clusters and Nodes
+[![Bigtable Instances, Clusters and Nodes](images/bigtable-instances-and-nodes.png)](images/bigtable-instances-and-nodes.png)
 
 **_Clusters_** and **_nodes_** are the physical compute layer for Bigtable, these are zonal assets, zonal and regional availability can be achieved through replication which we will discuss later in this article.
 
 **_Instances_** are a virtual abstraction for clusters, Tables belong to instances (not clusters). This is due to Bigtables underlying architecture which is based upon a separation of storage and compute as shown below.
 
-[![](images/bigtable-storage-and-compute.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/08/bigtable-storage-and-compute.png)
-
-Bigtable Separation of Storage and Compute
+[![Bigtable Separation of Storage and Compute](images/bigtable-storage-and-compute.png)](images/bigtable-storage-and-compute.png)
 
 Bigtables separation of storage and compute allow it to scale horizontally, as nodes are stateless they can be increased to increase query performance. The underlying storage system in inherently scalable.
 

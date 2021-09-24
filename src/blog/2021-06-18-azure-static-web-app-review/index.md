@@ -1,8 +1,11 @@
 ---
+slug: "azure-static-web-app-review"
 title: "Azure Static Web App Review"
-date: "2021-06-18"
-categories: 
-  - "cloud-deployment-templates"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/AzureStaticWebApp.png"
 tags: 
   - "azure"
   - "jamstack"
@@ -15,8 +18,21 @@ tags:
   - "spa"
   - "vercel"
   - "vue-js"
-coverImage: "AzureStaticWebApp.png"
+keywords:	
+  - "azure"
+  - "jamstack"
+  - "microsoft-azure"
+  - "netlify"
+  - "progressive-web-application"
+  - "pwa"
+  - "react"
+  - "single-page-application"
+  - "spa"
+  - "vercel"
+  - "vue-js"
 ---
+
+import Gist from 'react-gist';
 
 The Azure Static Web App feature is relatively new in the Azure estate which has recently become generally available, I thought I would take it for a test drive and discuss my findings.
 
@@ -39,13 +55,15 @@ Pretty simple to setup, aside from a name and a resource group, you just need to
 
 An example is shown here:
 
-<script src="https://gist.github.com/eef5a25ed01327a180711fd64370c457.js"></script>
+<Gist id="eef5a25ed01327a180711fd64370c457" 
+/>
 
 ## GitHub Actions
 
 Using the consent provided (either using the OAuth flow or by providing a token), Azure Static Web Apps will automagically create the GitHub Actions workflow to deploy your application on a push or merge event to your repo. This includes providing scoped API credentials to Azure to allow access to the Static Web App resource using secrets in GitHub (which are created automagically as well). An example workflow is shown here:
 
-<script src="https://gist.github.com/8e7ad2bdd9ba351368c5aedad289e972.js"></script>
+<Gist id="8e7ad2bdd9ba351368c5aedad289e972" 
+/>
 
 ## Preview or Staging Releases
 
@@ -55,7 +73,8 @@ Similar to the functionality in analogous services like Netlify, you can configu
 
 Routes (for SPAs) need to be provided to Azure by using a file named `staticwebapp.config.json` located in the application root of your repo (same level as you `package.json` file). You can also specify response codes and whether the rout requires authentication as shown here:
 
-<script src="https://gist.github.com/7dd3bcf05474da551b3d311ae0729e18.js"></script>
+<Gist id="7dd3bcf05474da551b3d311ae0729e18" 
+/>
 
 ## Pros
 

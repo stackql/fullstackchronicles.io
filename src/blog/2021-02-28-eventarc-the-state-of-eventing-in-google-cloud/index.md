@@ -1,32 +1,28 @@
 ---
-title: "EventArc: The state of eventing in Google Cloud"
-date: "2021-02-28"
-categories: 
-  - "cloud-deployment-templates"
-  - "engineering-patterns"
-tags: 
-  - "eventarc"
-  - "google-cloud-platform"
-  - "microservices"
 slug: "eventarc-the-state-of-eventing-in-google-cloud"
+title: "EventArc: The state of eventing in Google Cloud"
 authors:	
   - tomklimovski
 draft: false
 hide_table_of_contents: true
+image: "images/service-mesh-1.png"
+tags: 
+  - "eventarc"
+  - "google-cloud-platform"
+  - "microservices"
 keywords:	
   - "eventarc"
   - "google-cloud-platform"
   - "microservices"
-image: "changes-ahead.jpg"
 ---
 
 When defining event-driven architectures, it's always good to keep up with how the landscape is changing. How do you connect microservices in your architecture? Is Pub/Sub the end-game for all events? To dive a bit deeper, let's talk through the benefits of having a single _orchestrator_, or perhaps a choreographer is better?
 
 ## Orchestration versus choreography refresher
 
-My colleague @jeffreyaven did a recent post explaining this concept in simple terms, which is worth reviewing, see:
+My colleague [@jeffreyaven](https://www.linkedin.com/in/jeffreyaven/) did a recent post explaining this concept in simple terms, which is worth reviewing, see:
 
-https://cloudywithachanceofbigdata.com/microservices-concepts-orchestration-versus-choreography/
+[__Microservices Concepts: Orchestration versus Choreography__](https://cloudywithachanceofbigdata.com/microservices-concepts-orchestration-versus-choreography/)
 
 Should there really be a central orchestrator controlling all interactions between services.....or, should each service work independently and only interact through events?
 
@@ -45,9 +41,7 @@ Announced in October-2020, it was introduced as eventing functionality that enab
 
 Eventing is done by reading those sweet sweet Audit Logs, from various sources, and sending them to Cloud Run services as events in [Cloud Events](https://cloudevents.io/) format. Quick primer on Cloud Events: its a specification for describing event data in a common way. The specification is now under the [Cloud Native Computing Foundation](https://cncf.io/). Hooray! It can also read events from Pub/Sub topics for custom applications. Here's a diagram I graciously ripped from [Google Cloud Blog](https://cloud.google.com/blog/topics/developers-practitioners/eventarc-unified-eventing-experience-google-cloud):
 
-![](images/CloudEvents_fig1.png)
-
-Eventarc
+[![Eventarc](images/CloudEvents_fig1.png)](images/CloudEvents_fig1.png)
 
 ### Why do I need Eventarc? I have the Pub/Sub
 
@@ -65,9 +59,7 @@ Using the CloudEvent-compliant specification will allow for event data in a comm
 
 This means that the long-term vision of Eventarc to be the **hub** of events, enabling a unified eventing story for Google Cloud and beyond.
 
-![](images/CloudEvents_fig2.png)
-
-Eventarc producers and consumers
+[![Eventarc producers and consumers](images/CloudEvents_fig2.png)](images/CloudEvents_fig2.png)
 
 In the future, you can excpect to forego Audit Log and read these events directly and send these out to even more sinks within GCP and any HTTP target.
 

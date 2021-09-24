@@ -1,25 +1,34 @@
 ---
+slug: "spark-in-the-google-cloud-platform-part-1"
 title: "Spark in the Google Cloud Platform Part 1"
-date: "2020-02-14"
-categories: 
-  - "big-data-design-patterns"
-  - "cloud-deployment-templates"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/spark-gcp-featured-image.png"
 tags: 
   - "apache-spark"
   - "gcp"
   - "google-cloud-platform"
   - "googlecloudplatform"
   - "spark"
-coverImage: "spark-gcp-featured-image.png"
+keywords:	
+  - "apache-spark"
+  - "gcp"
+  - "google-cloud-platform"
+  - "googlecloudplatform"
+  - "spark"
 ---
 
 I have been an avid Spark enthusiast since 2014 (the early days..). Spark has featured heavily in every project I have been involved with from data warehousing, ETL, feature extraction, advanced analytics to event processing and IoT applications. I like to think of it as a Swiss army knife for distributed processing.
 
-Spark Training Courses from the AlphaZetta Academy
+:::note Spark Training Courses
 
 [Data Transformation and Analysis Using Apache Spark](https://academy.alphazetta.ai/data-transformation-and-analysis-using-apache-spark/)  
 [Stream and Event Processing using Apache Spark](https://academy.alphazetta.ai/stream-and-event-processing-using-apache-spark/)  
 [Advanced Analytics Using Apache Spark](https://academy.alphazetta.ai/advanced-analytics-using-apache-spark/)
+
+:::
 
 Curiously enough, the first project I had been involved with for some years that did not feature the Apache Spark project was a green field GCP project which got me thinking… where does Spark fit into the GCP landscape?
 
@@ -38,9 +47,7 @@ Every Spark application contains several components regardless of deployment mod
 
 Each component has a specific role in executing a Spark program and all of the Spark components run in Java virtual machines (JVMs).
 
-[![](images/spark-runtime.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/spark-runtime.png)
-
-Spark Runtime Architecture
+[![Spark Runtime Architecture](images/spark-runtime.png)](images/spark-runtime.png)
 
 Cluster Managers schedule and manage distributed resources (compute and memory) across the nodes of the cluster. Cluster Managers available for Spark include:
 
@@ -73,15 +80,15 @@ DataProc is integrated into Cloud IAM using various coarse grained permissions u
 
 Spark jobs can be submitted using the console or via `gcloud dataproc jobs submit` as shown here:
 
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/dataproc-spark-job.png?fit=840%2C382&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/dataproc-spark-job.png)
-
-Submitting a Spark Job using gcloud dataproc jobs submit
+[![Submitting a Spark Job using gcloud dataproc jobs submit](images/dataproc-spark-job.png)](images/dataproc-spark-job.png)
 
 Cluster logs are natively available in StackDriver and standard out from the Spark Driver is visible from the console as well as via `gcloud` commands.
 
 Complex Workflows can be created by adding Jobs as Steps in Workflow Templates using the following command:
 
+```
 gcloud dataproc workflow-templates add-job spark
+```
 
 #### Optional Components and the Component Gateway
 
@@ -97,9 +104,7 @@ Links to the component UIs as well as built in UIs like the YARN Resource Manage
 
 Jupyter is a popular notebook application in the data science and analytics communities used for reproducible research. DataProc’s Jupyter component provides a ready-made Spark application vector using PySpark. If you have also installed the Anaconda component you will have access to the full complement of scientific and mathematic Python packages such as Pandas and NumPy which can be used in Jupyter notebooks as well. Using the Component Gateway, Jupyer notebooks can be accessed directly from the Google console as shown here:
 
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/dataproc-jupyter-notebook.png?fit=840%2C571&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/dataproc-jupyter-notebook.png)
-
-Jupyter Notebooks using DataProc
+[![Jupyter Notebooks using DataProc](images/dataproc-jupyter-notebook.png)](images/dataproc-jupyter-notebook.png)
 
 From this example you can see that I accessed source data from a GCS bucket and used HDFS as local scratch space.
 

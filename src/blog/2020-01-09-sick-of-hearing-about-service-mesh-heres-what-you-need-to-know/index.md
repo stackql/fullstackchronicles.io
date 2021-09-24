@@ -1,14 +1,21 @@
 ---
+slug: "sick-of-hearing-about-service-mesh-heres-what-you-need-to-know"
 title: "Sick of hearing about Service Mesh? Here’s what you need to know..."
-date: "2020-01-09"
-categories: 
-  - "cloud-learnings"
+authors:	
+  - tomklimovski
+draft: false
+hide_table_of_contents: true
+image: "images/service-mesh-1.png"
 tags: 
   - "k8s"
   - "kubernetes"
   - "service-mesh"
   - "servicemesh"
-coverImage: "service-mesh-1.png"
+keywords:	
+  - "k8s"
+  - "kubernetes"
+  - "service-mesh"
+  - "servicemesh"
 ---
 
 So you’ve started delivering a new project and it’s all about this “Cloud Native” or “Microservices” thing. You’re a Delivery Manager or Software Engineer at some type of company and someone has lightly peppered a meeting with a term, ‘Mesh’.
@@ -46,6 +53,6 @@ Back to the service mesh, these userspace proxies are L7-aware TCP proxies. Thin
 
 Ok, probably time for a diagram now that we’ve explained the Data Plane.
 
-[![](images/service-mesh.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/service-mesh.png)
+[![](images/service-mesh.png)](images/service-mesh.png)
 
 Tune in for part 2 for when we discuss the Control Plane!

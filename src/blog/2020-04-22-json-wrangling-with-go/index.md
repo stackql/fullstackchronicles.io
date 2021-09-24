@@ -1,13 +1,20 @@
 ---
+slug: "json-wrangling-with-go"
 title: "JSON Wrangling with Go"
-date: "2020-04-22"
-categories: 
-  - "engineering-patterns"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/json-go.png"
 tags: 
   - "golang"
   - "json"
-coverImage: "json-go.png"
+keywords:	
+  - "golang"
+  - "json"
 ---
+
+import Gist from 'react-gist';
 
 Golang is a fantastic language but at first glance it is a bit clumsy when it comes to JSON in contrast to other languages such as Python or Javascript. Having said that once you master the concepts involved with JSON wrangling using Go it is equally as functional – with added type safety and performance.
 
@@ -19,15 +26,18 @@ The program has `describe` and `select` verbs as operation types; describe shows
 
 Starting with this:
 
-<script src="https://gist.github.com/jeffreyaven/cceeb5b667ccfe8a9e20437d3f1dde42.js"></script>
+<Gist id="cceeb5b667ccfe8a9e20437d3f1dde42" 
+/>
 
 We will end up with this when performing a `describe` operation:
 
-<script src="https://gist.github.com/jeffreyaven/fbd04c220a70d439df3a14d4a4f48a3e.js"></script>
+<Gist id="fbd04c220a70d439df3a14d4a4f48a3e" 
+/>
 
 And this when performing a `select` operation:
 
-<script src="https://gist.github.com/jeffreyaven/0b795b13b160cfbcd6796243c0fbb238.js"></script>
+<Gist id="0b795b13b160cfbcd6796243c0fbb238" 
+/>
 
 Now let’s talk about how we got there…
 
@@ -35,31 +45,36 @@ Now let’s talk about how we got there…
 
 Support for JSON in Go is provided using the `encoding/json` package, this needs to be imported in your program of course… You will also need to import the `reflect` package – more on this later. `io/ioutil` is required to read the data from a file input, there are other packages included in the program that are removed for brevity:
 
-<script src="https://gist.github.com/jeffreyaven/def7e02eac07ded8b80ff807cf023989.js"></script>
+<Gist id="def7e02eac07ded8b80ff807cf023989" 
+/>
 
 ## Reading the data…
 
 We will read the data from the JSON file into a variable called `body`, note that we are not attempting to deserialize the data at this point. This is also a good opportunity to handle any runtime or IO errors that occur here as well.
 
-<script src="https://gist.github.com/jeffreyaven/74a2c2c839a30ed8cc66d83d3ddde3b4.js"></script>
+<Gist id="74a2c2c839a30ed8cc66d83d3ddde3b4" 
+/>
 
 ## The interface…
 
 We will declare an empty interface called `data` which will be used to decode the json object (of which the structure is not known), we will also create an abstract interface called `colldata` to hold the contents of the collection contained inside the JSON object that we are specifically looking for:
 
-<script src="https://gist.github.com/jeffreyaven/32555f65af4be1fc2504f2d11e15aa19.js"></script>
+<Gist id="32555f65af4be1fc2504f2d11e15aa19" 
+/>
 
 ## Validating…
 
 Next we need to validate that the input is a valid JSON object, we can use the `json.Valid(body)` method to do this:
 
-<script src="https://gist.github.com/jeffreyaven/c7afe41fcca4ba1e3ed009044cea76de.js"></script>
+<Gist id="c7afe41fcca4ba1e3ed009044cea76de" 
+/>
 
 ## Unmarshalling…
 
 Now the interesting bits, we will deserialize the JSON object to the empty data interface we created earlier using the `json.Unmarshal()` method:
 
-<script src="https://gist.github.com/jeffreyaven/2579ec79be915fb89e91ea0977bfbff6.js"></script>
+<Gist id="2579ec79be915fb89e91ea0977bfbff6" 
+/>
 
 Note that this operation is another opportunity to catch unexpected errors and handle them accordingly.
 
@@ -67,17 +82,20 @@ Note that this operation is another opportunity to catch unexpected errors and h
 
 Now that we have serialized the JSON object into the data interface, there are several ways we can inspect the type of the object (which could be a map or an array). One such way is to use reflection. Reflection is the ability of a program to inspect itself at runtime. An example is shown here:
 
-<script src="https://gist.github.com/jeffreyaven/1ccd077de0fdee8973e25ac79719cbf5.js"></script>
+<Gist id="1ccd077de0fdee8973e25ac79719cbf5" 
+/>
 
 This instruction would produce the following output for our `zones.json` file:
 
-<script src="https://gist.github.com/jeffreyaven/04c1b3ae79e969e4be32ef7fa1c07736.js"></script>
+<Gist id="04c1b3ae79e969e4be32ef7fa1c07736" 
+/>
 
 ## The type switch…
 
 Another method to decode the type of the data object (and any objects nested as elements or keys within the data object), is to use the type switch, an example of a type switch function is shown here:
 
-<script src="https://gist.github.com/jeffreyaven/2e7a3d62ec6f7c71a9c01bfa8d360e4e.js"></script>
+<Gist id="2e7a3d62ec6f7c71a9c01bfa8d360e4e" 
+/>
 
 ## Finding the nested collection and recursing it…
 

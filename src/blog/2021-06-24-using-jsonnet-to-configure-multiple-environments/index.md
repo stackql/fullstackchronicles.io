@@ -1,8 +1,10 @@
 ---
+slug: "using-jsonnet-to-configure-multiple-environments"
 title: "Using Jsonnet to Configure Multiple Environments"
-date: "2021-06-24"
-categories: 
-  - "engineering-patterns"
+authors:	
+  - markstella
+draft: false
+hide_table_of_contents: true
 tags: 
   - "ci-cd"
   - "configuration"
@@ -11,11 +13,6 @@ tags:
   - "hocon"
   - "json"
   - "jsonnet"
-slug: "2021-06-24-using-jsonnet-to-configure-multiple-environments"
-authors:	
-  - markstella
-draft: false
-hide_table_of_contents: true
 keywords:	
   - "ci-cd"
   - "configuration"
@@ -24,7 +21,6 @@ keywords:
   - "hocon"
   - "json"
   - "jsonnet"
-image: "changes-ahead.jpg"  
 ---
 
 Everytime I start a new project I try and optimise how the application can work across multiple envronments. For those who don't have the luxury of developing everything in docker containers or isolated spaces, you will know my pain. How do I write code that can run on my local `dev` environment, migrate to the shared `test` and `ci` environment and ultimately still work in `production`.

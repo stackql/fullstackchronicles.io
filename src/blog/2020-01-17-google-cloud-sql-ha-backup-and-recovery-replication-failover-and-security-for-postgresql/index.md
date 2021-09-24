@@ -1,9 +1,11 @@
 ---
+slug: "google-cloud-sql-ha-backup-and-recovery-replication-failover-and-security-for-postgresql"
 title: "Google Cloud SQL – Availability, Replication, Failover for PostgreSQL – Part I"
-date: "2020-01-17"
-categories: 
-  - "cloud-deployment-templates"
-  - "cloud-learnings"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/cloudsql-featured-image.png"
 tags: 
   - "cloudsql"
   - "gcp"
@@ -12,7 +14,14 @@ tags:
   - "ha"
   - "highavailability"
   - "postgresql"
-coverImage: "cloudsql-featured-image.png"
+keywords:	
+  - "cloudsql"
+  - "gcp"
+  - "google-cloud-platform"
+  - "googlecloudplatform"
+  - "ha"
+  - "highavailability"
+  - "postgresql"
 ---
 
 In this multi part blog we will explore the features available in Google Cloud SQL for High Availability, Backup and Recovery, Replication and Failover and Security (at rest and in transit) for the PostgreSQL DBMS engine. Some of these features are relatively hot of the press and in Beta – which still makes them available for general use.
@@ -41,90 +50,96 @@ A shared IP address (like a Virtual IP) is used to serve traffic to the healthy 
 
 An overview of Cloud SQL HA is shown here:
 
-[![](images/cloud-sql-ha.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha.png)
-
-Cloud SQL High Availability
+[![Cloud SQL High Availability](images/cloud-sql-ha.png)](images/cloud-sql-ha.png)
 
 ## Implementing High Availability for Cloud SQL
 
 Implementing Regional Availability for Cloud SQL is dead simple, it is one argument:
 
-availability\_type = "REGIONAL"
+```
+availability_type = "REGIONAL"
+```
 
 Using the `gcloud` command line utility, this would be:
 
-gcloud sql instances create postgresql-instance-1234 \\
-  --availability-type=REGIONAL \\
-  --database-version= POSTGRES\_9\_6
+```
+gcloud sql instances create postgresql-instance-1234 \
+  --availability-type=REGIONAL \
+  --database-version= POSTGRES_9_6
+```
 
 Using Terraform (with a complete set of options) it would look like:
 
-resource "google\_sql\_database\_instance" "postgres\_ha" {
+```
+resource "google_sql_database_instance" "postgres_ha" {
   provider = google-beta
   region = var.region
   project = var.project
-  name = "postgresql-instance-${random\_id.instance\_suffix.hex}"
-  database\_version = "POSTGRES\_9\_6"
+  name = "postgresql-instance-${random_id.instance_suffix.hex}"
+  database_version = "POSTGRES_9_6"
   settings {
    tier = var.tier
-   disk\_size = var.disk\_size
-   activation\_policy = "ALWAYS"
-   disk\_autoresize = true
-   disk\_type = "PD\_SSD"
-   **availability\_type = "REGIONAL"**
-   backup\_configuration {
+   disk_size = var.disk_size
+   activation_policy = "ALWAYS"
+   disk_autoresize = true
+   disk_type = "PD_SSD"
+   **availability_type = "REGIONAL"**
+   backup_configuration {
      enabled = true
-     start\_time = "00:00"
+     start_time = "00:00"
    }
-   ip\_configuration  {
-     ipv4\_enabled = false
-     private\_network = google\_compute\_network.private\_network.self\_link
+   ip_configuration  {
+     ipv4_enabled = false
+     private_network = google_compute_network.private_network.self_link
    }
-   maintenance\_window  {
+   maintenance_window  {
      day = 7
      hour = 0
-     update\_track = "stable"
+     update_track = "stable"
    }
   }
  } 
+```
 
-Once deployed you will notice a few different items in the console, first from the instance overview page you can see that the High Availability option is ENABLED for your instance.
+Once deployed you will notice a few different items in the console, first from the instance overview page you can see that the High Availability option is `ENABLED` for your instance.
 
-[![](https://i2.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-1.png?fit=840%2C286&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-1.png)
+[![](images/cloud-sql-ha-1.png)](images/cloud-sql-ha-1.png)
 
 Second, you will see a Failover button enabled on the detailed management view for this instance.
 
-[![](https://i0.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-2.png?fit=840%2C392&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-2.png)
+[![](images/cloud-sql-ha-2.png)](images/cloud-sql-ha-2.png)
 
 ## Failover
 
 Failovers and failbacks can be initiated manually or automatically (should the primary be unresponsive). A manual failover can be invoked by executing the command:
 
+```
 gcloud sql instances failover postgresql-instance-1234
+```
 
 There is an `--async` option which will return immediately, invoking the failover operation asynchronously.
 
 Failover can also be invoked from the Cloud Console using the Failover button shown previously. As an example I have created a connection to a regionally available Cloud SQL instance and started a command which runs a loop and prints out a counter:
 
-[![](https://i0.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-3.png?fit=840%2C455&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-3.png)
+[![](images/cloud-sql-ha-3.png)](images/cloud-sql-ha-3.png)
 
 Now using the `gcloud` command shown earlier, I have invoked a manual failover of the Cloud SQL instance.
 
 Once the failover is initiated, the client connection is dropped (as the server is momentarily unavailable):
 
-[![](https://i2.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-4.png?fit=840%2C455&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-4.png)
+[![](images/cloud-sql-ha-4.png)](images/cloud-sql-ha-4.png)
 
 The connection can be immediately re-established afterwards, the state of the running query is lost - **_importantly no data is lost_** however. If your application clients had retry logic in their code and they weren't executing a long running query, chances are no one would notice! Once reconnecting normal database activities can be resumed:
 
-[![](images/cloud-sql-ha-5-1024x555.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-5.png)
+[![](images/cloud-sql-ha-5.png)](images/cloud-sql-ha-5.png)
 
 A quick check of the instance logs will show that the failover event has occured:
 
-[![](https://i1.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-6.png?fit=840%2C364&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-6.png)
+[![](images/cloud-sql-ha-6.png)](images/cloud-sql-ha-6.png)
 
 Now when you return to the instance page in the console you will see a Failback button, which indicates that your instance is being served by the standby:
 
-[![](https://i2.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-7.png?fit=840%2C435&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/cloud-sql-ha-screenshot-7.png)
+[![](images/cloud-sql-ha-7.png)](images/cloud-sql-ha-7.png)
 
 Note that there may be a slight delay in the availability of this option as the replica is still being synched.
 

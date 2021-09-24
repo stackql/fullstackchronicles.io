@@ -1,8 +1,11 @@
 ---
+slug: "query-cloud-sql-through-big-query"
 title: "Query Cloud SQL through Big Query"
-date: "2020-02-08"
-categories: 
-  - "cloud-deployment-templates"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/cloud-sql-federated-queries.png"
 tags: 
   - "big-query"
   - "bigquery"
@@ -10,8 +13,16 @@ tags:
   - "gcp"
   - "google-cloud-platform"
   - "googlecloudplatform"
-coverImage: "cloud-sql-federated-queries.png"
+keywords:	
+  - "big-query"
+  - "bigquery"
+  - "cloudsql"
+  - "gcp"
+  - "google-cloud-platform"
+  - "googlecloudplatform"
 ---
+
+import Gist from 'react-gist';
 
 This article demonstrates Cloud SQL federated queries for Big Query, a neat and simple to use feature.
 
@@ -48,21 +59,21 @@ This sounds bad, but it isn’t really that bad. You need to enable a public int
 
 Furthermore, you configure an empty list of authorized networks which effectively shields the instance from the public network, this can be configured in Terraform as shown here:
 
-<script src="https://gist.github.com/jeffreyaven/81c57a80a7e588b98ea7d294dbaee242.js"></script>
+<Gist id="81c57a80a7e588b98ea7d294dbaee242" 
+/>
 
 This configuration change can be made to a running instance as well as during the initial provisioning of the instance.
 
 As shown below you will get a warning dialog in the console saying that you have no authorized networks - this is by design.
 
-[![](https://i0.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/cloud-sql-publicip-screenshot.png?fit=840%2C572&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/cloud-sql-publicip-screenshot.png)
-
-Cloud SQL Public IP Enabled with No Authorized Networks
+[![Cloud SQL Public IP Enabled with No Authorized Networks](images/cloud-sql-publicip-screenshot.png)](images/cloud-sql-publicip-screenshot.png)
 
 ### Step 2. Create a Big Query dataset which will be used to execute the queries to Cloud SQL
 
 Connections to Cloud SQL are defined in a Big Query dataset, this can also be use to control access to Cloud SQL using authorized views controlled by IAM roles.
 
-<script src="https://gist.github.com/jeffreyaven/8a4beaab134a1c72613347b5822d1724.js"></script>
+<Gist id="8a4beaab134a1c72613347b5822d1724" 
+/>
 
 ### Step 3. Create a connection to Cloud SQL
 
@@ -70,11 +81,11 @@ To create a connection to Cloud SQL from Big Query you must first enable the Big
 
 As this is a fairly recent feature there isn't great coverage with either the **`bq`** tool or any of the Big Query client libraries to do this so we will need to use the console for now...
 
-Under the _**Resources**_ \-> **_Add Data_** link in the left hand panel of the Big Query console UI, select **_Create Connection_**. You will see a side info panel with a form to enter connection details for your Cloud SQL instance.
+Under the _**Resources**_ -> **_Add Data_** link in the left hand panel of the Big Query console UI, select **_Create Connection_**. You will see a side info panel with a form to enter connection details for your Cloud SQL instance.
 
 In this example I will setup a connection to a Cloud SQL read replica instance I have created:
 
-[![](images/big-query-add-connection.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/big-query-add-connection.png)
+[![](images/big-query-add-connection.png)](images/big-query-add-connection.png)
 
 Creating a Big Query Connection to Cloud SQL
 
@@ -82,22 +93,24 @@ More information on the Big Query Connections API can be found at: [https://clou
 
 The following permissions are associated with connections in Big Query:
 
+```
 bigquery.connections.create  
 bigquery.connections.get  
 bigquery.connections.list  
 bigquery.connections.use  
 bigquery.connections.update  
 bigquery.connections.delete
+```
 
 These permissions are conveniently combined into the following predefined roles:
 
+```
 roles/bigquery.connectionAdmin    (BigQuery Connection Admin)         
 roles/bigquery.connectionUser     (BigQuery Connection User)          
+```
 
 ### Step 4. Query away!
 
 Now the connection to Cloud SQL can be accessed using the **`EXTERNAL_QUERY`** function in Big Query, as shown here:
 
-[![](https://i2.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/cloud-sql-federated-queries-screenshot.png?fit=840%2C446&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/02/cloud-sql-federated-queries-screenshot.png)
-
-Querying Cloud SQL from Big Query
+[![Querying Cloud SQL from Big Query](images/cloud-sql-federated-queries-screenshot.png)](images/cloud-sql-federated-queries-screenshot.png)

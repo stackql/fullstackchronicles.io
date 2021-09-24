@@ -1,8 +1,11 @@
 ---
+slug: "cloud-bigtable-primer-part-ii-row-key-selection-and-schema-design"
 title: "Cloud Bigtable Primer Part II – Row Key Selection and Schema Design"
-date: "2020-09-13"
-categories: 
-  - "big-data-design-patterns"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/cbt-featured-image.png"
 tags: 
   - "bigtable"
   - "cloud-bigtable"
@@ -10,12 +13,18 @@ tags:
   - "google-cloud-platform"
   - "googlecloudplatform"
   - "nosql"
-coverImage: "cbt-featured-image.png"
+keywords:	
+  - "bigtable"
+  - "cloud-bigtable"
+  - "gcp"
+  - "google-cloud-platform"
+  - "googlecloudplatform"
+  - "nosql"
 ---
 
 This is a follow up to the original Cloud Bigtable primer where we discussed the basics of Cloud Bigtable:
 
-https://cloudywithachanceofbigdata.com/cloud-bigtable-primer-part-i/
+[__Cloud Bigtable Primer - Part I__](https://cloudywithachanceofbigdata.com/cloud-bigtable-primer-part-i/)
 
 In this article we will cover schema design and row key selection in Bigtable – arguably the most critical design decision to make when employing Bigtable in a cloud data architecture.
 
@@ -25,7 +34,7 @@ Recall from the previous post where the Bigtable data model was introduced that 
 
 Unlike a table in an RDBMS, columns only ever exist when they are inserted, and `NULLs` are not stored. See the illustration below:
 
-[![](images/bigtable-data-model.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/08/bigtable-data-model.png)
+[![](images/bigtable-data-model.png)](images/bigtable-data-model.png)
 
 ## Row Key Selection
 
@@ -46,7 +55,7 @@ Row key performance will be biased towards your specific access patterns and app
 
 Adding salts to keys (or additional data), similar to the use of salts in cryptography as well as promoting other field keys to be part of a composite row key can help achieve a “Goldilocks” scenario for both reads and writes, see the diagram below:
 
-[![](images/keys.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/09/keys.png)
+[![](images/keys.png)](images/keys.png)
 
 ### Using Reverse Timestamps
 
@@ -71,9 +80,7 @@ Google provides a neat tool to visualize your row key distribution in Cloud Bigt
 
 The Key Visualizer is shown here:
 
-[![](images/image.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/09/image.png)
-
-Bigtable Key Visualizer
+[![Bigtable Key Visualizer](images/image.png)](images/image.png)
 
 The Key Visualizer will help you find and prevent hotspots, find rows with too much data and show if your key schema is balanced.
 

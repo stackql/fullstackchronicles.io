@@ -1,8 +1,11 @@
 ---
+slug: "gcp-templates-for-c4-diagrams-using-plantuml"
 title: "GCP Templates for C4 Diagrams using PlantUML"
-date: "2020-08-14"
-categories: 
-  - "cloud-deployment-templates"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/gcp-c4.png"
 tags: 
   - "c4model"
   - "diagramming"
@@ -11,7 +14,14 @@ tags:
   - "googlecloudplatform"
   - "plantuml"
   - "software-architecture"
-coverImage: "gcp-c4.png"
+keywords:	
+  - "c4model"
+  - "diagramming"
+  - "gcp"
+  - "google-cloud-platform"
+  - "googlecloudplatform"
+  - "plantuml"
+  - "software-architecture"
 ---
 
 I am a believer in the mantra of _**“Everything-as-Code”**_, this includes diagrams and other architectural artefacts. Enter PlantUML…
@@ -30,6 +40,7 @@ PlantUML and C4 can be used to produce cloud architectures, there are official l
 
 The code below can be used to generate a C4 diagram describing a GCP architecture including official GCP service icons:
 
+```
 @startuml
 !define GCPPuml https://raw.githubusercontent.com/gamma-data/GCP-C4-PlantUML/master/templates
 
@@ -78,13 +89,15 @@ Rel(csqla, csqlb, "replication")
 Rel(publisher,bucket,"publish static content")
 
 @enduml
+```
 
 The preceding code generates the diagram below:
 
-[![](images/Sample-C4-Diagram-with-GCP-Icons-472x1024.png)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/08/Sample-C4-Diagram-with-GCP-Icons.png)
+[![](images/Sample-C4-Diagram-with-GCP-Icons.png)](images/Sample-C4-Diagram-with-GCP-Icons.png)
 
 Additional services can be added and used in your diagrams by adding them to your includes, such as:
 
+```
 !includeurl GCPPuml/DataAnalytics/BigQuery.puml
 !includeurl GCPPuml/DataAnalytics/CloudDataflow.puml
 !includeurl GCPPuml/AIandMachineLearning/AIHub.puml
@@ -95,6 +108,7 @@ Additional services can be added and used in your diagrams by adding them to you
 !includeurl GCPPuml/Migration/TransferAppliance.puml
 !includeurl GCPPuml/Security/CloudIAM.puml
 ' and more…
+```
 
 > The complete template library is available at:
 > 

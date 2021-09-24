@@ -1,9 +1,11 @@
 ---
+slug: "forseti-terraform-validator-enforcing-resource-policy-compliance-in-your-ci-pipeline"
 title: "Forseti Terraform Validator: Enforcing resource policy compliance in your CI pipeline"
-date: "2020-04-18"
-categories: 
-  - "cloud-deployment-templates"
-  - "engineering-patterns"
+authors:	
+  - danielhussey
+draft: false
+hide_table_of_contents: true
+image: "images/Forseti-Terraform-e1587291818418.png"
 tags: 
   - "devops"
   - "forseti"
@@ -12,7 +14,14 @@ tags:
   - "googlecloudplatform"
   - "policyascode"
   - "terraform"
-coverImage: "Forseti-Terraform-e1587291818418.png"
+keywords:	
+  - "devops"
+  - "forseti"
+  - "gcp"
+  - "google-cloud-platform"
+  - "googlecloudplatform"
+  - "policyascode"
+  - "terraform"
 ---
 
 Terraform is a powerful tool for managing your Infrastructure as Code. Declare your resources once, define their variables per environment and sleep easy knowing your CI pipeline will take care of the rest.
@@ -76,26 +85,31 @@ As discussed in Concepts, Constraints are defined Templates, which make use of R
 
 In a new branch…
 
-1. Copy the sample Constraint storage\_location.yaml to your Constraints folder.  
-    
-    $ cp policy-library/samples/storage\_location.yaml policy-library/policies/constraints/storage\_location.yaml
-    
+1. Copy the sample Constraint `storage_location.yaml` to your Constraints folder.  
+
+```bash    
+$ cp policy-library/samples/storage_location.yaml policy-library/policies/constraints/storage_location.yaml
+```
+
 2. Replace the sample location (`asia-southeast1`) in `storage_location.yaml` with `australia-southeast1`.  
-    
-    spec:  
-      severity: high  
-      match:  
-       target: \["organization/\*"\]  
-      parameters:  
-       mode: "allowlist"  
-       locations:  
-       - australia-southeast1  
-       exemptions: \[\]
-    
+
+```yaml    
+  spec:  
+    severity: high  
+    match:  
+      target: ["organization/*"]  
+    parameters:  
+      mode: "allowlist"  
+      locations:  
+      - australia-southeast1  
+      exemptions: []
+```
+
 3. Push back to your repo - not Forseti’s!  
     
-    $ git push https://github.com/__your-repository__/policy-library.git
-    
+```bash
+$ git push https://github.com/<your-repository>/policy-library.git
+```    
 
 #### Policy review
 
@@ -121,15 +135,21 @@ Check for the latest version of `terraform-validator` from the official terrafor
 
 Very important when using tf version 0.12 or greater. This is the easy way - you can pull from the [Terraform Validator Github](https://github.com/GoogleCloudPlatform/terraform-validator) and make it yourself too.
 
+```bash
 $ gsutil ls -r gs://terraform-validator/releases
+```
 
 Copy the latest version to the working dir
 
+```bash
 $ gsutil cp gs://terraform-validator/releases/2020-03-05/terraform-validator-linux-amd64 .
+```
 
 Make it executable
 
+```bash
 $ chmod 755 terraform-validator-linux-amd64
+```
 
 Ready to go!
 
@@ -137,22 +157,24 @@ Ready to go!
 
 We’re going to make a ridiculously simple piece of Terraform that tries to create one bucket in our project to keep things simple.
 
-main.tf
+```
+# main.tf
 
-resource "google\_storage\_bucket" "tf-validator-demo-bucket" {  
-  name          **\=** "tf-validator-demo-bucket"
-  location      **\=** "US"
-  force\_destroy **\=** **true**
+resource "google_storage_bucket" "tf-validator-demo-bucket" {  
+  name          = "tf-validator-demo-bucket"
+  location      = "US"
+  force_destroy = true
 
-  lifecycle\_rule {
+  lifecycle_rule {
     condition {
-      age **\=** "3"
+      age = "3"
     }
     action {
-      type **\=** "Delete"
+      type = "Delete"
     }
   }
 }
+```
 
 This is a pretty standard bit of Terraform for a GCS bucket, but made very simple with all the values defined directly in `main.tf`. Note the location of the bucket - it violates our Constraint that was set to the `australia-southeast1` region.
 
@@ -161,35 +183,49 @@ This is a pretty standard bit of Terraform for a GCS bucket, but made very simpl
 Warm up Terraform.  
 Double check your Terraform code if there are any hiccups.
 
+```bash
 $ terraform init
+```
 
 Make the Terraform plan and store output to file.
 
+```bash
 $ terraform plan --out=terraform.tfplan
+```
 
 Convert the plan to JSON
 
+```bash
 $ terraform show -json ./terraform.tfplan > ./terraform.tfplan.json
+```
 
 ### Validate the non-compliant Terraform plan against your Constraints, for example
 
+```bash
 $ ./terraform-validator-linux-amd64 validate ./tfplan.tfplan.json --policy-path=../repos/policy-library/
+```
 
 TA-DA!
 
+```
 Found Violations:
 
-Constraint allow\_some\_storage\_location on resource //storage.googleapis.com/tf-validator-demo-bucket: //storage.googleapis.com/tf-validator-demo-bucket is in a disallowed location.
+Constraint allow_some_storage_location on resource //storage.googleapis.com/tf-validator-demo-bucket: //storage.googleapis.com/tf-validator-demo-bucket is in a disallowed location.
+```
 
 ### Validate the compliant Terraform plan against your Constraints
 
 Let’s see what happens if we repeat the above, changing the location of our GCS bucket to `australia-southeast1`.
 
+```bash
 $ ./terraform-validator-linux-amd64 validate ./tfplan.tfplan.json --policy-path=../repos/policy-library/
+```
 
 Results in..
 
+```
 No violations found.
+```
 
 Success!!!
 
@@ -210,9 +246,7 @@ As mentioned there are [dozens upon dozens of samples](https://github.com/forset
 Of course, we stored these configured Constraints in our version-controlled Policy Library.
 
 - We looked at a simple set of Terraform code to define a GCS bucket, and stored the Terraform plan to a file before applying it.
-
 - We ran Forseti’s Terraform Validator against the Terraform plan file, and had the Validator compare the plan to our Policy Library.
-
 - We saw that the results matched our expectations! Compliance with the location specified in our Constraint passed the Validator’s checks, and non-compliance triggered a violation.
 
 Awesome. And the best part is that all this required no special permissions, no infrastructure for servers or agents and no networking.

@@ -1,9 +1,15 @@
 ---
+slug: "simple-tasker-configuration-driven-orchestration"
 title: "Simple Tasker: Configuration driven orchestration"
-date: "2021-06-15"
-categories: 
-  - "engineering-patterns"
+authors:	
+  - markstella
+draft: false
+hide_table_of_contents: true
 tags: 
+  - "data-lineage"
+  - "orchestration"
+  - "python"
+keywords:	
   - "data-lineage"
   - "orchestration"
   - "python"

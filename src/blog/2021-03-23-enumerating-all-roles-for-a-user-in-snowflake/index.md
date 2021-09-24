@@ -1,10 +1,11 @@
 ---
+slug: "enumerating-all-roles-for-a-user-in-snowflake"
 title: "Enumerating all roles for a user in Snowflake"
-date: "2021-03-23"
-categories: 
-  - "big-data-design-patterns"
-  - "cloud-deployment-templates"
-  - "engineering-patterns"
+authors:	
+  - jeffreyaven
+draft: false
+hide_table_of_contents: true
+image: "images/snowflake.png"
 tags: 
   - "javascript"
   - "rbac"
@@ -14,8 +15,18 @@ tags:
   - "stored-procedure"
   - "tail-call-recursion"
   - "tailcall"
-coverImage: "snowflake.png"
+keywords:	
+  - "javascript"
+  - "rbac"
+  - "roles"
+  - "snowflake"
+  - "sql"
+  - "stored-procedure"
+  - "tail-call-recursion"
+  - "tailcall"
 ---
+
+import Gist from 'react-gist';
 
 Snowflake allows roles to be assigned to other roles, so when a user is assigned to a role, they may inherit the ability to use countless other roles.
 
@@ -27,17 +38,20 @@ An easier solution is to use a stored procedure to recurse through grants for a 
 
 This is a good programming exercise in tail call recursion (sort of) in JavaScript. Here is the code:
 
-<script src="https://gist.github.com/9b9985dbf8163ade22b71f2ccf20cb51.js"></script>
+<Gist id="9b9985dbf8163ade22b71f2ccf20cb51" 
+/>
 
 To call the stored proc, execute:
 
-<script src="https://gist.github.com/fbbfaa3b67af828e4d905411567cd031.js"></script>
+<Gist id="fbbfaa3b67af828e4d905411567cd031" 
+/>
 
 One drawback of stored procedures in Snowflake is that they can only have scalar or array return types and cannot be used directly in a SQL query, however you can use the `table(result_scan(last_query_id()))` trick to get around this, as shown below where we will pivot the `ARRAY` into a record set with the array elements as rows:
 
-<script src="https://gist.github.com/6a7e8bc552b87ab1e039f22bacf1b65f.js"></script>
+<Gist id="6a7e8bc552b87ab1e039f22bacf1b65f" 
+/>
 
-IMPORTANT
+__IMPORTANT__
 
 This query **must** be the next statement run immediately after the `CALL` statement and cannot be run again until you run another `CALL` statement.
 

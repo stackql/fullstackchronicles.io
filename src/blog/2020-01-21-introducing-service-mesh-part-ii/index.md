@@ -1,19 +1,26 @@
 ---
+slug: "introducing-service-mesh-part-ii"
 title: "Introducing Service Mesh Part II"
-date: "2020-01-21"
-categories: 
-  - "cloud-learnings"
+authors:	
+  - tomklimovski
+draft: false
+hide_table_of_contents: true
+image: "images/service-mesh-1.png"
 tags: 
   - "k8s"
   - "kubernetes"
   - "service-mesh"
   - "servicemesh"
-coverImage: "service-mesh-1.png"
+keywords:	
+  - "k8s"
+  - "kubernetes"
+  - "service-mesh"
+  - "servicemesh"
 ---
 
 This is a follow up to the previous post:
 
-https://cloudywithachanceofbigdata.com/sick-of-hearing-about-service-mesh-heres-what-you-need-to-know/
+[__Sick of hearing about Service Mesh? Here’s what you need to know...__](https://cloudywithachanceofbigdata.com/sick-of-hearing-about-service-mesh-heres-what-you-need-to-know/)
 
 ## Refresher
 
@@ -30,7 +37,7 @@ The control plane is slightly less complex. For the data plane to act in a coord
 
 You can see from the diagram below the proxies are right next to the service in the same node. We usually call those 'sidecar' containers.
 
-[![](https://i2.wp.com/www.cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/control-data-plane.png?fit=840%2C542&ssl=1)](https://cloudywithachanceofbigdata.com/wp-content/uploads/2020/01/control-data-plane.png)
+[![](images/control-data-plane.png)](images/control-data-plane.png)
 
 The diagram above gives you a high level indication of what the service mesh would look like. What if I don't have many services? Then the service mesh probably isn't for you. That's a whole lot of machinery to run a single proxy! Having said this, if your solution is running hundreds or thousands of services, then you're going to require a whole heap of proxies.
 

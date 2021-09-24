@@ -1,10 +1,15 @@
 ---
+slug: "introducing-the-metadata-hub-mdh"
 title: "Introducing the Metadata Hub (MDH)"
-date: "2021-06-15"
-categories: 
-  - "big-data-design-patterns"
-  - "engineering-patterns"
+authors:	
+  - tomklimovski
+draft: false
+hide_table_of_contents: true
 tags: 
+  - "gcp"
+  - "google-cloud-platform"
+  - "metadata"
+keywords:	
   - "gcp"
   - "google-cloud-platform"
   - "metadata"
@@ -16,9 +21,9 @@ Metadata Hub (MDH) is intended to be the source of truth for metadata around the
 
 > **Config-Driven**. Anyone who has been authorized to do so, should be able to add another ‘table-info.yaml’ in to MDH without the need to update any code in the system
 
-Here’s how table information makes its way into MDH: ![mdh-overview](images/mdh-overview.png)
+Here’s how table information makes its way into MDH: [![mdh-overview](images/mdh-overview.png)](images/mdh-overview.png)  
 
-Paths
+### Paths
 
 |  |  |  |  |
 | --- | --- | --- | --- |
@@ -60,11 +65,11 @@ For highly related or hierarchical data, Datastore allows entities to be stored 
 
 ### Entity Group
 
-![erd](images/erd.png)
+[![erd](images/erd.png)](images/erd.png)
 
-_This is an example of an entity group with kinds of types: table, column, and classification. The ‘Grandparent’ in this relationship is the ‘table’. In order to configure this, one must first create the table entity. Then, a user can create a column, and specify that the parent is a table key. In order to create the grandchild, a user then creates a classification and sets its parent to be a column key. To further add customizable attributes, a user can specify additional key-value pairs such as pii and data\_type. These key-value pairs are stored as properties. We model this diagram in Datastore in our working example below._
+_This is an example of an entity group with kinds of types: table, column, and classification. The ‘Grandparent’ in this relationship is the ‘table’. In order to configure this, one must first create the table entity. Then, a user can create a column, and specify that the parent is a table key. In order to create the grandchild, a user then creates a classification and sets its parent to be a column key. To further add customizable attributes, a user can specify additional key-value pairs such as pii and data_type. These key-value pairs are stored as properties. We model this diagram in Datastore in our working example below._
 
-One can create entity groups by setting the ‘parent’ parameter while creating an entity key for a child. This command adds the parent key to be part of the child entity key. The child’s key is represented as a tuple (‘parent\_key’, ‘child\_key’), such that the parents’ key is the prefix of the key, which is followed by its own unique identifier. For example, follow the diagram above:
+One can create entity groups by setting the ‘parent’ parameter while creating an entity key for a child. This command adds the parent key to be part of the child entity key. The child’s key is represented as a tuple (‘parent_key’, ‘child_key’), such that the parents’ key is the prefix of the key, which is followed by its own unique identifier. For example, follow the diagram above:
 
 ```python
 table_key = datastore_client.key("table","broker")
@@ -73,7 +78,7 @@ column_key = datastore_client.key("column","broker_legal_name", parent=table_key
 
 Printing the variable `table_key` will display: `("table", "broker","column", "broker_legal_name")`
 
-Datastore also supports chaining of parents, which can lead to very large keys for descendants with a long lineage of ancestors. Additionally, parents can have multiple children (representing a one-to-many relationship). However, there is no native support for entities to have multiple parents (representing a many-to-many relationship). Once you have configured this ancestral hierarchy, it is easy to retrieve all descendants for a given parent. You can do this by querying on the parent key by using the ‘ancestor’ parameter. For example, given the entity table\_key created above, I can query for all of the tables
+Datastore also supports chaining of parents, which can lead to very large keys for descendants with a long lineage of ancestors. Additionally, parents can have multiple children (representing a one-to-many relationship). However, there is no native support for entities to have multiple parents (representing a many-to-many relationship). Once you have configured this ancestral hierarchy, it is easy to retrieve all descendants for a given parent. You can do this by querying on the parent key by using the ‘ancestor’ parameter. For example, given the entity table_key created above, I can query for all of the tables
 
 ```python
 columns: my_query = client.query(kind="table", ancestor = column_key) .
@@ -130,7 +135,7 @@ for entity in my_entities:
 
 The code above assumes that you’ve set yourself up with a working Service Account or authorised yourself in, and that your GCP project has been set.
 
-Now let’s do some digging around our newly minted Datastore model. Let’s grab the column ‘broker\_legal\_name’
+Now let’s do some digging around our newly minted Datastore model. Let’s grab the column ‘broker_legal_name’
 
 ```python
 query1 = datastore_client.query(kind="column")
@@ -153,7 +158,7 @@ for classification in list(query2.fetch()):
     print(classification["restriction_level"])
 ```
 
-For more complex queries, Datastore has the concept of indexes being set, usually via it’s index.yaml configuration. The following is an example of an index.yaml file:
+For more complex queries, Datastore has the concept of indexes being set, usually via it’s index.yaml configuration. The following is an example of an `index.yaml` file:
 
 ```yaml
 indexes:
