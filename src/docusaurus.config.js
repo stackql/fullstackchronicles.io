@@ -25,7 +25,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           editUrl:
             'https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io/tree/main/src/blog',
             blogTitle: 'Cloudy with a chance of Big Data',
-            blogDescription: 'Cloud and data design patterns',
+            blogDescription: 'Cloud and data design patterns and random musings',
             postsPerPage: 5,
             blogSidebarTitle: 'Recent Posts',
             blogSidebarCount: 10,
