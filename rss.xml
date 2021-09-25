@@ -4,9 +4,16 @@
         <title>Cloudy with a chance of Big Data Blog Feed</title>
         <link>https://cloudywithachanceofbigdata.github.io/</link>
         <description>Cloud and data design patterns</description>
-        <lastBuildDate>Thu, 24 Jun 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 26 Sep 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[From Wordpress to Jamstack]]></title>
+            <link>https://cloudywithachanceofbigdata.github.io/from-wordpress-to-jamstack</link>
+            <guid>from-wordpress-to-jamstack</guid>
+            <pubDate>Sun, 26 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[I started this blog a few years back to chronicle my journeys through building cloud data platforms, along the way I gathered some friends to share their experiences as well.  The easiest platform to start this blog on was Wordpress.  This worked, but wasnt really aligned with the way myself and my collegues worked,and didnt really align with the types of things we were writing about in blog articles or embracing as general principles... e.g. 'everything-as-code', 'gitops', etc.]]></description>
+        </item>
         <item>
             <title><![CDATA[Using Jsonnet to Configure Multiple Environments]]></title>
             <link>https://cloudywithachanceofbigdata.github.io/using-jsonnet-to-configure-multiple-environments</link>
@@ -312,7 +319,7 @@
             <title><![CDATA[The Cost of Future Change]]></title>
             <link>https://cloudywithachanceofbigdata.github.io/cost-of-future-change</link>
             <guid>cost-of-future-change</guid>
-            <pubDate>Sat, 08 Dec 2018 00:00:00 GMT</pubDate>
+            <pubDate>Tue, 01 Jan 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[what we should really be focused on (but no one is…)]]></description>
         </item>
     </channel>

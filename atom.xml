@@ -2,11 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cloudywithachanceofbigdata.github.io/</id>
     <title>Cloudy with a chance of Big Data Blog Feed</title>
-    <updated>2021-06-24T00:00:00.000Z</updated>
+    <updated>2021-09-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cloudywithachanceofbigdata.github.io/"/>
     <subtitle>Cloud and data design patterns</subtitle>
     <icon>https://cloudywithachanceofbigdata.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[From Wordpress to Jamstack]]></title>
+        <id>from-wordpress-to-jamstack</id>
+        <link href="https://cloudywithachanceofbigdata.github.io/from-wordpress-to-jamstack"/>
+        <updated>2021-09-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I started this blog a few years back to chronicle my journeys through building cloud data platforms, along the way I gathered some friends to share their experiences as well.  The easiest platform to start this blog on was Wordpress.  This worked, but wasnt really aligned with the way myself and my collegues worked,and didnt really align with the types of things we were writing about in blog articles or embracing as general principles... e.g. 'everything-as-code', 'gitops', etc.]]></summary>
+        <author>
+            <name>Jeffrey Aven</name>
+            <uri>https://www.linkedin.com/in/jeffreyaven/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Using Jsonnet to Configure Multiple Environments]]></title>
         <id>using-jsonnet-to-configure-multiple-environments</id>
@@ -484,7 +495,7 @@
         <title type="html"><![CDATA[The Cost of Future Change]]></title>
         <id>cost-of-future-change</id>
         <link href="https://cloudywithachanceofbigdata.github.io/cost-of-future-change"/>
-        <updated>2018-12-08T00:00:00.000Z</updated>
+        <updated>2019-01-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[what we should really be focused on (but no one is…)]]></summary>
         <author>
             <name>Jeffrey Aven</name>
