@@ -38,6 +38,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {},
       }),
     ],
   ],
@@ -45,6 +46,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      gtag: {
+        trackingID: 'G-4N6KSJ2G0P',
+        anonymizeIP: false,
+      },       
       navbar: {
         title: 'Cloudy with a chance of Big Data',
         hideOnScroll: true,
