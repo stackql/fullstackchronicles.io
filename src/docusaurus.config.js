@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'Cloudy with a chance of Big Data',
   tagline: 'Cloud and data design patterns and random musings',
-  url: 'https://cloudywithachanceofbigdata.github.io',
+  url: 'https://cloudywithachanceofbigdata.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
