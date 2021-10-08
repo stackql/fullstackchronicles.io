@@ -46,6 +46,21 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        apiKey: 'efc14c8c9dee8f07abff3286bae8780a',
+        indexName: 'cloudywithachanceofbigdata',
+  
+        // Optional: see doc section below
+        contextualSearch: false,
+  
+        // Optional: see doc section below
+        // appId: 'YOUR_APP_ID',
+  
+        // Optional: Algolia search parameters
+        // searchParameters: {},
+  
+        //... other Algolia params
+      },
       gtag: {
         trackingID: 'G-4N6KSJ2G0P',
         anonymizeIP: false,
