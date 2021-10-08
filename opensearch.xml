@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Cloudy with a chance of Big Data</ShortName>
+  <Description>Search Cloudy with a chance of Big Data</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://cloudywithachanceofbigdata.com/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://cloudywithachanceofbigdata.com/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://cloudywithachanceofbigdata.com/opensearch.xml" />
+  <moz:SearchForm>https://cloudywithachanceofbigdata.com/</moz:SearchForm>
+</OpenSearchDescription>
