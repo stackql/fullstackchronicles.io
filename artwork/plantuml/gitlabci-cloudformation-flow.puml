@@ -1,0 +1,30 @@
+@startuml
+
+partition prepare {
+  (*) --> === S1 ===
+  === S1 === --> "Validate Template"
+  --> === S2 ===
+  === S1 === --> "Check Stack State"
+  --> === S2 ===
+}
+
+partition publish {
+  --> "Publish Template to S3"
+}
+
+partition plan {
+  -right-> "Stack Exists?"
+  --> === S3 ===
+  === S3 === --> [Yes] "Create Change Set"
+  === S3 === --> [No] === S4 ===
+  "Create Change Set" --> === S4 ===
+}
+
+partition deploy {
+  --> "MANUAL: Review Changes"
+  --> "Deploy Change Set"
+}
+
+-left->(*)
+
+@enduml
