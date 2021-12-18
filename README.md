@@ -28,6 +28,7 @@ This command generates static content into the `build` directory and can be serv
 ### Deployment
 
 ```
+cd src
 cmd /C 'set "GIT_USER=jeffreyaven" && set "USE_SSH=true" && set "DEPLOYMENT_BRANCH=gh-pages" && set "CURRENT_BRANCH=main" && yarn deploy'
 ```
 

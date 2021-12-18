@@ -189,7 +189,7 @@ To test the connectivity between your Snowflake account and your AWS external st
 Now list objects in the stage (assuming there are any).  
 
 ```js
-list @ledger_file_stage;
+list @my_stage;
 ```
 This should just work!  You can use your storage integration to create different stages for different paths in your External Stage bucket and use both of these objects to create Snowpipes for automated ingestion.  Enjoy!  
 
