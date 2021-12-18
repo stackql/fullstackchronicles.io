@@ -4,9 +4,63 @@
         <title>Cloudy with a chance of Big Data Blog Feed</title>
         <link>https://cloudywithachanceofbigdata.com/</link>
         <description>Cloud and data design patterns</description>
-        <lastBuildDate>Sun, 21 Nov 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 18 Dec 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Automating Snowflake Role Based Storage Integration for AWS]]></title>
+            <link>https://cloudywithachanceofbigdata.com/automating-snowflake-role-based-storage-integration-for-aws</link>
+            <guid>automating-snowflake-role-based-storage-integration-for-aws</guid>
+            <pubDate>Sat, 18 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Automate the creation of a Storage Integration in Snowflake which allows a Snowflake External Stage to access objects in your AWS S3 bucket.]]></description>
+            <content:encoded><![CDATA[<p>I have used the instructions <a href="https://docs.snowflake.com/en/user-guide/data-load-snowpipe-auto-s3.html">here</a> to configure Snowpipe for several projects.  </p><p>Although it is accurate, it is entirely click-ops oriented.  I like to automate (and script) everything, so I have created a fully automated implementation using PowerShell, the <code>aws</code> and <code>snowsql</code> CLIs.  </p><p>The challenge is that you need to go back and forth between AWS and Snowflake, exchanging information from each platform with the other.  </p><h2>Overview</h2><p>A Role Based Storage Integration in Snowflake allows a user (an AWS user arn) in your Snowflake account to use a role in your AWS account, which in turns enables access to S3 and KMS resources used by Snowflake for an external stage.  </p><p>The following diagram explains this (along with the PlantUML code used to create the diagram..):  </p><div values="[object Object],[object Object]"><div value="overview"><p><a href="images/snowflake-aws-storage-integration.png"><img src="images/snowflake-aws-storage-integration.png" alt="Snowflake S3 Storage Integration"/></a> </p></div><div value="plantuml"><pre><code class="language-plantuml">@startuml
+
+skinparam rectangle&lt;&lt;boundary&gt;&gt; {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+skinparam defaultTextAlignment center
+
+!$imgroot = &quot;https://github.com/avensolutions/plantuml-cloud-image-library/raw/main/images&quot;
+
+!unquoted procedure $AwsIam($alias, $label, $techn, $descr=&quot;&quot;, $stereo=&quot;AWS IAM&quot;)
+    rectangle &quot;==$label\n\n&lt;img:$imgroot/aws/SecurityIdentityCompliance/Iam.png&gt;\n//&lt;size:12&gt;[$techn]&lt;/size&gt;//&quot; &lt;&lt;$stereo&gt;&gt; as $alias #white
+!endprocedure
+
+!unquoted procedure $AwsS3($alias, $label, $techn, $descr=&quot;&quot;, $stereo=&quot;AWS S3&quot;)
+    rectangle &quot;==$label\n\n&lt;img:$imgroot/aws/Storage/S3.png&gt;\n//&lt;size:12&gt;[$techn]&lt;/size&gt;//&quot; &lt;&lt;$stereo&gt;&gt; as $alias #white
+!endprocedure
+
+!unquoted procedure $Snowflake($alias, $label, $techn, $descr=&quot;&quot;, $stereo=&quot;Snowflake&quot;)
+    rectangle &quot;==$label\n\n&lt;img:$imgroot/snowflake/snowflakeDB.png{scale=0.70}&gt;\n//&lt;size:12&gt;[$techn]&lt;/size&gt;//&quot; &lt;&lt;$stereo&gt;&gt; as $alias #white
+!endprocedure
+
+rectangle &quot;Snowflake&quot; &lt;&lt;boundary&gt;&gt; {
+    $AwsIam(user, Snowflake IAM User, AWS IAM User)
+    $Snowflake(int, Storage Integration, Storage Integration)
+    $Snowflake(stage, External Stage, Stage)
+}
+
+rectangle &quot;AWS&quot; &lt;&lt;boundary&gt;&gt; {
+    $AwsS3(bucket, Stage Bucket, AWS S3 Bucket)
+    $AwsIam(role, Snowflake Access Role, IAM Role)
+    $AwsIam(policy, Snowflake Access Policy, IAM Policy)
+}
+
+stage -UP-&gt; int : uses
+int -RIGHT-&gt; user : uses
+user -RIGHT-&gt; role : uses
+policy -UP-&gt; role : attached to
+role -RIGHT-&gt; bucket : allows access to
+
+@enduml
+</code></pre></div></div><h2>Setup</h2><p>Some prerequisites (removed for brevity):  </p><ol><li>set the following variables in your script:  </li></ol><ul><li><code>$accountid</code> – your AWS account ID</li><li><code>$bucketname</code> – the bucket you are letting Snowflake use as an External Stage</li><li><code>$bucketarn</code> – used in policy statements (you could easily derive this from the bucket name)</li><li><code>$kmskeyarn</code> – assuming you are used customer managed encryption keys, your Snowflake storage integration will need to use these to decrypt data in the stage</li><li><code>$prefix</code> – if you want to set up granular access (on a key/path basis)</li></ul><ol start="2"><li>Configure Snowflake access credentials using environment variables or using the <code>~/.snowsql/config</code> file (you should definitely use the <code>SNOWSQL_PWD</code> env var for your password however)</li><li>Configure access to AWS using <code>aws configure</code></li></ol><p>:::note</p><p>The actions performed in both AWS and Snowflake required privileged access on both platforms.</p><p>:::</p><h2>The Code</h2><p>I have broken this into steps, the complete code is included at the end of the article.  </p><h3>Create Policy Documents</h3><p>You will need to create the policy documents to allow the role you will create to access objects in the target S3 bucket, you will also need an initial “Assume Role” policy document which will be used to create the role and then updated with information you will get from Snowflake later.  </p><div id="73d507126c114e6ee7398226cf004f55"></div><h3>Create Snowflake Access Policy</h3><p>Use the <code>snowflake_policy_doc.json</code> policy document created in the previous step to create a managed policy, you will need the <code>arn</code> returned in a subsequent statement.  </p><div id="65be4f7c104f92fa3dbf9342813b3fd2"></div><h3>Create Snowflake IAM Role</h3><p>Use the initial <code>assume_role_policy_doc.json</code> created to create a new Snowflake access role, you will need the <code>arn</code> for this resource when you configure the Storage Integration in Snowflake.  </p><div id="e1bdd5316fe7cb106de1edcff77d8e2b"></div><h3>Attach S3 Access Policy to the Role</h3><p>Now you will attach the <code>snowflake-access-policy</code> to the <code>snowflake-access-role</code> using the <code>$policyarn</code> captured from the policy creation statement.  </p><div id="d2d54b43e379a26bd264a4c97939250c"></div><h3>Create Storage Integration in Snowflake</h3><p>Use the <code>snowsql</code> CLI to create a Storage Integration in Snowflake supplying the <code>$rolearn</code> captured from the role creation statement.  </p><div id="8e4617227bcd68be74c2a5d694c85f91"></div><h3>Get <code>STORAGE_AWS_IAM_USER_ARN</code> and <code>STORAGE_AWS_EXTERNAL_ID</code></h3><p>You will need the <code>STORAGE_AWS_IAM_USER_ARN</code> and <code>STORAGE_AWS_EXTERNAL_ID</code> values for the storage integration you created in the previous statement, these will be used to updated the assume role policy in your <code>snowflake-access-role</code>.  </p><div id="14dbf570030cad1a46d88d2e87006c8e"></div><h3>Update Snowflake Access Policy</h3><p>Using the <code>STORAGE_AWS_IAM_USER_ARN</code> and <code>STORAGE_AWS_EXTERNAL_ID</code> values retrieved in the previous statements, you will update the <code>assume-role-policy</code> for the <code>snowflake-access-role</code>.  </p><div id="944c39205e142de9a76266f7f3cd260b"></div><h3>Test the Storage Integration</h3><p>To test the connectivity between your Snowflake account and your AWS external stage using the Storage Integartion just created, create a stage as shown here:  </p><div id="99c24e8c80c6556fe381cf64c841f739"></div><p>Now list objects in the stage (assuming there are any).  </p><pre><code class="language-js">list @ledger_file_stage;
+</code></pre><p>This should just work!  You can use your storage integration to create different stages for different paths in your External Stage bucket and use both of these objects to create Snowpipes for automated ingestion.  Enjoy!  </p><h3>Complete Code</h3><p>The complete code for this example is shown here:  </p><div id="5f4cba25f4eac380d63f5829c56d0306"></div>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Simplifying Large CloudFormation Templates using Jsonnet]]></title>
             <link>https://cloudywithachanceofbigdata.com/simplifying-large-cloudformation-templates-using-jsonnet</link>
