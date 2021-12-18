@@ -1,0 +1,45 @@
+@startuml
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+skinparam defaultTextAlignment center
+
+!$imgroot = "https://github.com/avensolutions/plantuml-cloud-image-library/raw/main/images"
+
+!unquoted procedure $AwsIam($alias, $label, $techn, $descr="", $stereo="AWS IAM")
+    rectangle "==$label\n\n<img:$imgroot/aws/SecurityIdentityCompliance/Iam.png>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $AwsS3($alias, $label, $techn, $descr="", $stereo="AWS S3")
+    rectangle "==$label\n\n<img:$imgroot/aws/Storage/S3.png>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $Snowflake($alias, $label, $techn, $descr="", $stereo="Snowflake")
+    rectangle "==$label\n\n<img:$imgroot/snowflake/snowflakeDB.png{scale=0.70}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+rectangle "Snowflake" <<boundary>> {
+    $AwsIam(user, Snowflake IAM User, AWS IAM User)
+    $Snowflake(int, Storage Integration, Storage Integration)
+    $Snowflake(stage, External Stage, Stage)
+}
+
+rectangle "AWS" <<boundary>> {
+    $AwsS3(bucket, Stage Bucket, AWS S3 Bucket)
+    $AwsIam(role, Snowflake Access Role, IAM Role)
+    $AwsIam(policy, Snowflake Access Policy, IAM Policy)
+}
+
+stage -UP-> int : uses
+int -RIGHT-> user : uses
+user -RIGHT-> role : uses
+policy -UP-> role : attached to
+role -RIGHT-> bucket : allows access to
+
+@enduml
