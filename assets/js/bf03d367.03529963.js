@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[7056],{75165:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/aws","name":"aws","count":9,"permalink":"/tags/aws"}')}}]);
