@@ -1,4 +1,8 @@
-# Website
+[![pages-build-deployment](https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io/actions/workflows/pages/pages-build-deployment)
+
+[![cloudy-with-a-chance-of-big-data](artwork/png/cloudywithachanceofbigdata-rect.png)](https://cloudywithachanceofbigdata.com)
+
+# Cloudy with a Chance of Big Data
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
