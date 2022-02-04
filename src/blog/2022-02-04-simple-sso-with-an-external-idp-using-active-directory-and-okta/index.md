@@ -27,7 +27,6 @@ description: A simple SSO pattern for authenticating and authorizing users from 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Gist from 'react-gist';
-import Mermaid from '/js/Mermaid/Mermaid.js';
 
 This article describes a simple SSO pattern for authenticating and authorizing users from an external AD and to your application without requiring federation.  
 
@@ -136,7 +135,7 @@ The following flowchart explains the steps involved in setting this up.  The hig
 </TabItem>
 <TabItem value="mermaidCode">
 
-```
+```mermaid
 flowchart TD;
   subgraph Local Azure AD;
     a1(1. Create AD App);
@@ -179,7 +178,7 @@ The authorization flow for a public client (SPA) using PKCE (Proof Key for Code 
 </TabItem>
 <TabItem value="mermaidCode">
 
-```
+```mermaid
 sequenceDiagram;
   %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#AACCFF', 'primaryBorderColor': '#999000', 'actorLineColor': '#000000' }}}%%;
   participant user as User;

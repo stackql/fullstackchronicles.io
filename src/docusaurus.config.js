@@ -53,6 +53,9 @@ const TwitterSvg =
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      prism: {
+        additionalLanguages: ['mermaid'],
+      },
       announcementBar: {
         id: 'support_us',
         content:
