@@ -82,11 +82,11 @@ Here is a context diagram which explains the interactions in the context of a Ja
 !$imgroot = "https://github.com/avensolutions/plantuml-cloud-image-library/raw/main/images"
 
 !unquoted procedure $AzureActiveDirectory($alias, $label, $techn, $descr="", $stereo="Azure Active Directory")
-    rectangle "==$label\n\n<img:../images/AzureActiveDirectory.png{scale=0.75}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+    rectangle "==$label\n\n<img:$imgroot/azure/AzureActiveDirectory.png{scale=0.75}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
 !endprocedure
 
 !unquoted procedure $Okta($alias, $label, $techn, $descr="", $stereo="Okta")
-    rectangle "==$label\n\n<img:../images/Okta.png{scale=0.75}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+    rectangle "==$label\n\n<img:$imgroot/okta/okta.png{scale=1}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
 !endprocedure
 
 Person(user, User\n<i>UserAgent (Browser) )

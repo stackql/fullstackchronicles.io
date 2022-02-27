@@ -98,6 +98,7 @@ const TwitterSvg =
               {to: 'tags/gcp', label: 'Google Cloud Platform'},
               {to: 'tags/aws', label: 'AWS'},
               {to: 'tags/azure', label: 'Azure'},
+              {to: 'tags/snowflake', label: 'Snowflake'},
               {to: 'tags/ci-cd', label: 'CI/CD'},
             ],
           },          
