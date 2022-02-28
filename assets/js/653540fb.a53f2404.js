@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[1195],{42660:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/aws-transfer-family","name":"aws transfer family","count":1,"permalink":"/tags/aws-transfer-family"}')}}]);
