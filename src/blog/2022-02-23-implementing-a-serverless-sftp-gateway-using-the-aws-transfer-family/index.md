@@ -126,6 +126,8 @@ snowpipe -RIGHT-> db: writes to
 </TabItem>
 </Tabs>
 
+## Setup
+
 The steps to set up this pattern are detailed below.  
 
 :::info
@@ -136,58 +138,119 @@ This example uses the Jsonnet/CloudFormation pattern described in this article: 
 
 ## Setup the Service
 
+To setup the SFTP transfer service use the `AWS::Transfer::Server` resource type as shown below:  
 
-
-## Create the S3 Bucket
-
-
-## Create a Customer Managed KMS Key
-
-
-
-# Create an IAM role to access the bucket
-
-S3AccessRole
-
-# Create a Scoped Down Policy
+<Gist id="c8b4ce8ab478715753aab73d478f4fcd" 
+/>
 
 :::note
 
-Something
+Use the `tags` shown to display the custom hostname (used as a vanity url) in the Transfer UI in the AWS console.
 
 :::
 
-policy.txt
+## Create the S3 Bucket
 
+Create a bucket which will be used to store incoming files sent via SFTP.  
 
+<Gist id="82eb106bc13f1a888f823cc71a7ff933" 
+/>
+
+:::note
+
+This example logs to a logging bucket, not shown for brevity.
+
+:::
+
+## Create a Customer Managed KMS Key
+
+Create a customer managed KMS key which will be used to encrypt data stored in the S3 bucket created in the previous step.  
+
+<Gist id="2c563411442c4541584815389de8a3b5" 
+/>
+
+# Create an IAM role to access the bucket
+
+Create an IAM role which will be assumed by the AWS Transfer Service to read and write to the S3 staging bucket.  
+
+<Gist id="57e23a5c99c22f5550e99b086db5f9f1" 
+/>
+
+:::important
+
+You must assign permissions to use the KMS key created previously, failure to do so will result in errors such as:
+
+```
+remote readdir(): Permission denied
+```
+
+:::
+
+## User Directory Mappings
+
+An SFTP users home directory is mapped to a path in your S3 bucket.  It is recommended to use the `LOGICAL` `HomeDirectoryType`.  This will prevent SFTP users from:
+
+- seeing or being able to access other users home directories
+- seeing the bucket name or paths in the bucket above their home directory
+
+There are some trade offs for this which can make deployment a little more challenging but we will cover off the steps from here.
+
+### Create a Scoped Down Policy
+
+A "scoped down" policy prevents users from seeing or accessing objects in other users home directories.  This is a text file that will be sourced as a string into the `Policy` parameter of each SFTP user you create.
+
+<Gist id="5e876bbf95b1b36355fa8af868572a26" 
+/>
+
+:::important
+
+Using the `LOGICAL` `HomeDirectoryType` you don't have access to variables which represent the bucket, so this needs to be hard coded in the `policy.txt` document.  
+
+Also if you are using a customer managed KMS key to encrypt the data in the bucket (which you should be), you need to add permissions to the key - which again cannot be represented by a variable.  
+
+Failure to do so will result in errors when trying to `ls`, `put`, etc into the user's home directory such as:  
+
+```
 Couldn't read directory: Permission denied
-
 Couldn't close file: Permission denied
+```
 
+Since these properties are unlikely to change for the lifetime of your service this should not be an issue.  
 
-# Create a Route 53 CNAME record
-Cname
+:::
 
-# Create a user
+### Create a user
+
+Users are identified by a username and an SSH key, providing the public key to the server.  A sample user is shown here:  
+
+<Gist id="1b946b07374b78e0aca380317729bfa9" 
+/>
 
 :::tip
 
-Something
+As discussed previously, it is recommended to use `LOGICAL` home directory mappings, which prevents users from seeing information about the bucket or other directories on the SFTP server (including other users directories).
 
 :::
 
+## Create a Route 53 CNAME record
 
-User
+Ideally you want to use a vanity url for users to access your SFTP service, such as `sftp.yourcompany.com`.  This can be accomplished by using a Route 53 CNAME record as shown here:  
 
+<Gist id="0098851edc8d60b45534f6b1134be8cd" 
+/>
 
+## Create some shared Tags
 
+You would have noticed a shared `Tags` definition in many of the `libsonnet` files shown, an example `Tags` source file is shown here:  
 
-# Create some shared Tags
-Tags
+<Gist id="8323d49f1045d2cd8c874d5a00e82a5e" 
+/>
 
-# Pull it all together!
-s
+## Pull it all together!
 
-You would pre-process this jsonnet file in a CI job step, publish it to an S3 bucket (one dedicated for Cloud Formation templates), then deploy via Cloud Formation.  
+Now that we have all of the input files, lets pull them all together in a `jsonnet` file, which will be preprocessed in a CI process to create a template we can deploy with AWS CloudFormation.  
+
+<Gist id="f56065c075af9cc33853b0624f6ef636" 
+/>
 
 Add more users and enjoy!  
