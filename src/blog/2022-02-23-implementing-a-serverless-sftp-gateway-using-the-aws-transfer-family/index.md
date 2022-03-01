@@ -253,4 +253,10 @@ Now that we have all of the input files, lets pull them all together in a `jsonn
 <Gist id="f56065c075af9cc33853b0624f6ef636" 
 />
 
+Your customers would now connect to your service using they private key which corresponds to the public key they supplied to you in one of the previous steps, for example:    
+
+```bash
+sftp -i mysftpkey jeffrey_aven@sftp.yourdomain.com
+```
+
 Add more users and enjoy!  
