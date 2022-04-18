@@ -43,7 +43,7 @@ const TwitterSvg =
         },
         sitemap: {},
         gtag: {
-          trackingID: 'G-4N6KSJ2G0P',
+          trackingID: 'G-0FVDC1E8G6',
           anonymizeIP: false,
         },        
       }),
