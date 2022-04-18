@@ -34,6 +34,18 @@ font-weight: bold;
 text-transform: uppercase;
 }
 
+@media (max-width: 480px) {
+	.navbar__title {
+		font-size: 1.25rem;
+	}
+	.navbar__logo {
+		display: none;
+  }
+  .searchBox_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchBar-styles-module {
+    display: none;
+  }
+}
+
 .header-github-link:hover {
   opacity: 0.6;
 }

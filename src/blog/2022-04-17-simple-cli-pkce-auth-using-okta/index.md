@@ -28,13 +28,13 @@ This article demonstrates a simple command line utility to login to an authoriza
 
 ## Example
 
-![Okta PKCE cli login example](images/okta-pkce-cli-login.png)
+[![Okta PKCE cli login example](images/okta-pkce-cli-login.png)](images/okta-pkce-cli-login.png)
 
 ## Overview
 
 This application can be used to illustrate the authorization/authentication flow discussed in [Simple SSO with an external IdP using Active Directory and Okta](https://fullstackchronicles.io/simple-sso-with-an-external-idp-using-active-directory-and-okta).  A flow which is pictured here:  
 
-![PKCE Authorization to Okta using an AD IdP](images/seqdiagram.png)
+[![PKCE Authorization t Okta using an AD IdP](images/seqdiagram.png)](images/seqdiagram.png)
 
 ## Steps
 
