@@ -41,7 +41,10 @@ text-transform: uppercase;
 	.navbar__logo {
 		display: none;
   }
-  .searchBox_node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchBar-styles-module {
+  div[class^='searchBox']{
+    display: none;
+  }
+  a[class^='skipToContent']{
     display: none;
   }
 }
