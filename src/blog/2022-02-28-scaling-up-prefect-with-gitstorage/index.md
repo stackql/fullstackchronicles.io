@@ -19,7 +19,6 @@ keywords:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import Gist from 'react-gist';
 
 [Prefect.io](https://prefect.io) is a python based Data Engineering toolbox for building and
 operating Data Pipelines.  Out of the box, Prefect provides an initial workflow for managing data

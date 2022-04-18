@@ -7,15 +7,15 @@ const TwitterSvg =
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
-  title: 'Cloudy with a chance of Big Data',
-  tagline: 'Cloud and data design patterns and random musings',
-  url: 'https://cloudywithachanceofbigdata.com',
+  title: 'Full Stack Chronicles',
+  tagline: 'Full stack design patterns and random musings',
+  url: 'https://fullstackchronicles.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'cloudywithachanceofbigdata',
-  projectName: 'cloudywithachanceofbigdata.github.io',
+  organizationName: 'stackql',
+  projectName: 'fullstackchronicles.io',
   trailingSlash: false,
   presets: [
     [
@@ -26,16 +26,16 @@ const TwitterSvg =
           routeBasePath: '/',
           showReadingTime: true,
           editUrl:
-            'https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io/tree/main/src/blog',
-            blogTitle: 'Cloudy with a chance of Big Data',
-            blogDescription: 'Cloud and data design patterns and random musings',
+            'https://github.com/stackql/fullstackchronicles.io/tree/main/src/blog',
+            blogTitle: 'Full Stack Chronicles',
+            blogDescription: 'Full stack design patterns and random musings',
             postsPerPage: 5,
             blogSidebarTitle: 'Recent Posts',
             blogSidebarCount: 10,
             feedOptions: {
               type: 'all',
-              title: 'Cloudy with a chance of Big Data Blog Feed',
-              description: 'Cloud and data design patterns',
+              title: 'Full Stack Chronicles Blog Feed',
+              description: 'Full stack design patterns',
             },
           },
         theme: {
@@ -59,33 +59,32 @@ const TwitterSvg =
       announcementBar: {
         id: 'support_us',
         content:
-          `<b>If you find our content useful, give it a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io">GitHub</a>, if you want to contribute and become an author, submit a PR</b>`,
+          `<b>If you find our content useful, give it a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/stackql/fullstackchronicles.io">GitHub</a>, if you want to contribute and become an author, submit a PR</b>`,
         backgroundColor: '#A9BCD0',
         textColor: '#1A4E82',
         isCloseable: false,
       },
       algolia: {
-        apiKey: 'efc14c8c9dee8f07abff3286bae8780a',
+        appId: 'MZCGVO503N',
+        apiKey: 'd1632c325880eee872b1081d9cde1081',
         indexName: 'cloudywithachanceofbigdata',
-  
+
         // Optional: see doc section below
         contextualSearch: false,
-  
-        // Optional: see doc section below
-        // appId: 'YOUR_APP_ID',
-  
+
         // Optional: Algolia search parameters
         // searchParameters: {},
   
         //... other Algolia params
       },
       navbar: {
-        title: 'Cloudy with a chance of Big Data',
+        title: 'Full Stack Chronicles',
+        style: 'primary',
         hideOnScroll: true,
-        //logo: {
-        //  alt: 'Cloudy with a chance of Big Data',
-        //  src: 'img/cloud1.svg',
-        //},
+        logo: {
+          alt: 'Full Stack Chronicles',
+          src: 'img/full-stack-logo-transparent.svg',
+        },
         items: [
           {to: '/', label: 'Home', position: 'right'}, 
           {
@@ -104,7 +103,7 @@ const TwitterSvg =
           },          
           {to: 'archive', label: 'Archive', position: 'right'},
           {
-            href: 'https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io',
+            href: 'https://github.com/stackql/fullstackchronicles.io',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -164,7 +163,7 @@ const TwitterSvg =
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/cloudywithachanceofbigdata/cloudywithachanceofbigdata.github.io',
+                href: 'https://github.com/stackql/fullstackchronicles.io',
               },
             ],
           },
