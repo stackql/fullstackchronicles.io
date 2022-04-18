@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[1540],{87278:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/gitlab","name":"gitlab","count":4,"permalink":"/tags/gitlab"}')}}]);

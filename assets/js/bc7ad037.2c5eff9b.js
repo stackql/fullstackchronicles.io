@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[3998],{30653:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"single-page-application","count":1,"permalink":"/tags/single-page-application"}')}}]);

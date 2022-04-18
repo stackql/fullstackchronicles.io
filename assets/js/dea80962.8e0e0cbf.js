@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[7001],{8546:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/serverless","name":"serverless","count":2,"permalink":"/tags/serverless"}')}}]);
