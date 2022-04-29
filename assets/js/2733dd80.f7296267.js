@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[5006],{47756:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"gcp","count":18,"permalink":"/tags/gcp"}')}}]);
