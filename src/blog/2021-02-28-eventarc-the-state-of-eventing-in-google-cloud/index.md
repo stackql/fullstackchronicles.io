@@ -10,10 +10,12 @@ tags:
   - "eventarc"
   - "google-cloud-platform"
   - "microservices"
+  - "gcp"  
 keywords:	
   - "eventarc"
   - "google-cloud-platform"
   - "microservices"
+  - "gcp"  
 ---
 
 When defining event-driven architectures, it's always good to keep up with how the landscape is changing. How do you connect microservices in your architecture? Is Pub/Sub the end-game for all events? To dive a bit deeper, let's talk through the benefits of having a single _orchestrator_, or perhaps a choreographer is better?

@@ -1,0 +1,67 @@
+@startuml
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+skinparam defaultTextAlignment center
+
+!$imgroot = "https://github.com/avensolutions/plantuml-cloud-image-library/raw/main/images"
+
+!unquoted procedure $AwsS3($alias, $label, $techn, $descr="", $stereo="AWS S3")
+    rectangle "==$label\n\n<img:$imgroot/aws/Storage/S3.png>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $Kms($alias, $label, $techn, $descr="", $stereo="AWS KMS")
+    rectangle "==$label\n\n<img:$imgroot/aws/SecurityIdentityCompliance/kms.png{scale=0.80}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $Route53($alias, $label, $techn, $descr="", $stereo="AWS Route53")
+    rectangle "==$label\n\n<img:$imgroot/aws/Networking/route53.png{scale=0.80}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $AwsTransferFamily($alias, $label, $techn, $descr="", $stereo="AWS Transfer Family")
+    rectangle "==$label\n\n<img:$imgroot/aws/MigrationTransfer/TransferFamily.png>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $Data($alias, $label, $techn, $descr="", $stereo="Data")
+    rectangle "==$label\n\n<img:$imgroot/general/documents.png>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $Snowpipe($alias, $label, $techn, $descr="", $stereo="Snowpipe")
+    rectangle "==$label\n\n<img:$imgroot/snowflake/snowpipe.png{scale=0.60}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $SnowflakeDb($alias, $label, $techn, $descr="", $stereo="Snowflake DB")
+    rectangle "==$label\n\n<img:$imgroot/snowflake/snowflakeDB.png{scale=0.70}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+$Data(supplier, Data Supplier, External Client)
+
+rectangle "AWS Environment" <<boundary>> {
+    $AwsTransferFamily(sftpgw, SFTP/FTPS Gateway, AWS Transfer Family)
+    $AwsS3(s3staging, Staging Bucket, AWS S3 Bucket)
+    $Kms(kms, KMS Key, Customer Managed Key)
+    $Route53(r53, CNAME Record, Route53 Record)
+}
+
+rectangle "Snowflake Environment" <<boundary>> {
+    $Snowpipe(snowpipe, Snowpipe, Snowpipe)
+    $SnowflakeDb(db, Snowflake DB, Snowflake DB)
+}
+
+r53 -[hidden]D- sftpgw
+supplier -> r53 : resolves name
+r53 -> supplier : gets address
+supplier -RIGHT-> sftpgw : SFTP
+sftpgw -DOWN-> kms : uses
+sftpgw -RIGHT-> s3staging: writes to
+s3staging -RIGHT-> snowpipe: writes to
+snowpipe -DOWN-> kms: uses
+snowpipe -RIGHT-> db: writes to
+
+@enduml

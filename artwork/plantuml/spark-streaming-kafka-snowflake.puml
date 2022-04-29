@@ -1,0 +1,37 @@
+@startuml
+
+skinparam defaultTextAlignment center
+
+!$imgroot = "https://github.com/avensolutions/plantuml-cloud-image-library/raw/main/images"
+
+
+!unquoted procedure $Snowflake($alias, $label, $techn, $descr="", $stereo="Snowflake")
+    rectangle "==$label\n\n<img:$imgroot/snowflake/snowflakeDB.png{scale=0.70}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $Kafka($alias, $label, $techn, $descr="", $stereo="Kafka")
+    rectangle "==$label\n\n<img:$imgroot/kafka/kafka.png{scale=0.70}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $Spark($alias, $label, $techn, $descr="", $stereo="Apache Spark")
+    rectangle "==$label\n\n<img:$imgroot/spark/spark.png{scale=0.70}>\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+!unquoted procedure $Producer($alias, $label, $techn, $descr="", $stereo="Kafka Producer")
+    rectangle "==$label\n\n//<size:12>[$techn]</size>//" <<$stereo>> as $alias #white
+!endprocedure
+
+
+$Snowflake(snowflake, Snowflake Table, Snowflake DB)
+$Kafka(kafka, Kafka Topic, Kafka Cluser)
+$Spark(spark, "Structured Streaming\n<b>Application", Apache Spark)
+$Producer(producer, Kafka Producer, Kafka Client)
+
+
+producer -RIGHT-> kafka : writes messages
+spark -LEFT-> kafka : polls for new messages
+kafka -RIGHT-> spark : consumes messages
+spark -UP-> spark : "performs transformations,\naggregations,\nwindowing operations"
+spark -DOWN-> snowflake : writes records
+
+@enduml
