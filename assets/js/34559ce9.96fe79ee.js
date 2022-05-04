@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[7436],{15843:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"k8s","count":2,"permalink":"/tags/k-8-s"}')}}]);

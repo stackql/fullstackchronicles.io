@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[806],{79737:function(l){l.exports=JSON.parse('{"allTagsPath":"/tags","name":"tail-call-recursion","count":1,"permalink":"/tags/tail-call-recursion"}')}}]);

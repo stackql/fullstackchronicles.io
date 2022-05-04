@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[4252],{78742:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"c4model","count":2,"permalink":"/tags/c-4-model"}')}}]);

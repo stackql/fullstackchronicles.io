@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[1930],{46917:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"orchestration","count":1,"permalink":"/tags/orchestration"}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[1953],{31457:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"servicemesh","count":2,"permalink":"/tags/servicemesh"}')}}]);

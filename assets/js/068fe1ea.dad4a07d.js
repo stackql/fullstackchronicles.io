@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[1348],{83602:function(s){s.exports=JSON.parse('{"permalink":"/tags/stackql","page":1,"postsPerPage":5,"totalPages":1,"totalCount":1,"blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);

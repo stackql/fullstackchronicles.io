@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[2031],{56443:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"amazonwebservices","count":2,"permalink":"/tags/amazonwebservices"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[6212],{95185:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"fullstackchronicles.io","count":1,"permalink":"/tags/fullstackchronicles-io"}')}}]);

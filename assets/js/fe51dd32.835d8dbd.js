@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[827],{14333:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"lateral-thinking","count":1,"permalink":"/tags/lateral-thinking"}')}}]);

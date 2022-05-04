@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[6197],{79055:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"technology","count":2,"permalink":"/tags/technology"}')}}]);

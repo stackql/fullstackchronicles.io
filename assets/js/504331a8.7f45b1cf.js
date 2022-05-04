@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[2031],{56443:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"amazonwebservices","count":2,"permalink":"/tags/amazonwebservices"}')}}]);

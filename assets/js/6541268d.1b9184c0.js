@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[6160],{15461:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"pyspark","count":1,"permalink":"/tags/pyspark"}')}}]);

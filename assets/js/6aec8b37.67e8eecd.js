@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[1375],{65917:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"python","count":7,"permalink":"/tags/python"}')}}]);

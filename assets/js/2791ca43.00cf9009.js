@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[1171],{33371:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"jamstack","count":2,"permalink":"/tags/jamstack"}')}}]);

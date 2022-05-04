@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[5813],{95571:function(l){l.exports=JSON.parse('{"allTagsPath":"/tags","name":"plantuml","count":2,"permalink":"/tags/plantuml"}')}}]);

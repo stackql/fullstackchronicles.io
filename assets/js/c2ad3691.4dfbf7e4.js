@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcloudy_with_a_chance_of_big_data=self.webpackChunkcloudy_with_a_chance_of_big_data||[]).push([[6911],{63820:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"snowsql","count":1,"permalink":"/tags/snowsql"}')}}]);

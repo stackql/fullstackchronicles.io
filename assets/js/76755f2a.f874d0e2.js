@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[7142],{98027:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"wordpress","count":1,"permalink":"/tags/wordpress"}')}}]);
