@@ -1,8 +1,8 @@
 {
-  "name": "cloudy-with-a-chance-of-big-data",
+  "name": "full-stack-chronicles",
   "version": "0.0.0",
   "private": true,
-  "homepage": "http://cloudywithachanceofbigdata.github.io",
+  "homepage": "https://fullstackchronicles.io/",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

@@ -53,6 +53,7 @@ const TwitterSvg =
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{name: 'wot-verification', content: 'e7522390be4370727fac'}],
       prism: {
         additionalLanguages: ['mermaid'],
       },
