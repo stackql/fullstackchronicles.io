@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[7169],{87701:function(e){e.exports=JSON.parse('{"allTagsPath":"/tags","name":"map-reduce","count":1,"permalink":"/tags/map-reduce"}')}}]);

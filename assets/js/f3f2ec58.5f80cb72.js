@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[78698],{920:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"data-lineage","count":1,"permalink":"/tags/data-lineage"}')}}]);

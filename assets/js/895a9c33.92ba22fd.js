@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[83997],{75293:function(s){s.exports=JSON.parse('{"permalink":"/tags/aws","page":1,"postsPerPage":5,"totalPages":3,"totalCount":11,"nextPage":"/tags/aws/page/2","blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);

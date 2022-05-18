@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[1195],{42660:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"aws transfer family","count":1,"permalink":"/tags/aws-transfer-family"}')}}]);

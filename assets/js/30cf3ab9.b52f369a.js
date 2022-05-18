@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[5612],{19615:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"vue-js","count":1,"permalink":"/tags/vue-js"}')}}]);

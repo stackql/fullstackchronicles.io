@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[66803],{17397:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"vpc-native","count":1,"permalink":"/tags/vpc-native"}')}}]);

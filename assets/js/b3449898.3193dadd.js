@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[63066],{69314:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"nosql","count":2,"permalink":"/tags/nosql"}')}}]);

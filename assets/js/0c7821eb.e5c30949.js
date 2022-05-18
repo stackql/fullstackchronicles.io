@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[21710],{59801:function(s){s.exports=JSON.parse('{"permalink":"/tags/open-source-software","page":1,"postsPerPage":5,"totalPages":1,"totalCount":2,"blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);

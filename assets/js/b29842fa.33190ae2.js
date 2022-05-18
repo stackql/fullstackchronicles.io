@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[72673],{582:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"lambda","count":3,"permalink":"/tags/lambda"}')}}]);

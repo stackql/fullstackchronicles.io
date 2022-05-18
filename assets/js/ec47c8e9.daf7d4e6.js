@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[96212],{14032:function(e){e.exports=JSON.parse('{"permalink":"/tags/web-development","page":1,"postsPerPage":5,"totalPages":1,"totalCount":1,"blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);

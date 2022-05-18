@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[89864],{22496:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"infrastructureascode","count":3,"permalink":"/tags/infrastructureascode"}')}}]);

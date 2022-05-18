@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[8762],{17463:function(e){e.exports=JSON.parse('{"allTagsPath":"/tags","name":"prefect","count":1,"permalink":"/tags/prefect"}')}}]);

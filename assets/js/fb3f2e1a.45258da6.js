@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[7049],{21315:function(e){e.exports=JSON.parse('{"allTagsPath":"/tags","name":"stored-procedure","count":1,"permalink":"/tags/stored-procedure"}')}}]);
