@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[37897],{71942:function(c){c.exports=JSON.parse('{"allTagsPath":"/tags","name":"ci-cd","count":3,"permalink":"/tags/ci-cd"}')}}]);

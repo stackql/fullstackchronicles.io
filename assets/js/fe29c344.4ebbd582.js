@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[34027],{28633:function(s){s.exports=JSON.parse('{"permalink":"/tags/python/page/2","page":2,"postsPerPage":5,"totalPages":2,"totalCount":7,"previousPage":"/tags/python","blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);
