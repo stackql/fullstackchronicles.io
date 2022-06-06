@@ -100,6 +100,7 @@ const TwitterSvg =
               {to: 'tags/azure', label: 'Azure'},
               {to: 'tags/snowflake', label: 'Snowflake'},
               {to: 'tags/okta', label: 'Okta'},
+              {to: 'tags/openapi', label: 'OpenAPI'},
               {to: 'tags/spark', label: 'Spark'},
               {to: 'tags/kafka', label: 'Kafka'},
               {to: 'tags/ci-cd', label: 'CI/CD'},
