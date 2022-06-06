@@ -24,6 +24,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![cloudsql federated queries](images/cloud-sql-federated-queries.png)
+
 This article demonstrates Cloud SQL federated queries for Big Query, a neat and simple to use feature.
 
 ## Connecting to Cloud SQL

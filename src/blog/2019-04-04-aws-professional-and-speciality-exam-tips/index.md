@@ -14,6 +14,8 @@ keywords:
   - "certification"
 ---
 
+![AWS pro and specialty certs](images/aws-pro-and-specialty-certs.png)
+
 One you get beyond the Associate level AWS certification exams into the Professional or Speciality track exams the degree of difficulty rises significantly. As a veteran of the Certified Solutions Architect Professional and Big Data Specialty exams, I thought I would share my experiences which I believe are applicable to all the certification streams and tracks in the AWS certification program.
 
 First off let me say that I am a self-professed certification addict, having sat more than thirty technical certification exams over my thirty plus year career in technology including certification and re-certification exams. I would put the AWS professional and specialty exams right up there in terms of their level of difficulty.

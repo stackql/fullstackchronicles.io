@@ -34,6 +34,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Azure Static WebApp](images/AzureStaticWebApp.png)
+
 The Azure Static Web App feature is relatively new in the Azure estate which has recently become generally available, I thought I would take it for a test drive and discuss my findings.
 
 I am a proponent of the JAMStack architecture for front end applications and a user of CD enabled CDN services like Netlify, so this Azure feature was naturally appealing to me.

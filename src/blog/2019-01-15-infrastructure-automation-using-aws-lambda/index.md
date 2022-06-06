@@ -31,6 +31,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Automate infrastructure tasks using Lambda with Terraform](images/automate-infrastructure-tasks-using-lambda-with-terraform.png)
+
 There are many other blog posts and examples available for either scheduling infrastructure tasks such as the starting or stopping of EC2 instances; or deploying a Lambda function using Terraform. However, I have found many of the other examples to be unnecessarily complicated, so I have put together a very simple example doing both.
 
 The function itself could be easily adapted to take other actions including interacting with other AWS services using the boto3 library (the Python AWS SDK). The data payload could be modified to pass different data to the function as well.

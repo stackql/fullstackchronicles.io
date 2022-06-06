@@ -22,6 +22,8 @@ keywords:
   - "nosql"
 ---
 
+![Cloud BigTable](images/cbt-featured-image.png)
+
 Bigtable is one of the foundational services in the Google Cloud Platform and to this day one of the greatest contributions to the big data ecosystem at large. It is also one of the least known services available, with all the headlines and attention going to more widely used services such as BigQuery.
 
 ## Background

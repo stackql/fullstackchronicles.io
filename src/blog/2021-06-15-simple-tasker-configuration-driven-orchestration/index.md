@@ -5,6 +5,7 @@ authors:
   - markstella
 draft: false
 hide_table_of_contents: true
+image: "/img/fullstackchronicles-cover-image.png"
 tags: 
   - "data-lineage"
   - "orchestration"

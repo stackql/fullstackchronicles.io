@@ -24,6 +24,8 @@ keywords:
   - "software-architecture"
 ---
 
+![GCP C4 Diagramming](images/gcp-c4.png)
+
 I am a believer in the mantra of _**“Everything-as-Code”**_, this includes diagrams and other architectural artefacts. Enter PlantUML…
 
 ## PlantUML

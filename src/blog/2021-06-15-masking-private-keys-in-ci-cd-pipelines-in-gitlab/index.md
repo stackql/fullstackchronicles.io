@@ -5,6 +5,7 @@ authors:
   - jeffreyaven
 draft: false
 hide_table_of_contents: true
+image: "/img/fullstackchronicles-cover-image.png"
 tags: 
   - "ci"
   - "gitlab"

@@ -26,6 +26,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![API Management Function App](images/api-management-function-app.png)
+
 Function Apps, Logic Apps and App Services can be used to expose APIs within Azure API Management which is an easy way to deploy serverless microservices. You can see this capability in the Azure portal below within API Management:
 
 [![Add a new API using a Function App as a back end](images/apimamanagement-add-fnapp.png)](images/apimamanagement-add-fnapp.png)

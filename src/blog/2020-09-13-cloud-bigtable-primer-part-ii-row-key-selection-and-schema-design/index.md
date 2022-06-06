@@ -22,6 +22,8 @@ keywords:
   - "nosql"
 ---
 
+![Cloud BigTable](images/cbt-featured-image.png)
+
 This is a follow up to the original Cloud Bigtable primer where we discussed the basics of Cloud Bigtable:
 
 [__Cloud Bigtable Primer - Part I__](https://cloudywithachanceofbigdata.com/cloud-bigtable-primer-part-i/)

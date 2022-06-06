@@ -12,6 +12,8 @@ keywords:
   - "microservices"
 ---
 
+![Orchestration versus Choreography](images/service-mesh-1.png)
+
 One of the foundational concepts in microservices architecture and design patterns is the concept of Orchestration versus Choreography. Before we look at a reference implementation of each of these patterns, it is worthwhile starting with an analogy.
 
 This is often likened to a Jazz band versus a Symphony Orchestra.

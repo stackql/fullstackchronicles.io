@@ -24,6 +24,8 @@ keywords:
   - "okta"
 ---
 
+![Okta Admin CLI](images/Dev_Logo-02_Large-thumbnail.png)
+
 Identity and Access Management is a critical component of any application or SaaS architecture. I’m currently doing a spike of the Okta solution for an application development project I am on. Okta is a comprehensive solution built on the open OAuth2 and OIDC protocols, as well as supporting more conventional identity federation approaches such as SAML.
 
 Okta has a clean and easy to use web-based Admin interface which can be used to create applications, users, claims, identity providers and more.

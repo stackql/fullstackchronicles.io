@@ -22,6 +22,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![CDC using Spark](images/CDC-using-Spark.png)
+
 Change Data Capture (CDC) is one of the most challenging processing patterns to implement at scale. I personally have had several cracks at this using various different frameworks and approaches, the most recent of which was implemented using Spark – and I think I have finally found the best approach. Even though the code examples referenced use Spark, the pattern is language agnostic – the focus is on the approach not the specific implementation (as this could be applied to any framework or runtime).
 
 :::note Spark Training Courses

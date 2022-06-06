@@ -16,6 +16,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![JSON Golang](images/json-go.png)
+
 Golang is a fantastic language but at first glance it is a bit clumsy when it comes to JSON in contrast to other languages such as Python or Javascript. Having said that once you master the concepts involved with JSON wrangling using Go it is equally as functional – with added type safety and performance.
 
 In this article we will build a program in Golang to parse a JSON file containing a collection held in a named key – without knowing the structure of this object, we will expose the schema for the object including data types and recurse the object for its values.

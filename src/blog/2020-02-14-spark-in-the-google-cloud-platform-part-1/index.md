@@ -20,6 +20,8 @@ keywords:
   - "spark"
 ---
 
+![Apache Spark in GCP](images/spark-gcp-featured-image.png)
+
 I have been an avid Spark enthusiast since 2014 (the early days..). Spark has featured heavily in every project I have been involved with from data warehousing, ETL, feature extraction, advanced analytics to event processing and IoT applications. I like to think of it as a Swiss army knife for distributed processing.
 
 :::note Spark Training Courses

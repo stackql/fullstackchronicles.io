@@ -30,6 +30,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Apache Spark in GCP](images/spark-gcp-featured-image.png)
+
 In the previous post in this series [__Spark in the Google Cloud Platform Part 1__](https://cloudywithachanceofbigdata.com/spark-in-the-google-cloud-platform-part-1/), we started to explore the various ways in which we could deploy Apache Spark applications in GCP. The first option we looked at was deploying Spark using Cloud DataProc, a managed Hadoop cluster with various ecosystem components included.
 
 :::note Spark Training Courses

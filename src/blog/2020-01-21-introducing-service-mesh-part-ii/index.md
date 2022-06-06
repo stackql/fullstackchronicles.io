@@ -18,6 +18,8 @@ keywords:
   - "servicemesh"
 ---
 
+![Service Mesh](images/service-mesh-1.png)
+
 This is a follow up to the previous post:
 
 [__Sick of hearing about Service Mesh? Here’s what you need to know...__](https://cloudywithachanceofbigdata.com/sick-of-hearing-about-service-mesh-heres-what-you-need-to-know/)

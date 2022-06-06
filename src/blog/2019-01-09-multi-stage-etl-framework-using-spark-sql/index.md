@@ -19,6 +19,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Spark SQL ETL Framework](images/spark-sql-etl-framework.png)
+
 Most traditional data warehouse or datamart ETL routines consist of multi stage SQL transformations, often a series of CTAS (`CREATE TABLE AS SELECT`) statements usually creating transient or temporary tables – such as volatile tables in Teradata or Common Table Expressions (CTE’s).
 
 :::note Spark Training Courses

@@ -20,6 +20,8 @@ keywords:
   - "secrets-management"
 ---
 
+![Gitlab Vault](images/Gitlab-Vault.png)
+
 ## Overview
 
 With the adoption automation for deploying and managing application environments, protecting privileged accounts and credential secrets in a consistent, secure, and scalable manner becomes critical.  Secrets can include account usernames, account passwords and API tokens.  Good credentials management and secrets automation practices reduce the risk of secrets escaping into the wild and being used either intentionally (hacked) or unintentionally (accident).

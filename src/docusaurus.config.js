@@ -57,6 +57,7 @@ const TwitterSvg =
       prism: {
         additionalLanguages: ['mermaid'],
       },
+      image: '/img/fullstackchronicles-cover-image.png',
       announcementBar: {
         id: 'support_us',
         content:

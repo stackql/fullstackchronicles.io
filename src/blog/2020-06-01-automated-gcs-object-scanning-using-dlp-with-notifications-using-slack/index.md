@@ -34,6 +34,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Slack GCS DLP](images/Slack-GCS-DLP-Image-e1591007165488.png)
+
 This is a follow up to a previous blog, [__Google Cloud Storage Object Notifications using Slack__](https://cloudywithachanceofbigdata.com/google-cloud-storage-object-notifications-using-slack/) in which we used Slack to notify us of new objects being uploaded to GCS.
 
 In this article we will take things a step further, where uploading an object to a GCS bucket will trigger a DLP inspection of the object and if any preconfigured info types (such as credit card numbers or API credentials) are present in the object, a Slack notification will be generated.

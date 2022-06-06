@@ -24,6 +24,8 @@ keywords:
   - "postgresql"
 ---
 
+![CloudSQL HA](images/cloudsql-featured-image.png)
+
 In this multi part blog we will explore the features available in Google Cloud SQL for High Availability, Backup and Recovery, Replication and Failover and Security (at rest and in transit) for the PostgreSQL DBMS engine. Some of these features are relatively hot of the press and in Beta – which still makes them available for general use.
 
 We will start by looking at the High Availability (HA) options available to you when using the PostgreSQL engine in Google Cloud SQL.

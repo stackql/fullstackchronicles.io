@@ -28,6 +28,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Snowflake](images/snowflake.png)
+
 Snowflake allows roles to be assigned to other roles, so when a user is assigned to a role, they may inherit the ability to use countless other roles.
 
 **Challenge:** recursively enumerate all roles for a given user

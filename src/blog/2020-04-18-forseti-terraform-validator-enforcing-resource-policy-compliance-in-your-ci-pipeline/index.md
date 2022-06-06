@@ -24,6 +24,8 @@ keywords:
   - "terraform"
 ---
 
+![Forseti Terraform](images/Forseti-Terraform-e1587291818418.png)
+
 Terraform is a powerful tool for managing your Infrastructure as Code. Declare your resources once, define their variables per environment and sleep easy knowing your CI pipeline will take care of the rest.
 
 But… one night you wake up in a sweat. The details are fuzzy but you were browsing your favourite cloud provider’s console - probably GCP ;) - and thought you saw a bucket had been created outside of your allowed locations! Maybe it even had risky access controls.

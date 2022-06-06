@@ -36,6 +36,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Mulitcloud Diagramming](images/multicloud.png)
+
 Following on from the recent post [GCP Templates for C4 Diagrams using PlantUML](https://cloudywithachanceofbigdata.com/gcp-templates-for-c4-diagrams-using-plantuml/), cloud architects are often challenged with producing diagrams for architectures spanning multiple cloud providers, particularly as you elevate to enterprise level diagrams.
 
 In this post, with the magic of `!includeurl` we have brought PlantUML template libraries together for AWS, Azure and GCP icon sets, allowing us to produce multi cloud C4 diagrams using PlantUML like this one:

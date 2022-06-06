@@ -18,6 +18,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Great Expectations](images/great-expectations.png)
+
 This article provides an introduction to the Great Expectations Python library for data quality management ([https://github.com/great-expectations/great\_expectations](https://github.com/great-expectations/great_expectations)).
 
 So what are expectations when it comes to data (and data quality)...

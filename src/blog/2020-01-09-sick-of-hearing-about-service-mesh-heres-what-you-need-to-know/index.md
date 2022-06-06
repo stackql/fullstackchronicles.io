@@ -18,6 +18,8 @@ keywords:
   - "servicemesh"
 ---
 
+![Service Mesh](images/service-mesh-1.png)
+
 So you’ve started delivering a new project and it’s all about this “Cloud Native” or “Microservices” thing. You’re a Delivery Manager or Software Engineer at some type of company and someone has lightly peppered a meeting with a term, ‘Mesh’.
 
 They possibly said event mesh. Or better yet, they mentioned a service mesh. As time went on you kept hearing more and more about the service mesh. You’ve attempted to read up about it, digested a whole bunch of new terms and still didn’t completely understand what the Mesh even does, why you would need it or why the hype train around this technology shows no sign of stopping. This article is an attempt to provide a focused guide to the service mesh, and why it is so interesting.

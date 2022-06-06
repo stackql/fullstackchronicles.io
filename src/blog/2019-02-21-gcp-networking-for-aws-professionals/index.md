@@ -21,6 +21,8 @@ keywords:
   - "networking"
 ---
 
+![GCP AWS Networking](images/gcp-aws-networking.png)
+
 GCP and AWS share many similarities, they both provide similar services and both leverage containerization, virtualization and software defined networking.
 
 There are some significant differences when it comes to their respective implementations, networking is a key example of this.

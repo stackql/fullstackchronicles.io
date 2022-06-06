@@ -4,6 +4,7 @@ title: "Recurse JavaScript Object to Get Values for a Given Key the Easy Way"
 authors:	
   - jeffreyaven
 draft: false
+image: "/img/fullstackchronicles-cover-image.png"
 tags: 
   - "nodejs"
   - "javascript"

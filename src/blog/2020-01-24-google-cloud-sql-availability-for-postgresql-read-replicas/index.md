@@ -36,6 +36,8 @@ import SetupImage7 from './images/cloud-sql-postgres-read-replicas-7.png';
 import SetupImage8 from './images/cloud-sql-postgres-read-replicas-8.png';
 import SetupImage9 from './images/cloud-sql-postgres-read-replicas-9.png';
 
+![CloudSQL HA](images/cloudsql-featured-image.png)
+
 In this post we will look at read replicas as an additional method to achieve multi zone availability for Cloud SQL, which gives us - in turn - the ability to offload (potentially expensive) IO operations such as user created backups or read operations without adding load to the master instance.
 
 In the previous post in this series we looked at Regional availability for PostgreSQL HA using Cloud SQL:

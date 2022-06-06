@@ -4,6 +4,7 @@ title: "Converting to local time in AWS Lambda using Node.js"
 authors:	
   - jeffreyaven
 draft: false
+image: "/img/fullstackchronicles-cover-image.png"
 tags: 
   - "aws"
   - "lambda"

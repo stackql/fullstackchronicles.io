@@ -16,6 +16,8 @@ keywords:
   - "map-reduce"
 ---
 
+![Map Reduce is Dead](images/image.png)
+
 Firstly, this is not another Hadoop obituary, there are enough of those out there already.
 
 The generalized title of this article has been used as an expression to convey the idea that something old has been replaced by something new. In the case of the expression “the King is dead, long live the King” the inference is that although one monarch has passed, another monarch instantly succeeds him.

@@ -27,6 +27,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![S3 object notifications using Lambda and SES with Terraform](images/s3-object-notifications-using-Lambda-and-SES-with-Terraform.png)
+
 Following on from the previous post in the Really Simple Terraform series [simple-lambda-ec2-scheduler](https://cloudywithachanceofbigdata.com/really-simple-terraform-infrastructure-automation-using-aws-lambda/), where we used Terraform to deploy a Lambda function including the packaging of the Python function into a ZIP archive and creation of all supporting objects (roles, policies, permissions, etc) – in this post we will take things a step further by using templating to update parameters in the Lambda function code before the packaging and creation of the Lambda function.
 
 S3 event notifications can be published directly to an SNS topic which you could create an email subscription, this is quite straightforward. However the email notifications you get look something like this:

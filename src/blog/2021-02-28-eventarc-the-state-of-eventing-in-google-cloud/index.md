@@ -5,7 +5,7 @@ authors:
   - tomklimovski
 draft: false
 hide_table_of_contents: true
-image: "images/service-mesh-1.png"
+image: "/img/fullstackchronicles-cover-image.png"
 tags: 
   - "eventarc"
   - "google-cloud-platform"

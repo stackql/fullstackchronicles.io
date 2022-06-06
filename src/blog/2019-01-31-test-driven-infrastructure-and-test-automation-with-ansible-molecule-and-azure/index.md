@@ -26,6 +26,8 @@ keywords:
 
 import Gist from 'react-gist';
 
+![Molecule Ansible Azure](images/molecule-ansible-azure.png)
+
 A few years back, before the rise of the hyper-scalers, I had my first infracode 'aha moment' with OpenStack. The second came with [Kitchen](https://kitchen.ci/).
 
 I had already been using test driven development for application code and configuration automation for infrastructure but Kitchen brought the two together. Kitchen made it possible to write tests, spin up infrastructure, and then tear everything down again - the Red/Green/Refactor cycle for infrastructure. What made this even better was that it wasn't a facsimile of a target environment, it was the same - same VM's, same OS, same network.

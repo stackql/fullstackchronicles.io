@@ -5,7 +5,7 @@ authors:
   - jeffreyaven
 draft: false
 hide_table_of_contents: true
-image: "images/AzureStaticWebApp.png"
+image: "/img/fullstackchronicles-cover-image.png"
 tags: 
   - "wordpress"
   - "jamstack"
