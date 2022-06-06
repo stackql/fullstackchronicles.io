@@ -17,13 +17,14 @@ keywords:
   - "swagger"
 ---
 
+
 I had a scenario where I needed to find values for a key in a complex JavaScript object which could be nested __*n*__ levels deep.  
 
-I found numerous approaches to doing this, most were overly complicated, so I thought I would share the simplest, most succinct approach to doing this.  
+I found numerous approaches to doing this, most were overly complicated, so I thought I would share the most straightforward, concise process.  
 
 ## the Code
 
-One simple function implementing the __*"tail call recursion"*__ pattern, to search for a key (`key`) from the root of an object (`obj`), excluding any keys in `excludeKeys`.  
+You can do this in a straightforward function implementing the __*"tail call recursion"*__ pattern to search for a key (`key`) from the root of an object (`obj`), excluding any keys in `excludeKeys`.  
 
 This will return a list of values for the given key, searching all levels in all branches of the object.   
 
