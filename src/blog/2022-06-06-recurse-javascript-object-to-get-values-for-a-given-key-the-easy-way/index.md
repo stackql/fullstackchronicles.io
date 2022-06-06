@@ -17,7 +17,7 @@ keywords:
   - "swagger"
 ---
 
-I dad a scenario where I needed to find values for a key in a complex JavaScript object which could be nested __*n*__ levels deep.  
+I had a scenario where I needed to find values for a key in a complex JavaScript object which could be nested __*n*__ levels deep.  
 
 I found numerous approaches to doing this, most were overly complicated, so I thought I would share the simplest, most succinct approach to doing this.  
 
