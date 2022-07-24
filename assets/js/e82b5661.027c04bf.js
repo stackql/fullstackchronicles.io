@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[38694],{31362:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"stackql","count":2,"permalink":"/tags/stackql"}')}}]);
