@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[71930],{46917:function(s){s.exports=JSON.parse('{"label":"orchestration","permalink":"/tags/orchestration","allTagsPath":"/tags","count":1}')}}]);

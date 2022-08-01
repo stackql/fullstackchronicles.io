@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[2677],{72446:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"docusaurus","count":1,"permalink":"/tags/docusaurus"}')}}]);

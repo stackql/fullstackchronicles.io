@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[30420],{19830:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"boto3","count":2,"permalink":"/tags/boto-3"}')}}]);

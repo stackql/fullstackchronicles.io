@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[2085],{173:function(e){e.exports=JSON.parse('{"allTagsPath":"/tags","name":"software-architecture","count":2,"permalink":"/tags/software-architecture"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[59062],{16672:function(s){s.exports=JSON.parse('{"label":"sso","permalink":"/tags/sso","allTagsPath":"/tags","count":1}')}}]);

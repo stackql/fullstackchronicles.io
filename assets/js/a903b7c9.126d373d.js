@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[71313],{35952:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"apis","count":1,"permalink":"/tags/apis"}')}}]);

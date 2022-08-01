@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[54531],{55570:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"kappa-architecture","count":1,"permalink":"/tags/kappa-architecture"}')}}]);

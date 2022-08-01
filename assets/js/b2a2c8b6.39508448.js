@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[32909],{60311:function(l){l.exports=JSON.parse('{"label":"multi-cloud","permalink":"/tags/multi-cloud","allTagsPath":"/tags","count":2}')}}]);

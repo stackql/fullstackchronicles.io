@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[1691],{64472:function(s){s.exports=JSON.parse('{"label":"gcp","permalink":"/tags/gcp","allTagsPath":"/tags","count":20}')}}]);

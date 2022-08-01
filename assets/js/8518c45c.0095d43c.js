@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[6358],{50336:function(a){a.exports=JSON.parse('{"label":"data-warehousing","permalink":"/tags/data-warehousing","allTagsPath":"/tags","count":1}')}}]);

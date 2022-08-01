@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[49659],{18009:function(s){s.exports=JSON.parse('{"label":"microsoft","permalink":"/tags/microsoft","allTagsPath":"/tags","count":1}')}}]);

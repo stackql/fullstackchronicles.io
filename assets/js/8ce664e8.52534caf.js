@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[698],{2409:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","name":"docker","count":2,"permalink":"/tags/docker"}')}}]);

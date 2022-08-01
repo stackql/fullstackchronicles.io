@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[17014],{19779:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"cloudywithachanceofbigdata.com","count":1,"permalink":"/tags/cloudywithachanceofbigdata-com"}')}}]);

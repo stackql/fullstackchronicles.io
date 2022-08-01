@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[31255],{3862:function(s){s.exports=JSON.parse('{"label":"vpn","permalink":"/tags/vpn","allTagsPath":"/tags","count":1}')}}]);

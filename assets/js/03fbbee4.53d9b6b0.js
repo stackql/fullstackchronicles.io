@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[57032],{46668:function(s){s.exports=JSON.parse('{"label":"policyascode","permalink":"/tags/policyascode","allTagsPath":"/tags","count":1}')}}]);

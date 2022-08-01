@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[60017],{74639:function(a){a.exports=JSON.parse('{"label":"azure","permalink":"/tags/azure","allTagsPath":"/tags","count":6}')}}]);

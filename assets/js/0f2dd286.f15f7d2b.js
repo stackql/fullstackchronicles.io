@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[12182],{78751:function(l){l.exports=JSON.parse('{"label":"dlp","permalink":"/tags/dlp","allTagsPath":"/tags","count":1}')}}]);

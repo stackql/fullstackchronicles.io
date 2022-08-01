@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[38941],{29698:function(s){s.exports=JSON.parse('{"label":"open-source-software","permalink":"/tags/open-source-software","allTagsPath":"/tags","count":2}')}}]);

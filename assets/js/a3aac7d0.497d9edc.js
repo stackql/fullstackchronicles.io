@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[48263],{251:function(a){a.exports=JSON.parse('{"allTagsPath":"/tags","name":"data-quality-management","count":1,"permalink":"/tags/data-quality-management"}')}}]);
