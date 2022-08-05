@@ -25,17 +25,18 @@ description: This article gives a quick and straightforward introduction to dbt 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-DBT or Data Build Tool is a modern data transformation tool born in the cloud/DevOps era. It's a great project which much has been written about; I will try to give as brief an overview as possible.  
+[__DBT (or Data Build Tool)__](https://docs.getdbt.com/) is a modern data transformation tool born in the cloud/DevOps era. It's a great project which much has been written about; I will try to give as brief an overview as possible.  
 
-## ETL vs ELT
-
-Before we discuss DBT, we need a quick refresher on ELT vs ETL; I have created an infographic for this...  
-
-[![ETL vs ELT](images/etl-vs-elt.png)](images/etl-vs-elt.png)
+<details>
+<summary>ETL vs ELT Refresher</summary>
+<p>A quick refresher on ELT vs ETL before we discuss DBT. I have created an infographic for this...</p>
+<a target="_blank" href="/img/blog/dbt-in-five-minutes/etl-vs-elt.png">
+<img loading="lazy" alt="ETL vs ELT" src="/img/blog/dbt-in-five-minutes/etl-vs-elt.png" width="595" height="410" class="img_node_modules-@docusaurus-theme-classic-lib-theme-MDXComponents-Img-styles-module" /></a>
+</details>
 
 ## Summary
 
-DBT (or Data Build Tool) is an open-source command line tool written in Python from DBT Labs (formerly Fishtown Analytics).  
+DBT is an open-source command line tool written in Python from DBT Labs (formerly Fishtown Analytics).  
 
 DBT is designed to manage data transformations while applying software engineering best practices (including version control, automated testing, reviews, approvals, etc).  Its modern software engineering and cloud-first design goals separate it from its old-school ETL/ELT predecessors.  
 
@@ -45,7 +46,7 @@ At its core DBT is a templating engine using Jinja (Python templating engine); i
 
 ## Models
 
-The concept most integral to DBT is the __Model__.  A Model is simply a representation of a transform (or set of transforms) to a dataset, resulting in a target object (which could be a table or tables in a datamart).  A model is expressed as a `SELECT` statement stored in a `.sql` file in your `dbt` project (well get to that in a minute).  
+The concept most integral to DBT is the [__Model__](https://docs.getdbt.com/docs/building-a-dbt-project/building-models).  A Model is simply a representation of a transform (or set of transforms) to a dataset, resulting in a target object (which could be a table or tables in a datamart).  A model is expressed as a `SELECT` statement stored in a `.sql` file in your `dbt` project (well get to that in a minute).  
 
 Suppose we want to create a denormalized fact table for commits to store in a datamart in BigQuery.  This is what a model file might look like (using the BigQuery SQL dialect and referencing objects that should exist and be accessible at runtime when we execute the model).  
 
@@ -67,11 +68,11 @@ select * from commits
 
 Models are created as views by default, but you can materialize these as tables where needed.  
 
-You configure connectivity to the target database using __adapters__ (software libraries provided by dbt in the case of most mainstream databases) and __profiles__ (which contain details around authentication, databases/datasets, schemas etc).  
+You configure connectivity to the target database using [__adapters__](https://docs.getdbt.com/docs/available-adapters) (software libraries provided by dbt in the case of most mainstream databases) and [__profiles__](https://docs.getdbt.com/dbt-cli/configure-your-profile) (which contain details around authentication, databases/datasets, schemas etc).  
 
 ## DBT Project
 
-You `dbt` project is simply a folder containing your models and some other configuration data.  You can initialize this by running `dbt init` from your desired project directory.  In its most basic form, the structure looks like this:  
+A DBT project is simply a folder containing your models and some other configuration data.  You can initialize this by running [__`dbt init`__](https://docs.getdbt.com/reference/commands/init) from your desired project directory.  In its most basic form, the structure looks like this:  
 
 ```
 models/
@@ -79,15 +80,15 @@ models/
 ├─ schema.yml
 dbt_project.yml
 ```
-Your models can be organized into subfolders for organization.  The `schema.yml` file contains tests for columns, can also include descriptions for documentation.  The `dbt_project.yml` is the main entry point for the `dbt` program, it contains the configuration for the project, including which __profile__ to use.  Profiles (stored in a file called `profiles.yml` are used to store all of the necessary connectivity information for your target database platform.  By default `dbt init` creates this file a `.dbt` folder under your home directory.  
+Your models can be created under subfolders for organization.  [__`schema.yml`__](https://docs.getdbt.com/reference/resource-configs/schema) is an optional file that  contains tests for columns, can also include descriptions for documentation.  The [__`dbt_project.yml`__](https://docs.getdbt.com/reference/dbt_project.yml) file is the main entry point for the `dbt` program, it contains the configuration for the project, including which `profile` to use.  Profiles (stored in a file called [__`profiles.yml`__](https://docs.getdbt.com/reference/profiles.yml) store all of the necessary connectivity information for your target database platform.  By default `dbt init` creates this file a `.dbt` folder under your home directory.  
 
 :::info
 
-You could store this with your project (be careful not to commit secrets like database credentials to source control).  If you store it in any other directory than the default, you will need to tell `dbt` where it can find this file using the `--profiles-dir` argument of any `dbt` command
+You could store this with your project (be careful not to commit secrets like database credentials to source control).  If you store it in any other directory than the default, you will need to tell `dbt` where it can find this file using the `--profiles-dir` argument of any `dbt` command, see [__here__](https://docs.getdbt.com/dbt-cli/configure-your-profile#advanced-customizing-a-profile-directory) for more information.
 
 :::
 
-To confirm your project is ship shape, run `dbt parse`; if there are no errors, you are good to proceed running and testing your models.  
+To confirm your project is ship shape, run [__`dbt parse`__](https://docs.getdbt.com/reference/commands/parse); if there are no errors, you are good to proceed running and testing your models.  
 
 ## Running DBT Models
 
@@ -102,7 +103,7 @@ To run your models, simply run the following command from the directory containi
 }>
 <TabItem value="command">
 <pre>
-<b>dbt run</b>
+<b><a target="_blank" href="https://docs.getdbt.com/reference/commands/run">dbt run</a></b>
 </pre>
 </TabItem>
 <TabItem value="output">
@@ -135,7 +136,7 @@ Model deployed!  Let's test it:
 }>
 <TabItem value="command">
 <pre>
-<b>dbt test</b>
+<b><a target="_blank" href="https://docs.getdbt.com/reference/commands/test">dbt test</a></b>
 </pre>
 </TabItem>
 <TabItem value="output">
@@ -159,7 +160,7 @@ Model deployed!  Let's test it:
 </TabItem>
 </Tabs>
 
-This will run all of the tests associated with your model(s) - in this case not null and unique tests defined in the `schema.yml` file.  That's it, deployed and tested.  
+This will run all of the tests associated with your model(s) - in this case, `not null` and `unique` tests defined in the `schema.yml` file.  That's it, deployed and tested.  
 
 ## Other Stuff
 
