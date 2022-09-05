@@ -58,14 +58,14 @@ const TwitterSvg =
         additionalLanguages: ['mermaid'],
       },
       image: '/img/fullstackchronicles-cover-image.png',
-      announcementBar: {
-        id: 'support_us',
-        content:
-          `<b>If you find our content useful, give it a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/stackql/fullstackchronicles.io">GitHub</a>, if you want to contribute and become an author, submit a PR</b>`,
-        backgroundColor: '#A9BCD0',
-        textColor: '#1A4E82',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'support_us',
+      //   content:
+      //     `<b>If you find our content useful, give it a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/stackql/fullstackchronicles.io">GitHub</a>, if you want to contribute and become an author, submit a PR</b>`,
+      //   backgroundColor: '#A9BCD0',
+      //   textColor: '#1A4E82',
+      //   isCloseable: true,
+      // },
       algolia: {
         appId: 'MZCGVO503N',
         apiKey: 'd1632c325880eee872b1081d9cde1081',
