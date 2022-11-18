@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[97785],{49557:function(a){a.exports=JSON.parse('{"label":"magic","permalink":"/tags/magic","allTagsPath":"/tags","count":1}')}}]);
