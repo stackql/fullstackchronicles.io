@@ -4,7 +4,7 @@ title: "Create and use Custom Magic Commands in Jupyter"
 authors:	
   - jeffreyaven
 draft: false
-image: "/img/blog/deno-in-five-minutes.png"
+image: "/img/blog/custom-jupyter-magic-featured-image.png"
 tags: 
   - "jupyter"
   - "magic"  
