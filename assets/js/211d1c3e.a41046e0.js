@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[71045],{96973:a=>{a.exports=JSON.parse('{"label":"parquet","permalink":"/tags/parquet","allTagsPath":"/tags","count":1}')}}]);

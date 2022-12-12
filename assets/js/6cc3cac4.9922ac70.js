@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[71700],{86236:s=>{s.exports=JSON.parse('{"label":"forseti","permalink":"/tags/forseti","allTagsPath":"/tags","count":1}')}}]);

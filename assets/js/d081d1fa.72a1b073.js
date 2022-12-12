@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[98619],{47515:function(a){a.exports=JSON.parse('{"label":"pwa","permalink":"/tags/pwa","allTagsPath":"/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[31226],{15101:l=>{l.exports=JSON.parse('{"permalink":"/tags/google-cloud-dataflow","page":1,"postsPerPage":5,"totalPages":1,"totalCount":1,"blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);

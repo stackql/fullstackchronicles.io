@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[47556],{74434:function(e){e.exports=JSON.parse('{"label":"data engineering","permalink":"/tags/data-engineering","allTagsPath":"/tags","count":1}')}}]);

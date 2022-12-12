@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[24252],{78742:function(l){l.exports=JSON.parse('{"label":"c4model","permalink":"/tags/c-4-model","allTagsPath":"/tags","count":2}')}}]);

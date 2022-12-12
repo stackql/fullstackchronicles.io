@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[53977],{27626:function(s){s.exports=JSON.parse('{"permalink":"/tags/gcp","page":1,"postsPerPage":5,"totalPages":5,"totalCount":21,"nextPage":"/tags/gcp/page/2","blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);

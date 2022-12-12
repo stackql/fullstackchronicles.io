@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[84246],{35590:function(a){a.exports=JSON.parse('{"label":"managed file transfer","permalink":"/tags/managed-file-transfer","allTagsPath":"/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[58835],{1918:s=>{s.exports=JSON.parse('{"label":"roles","permalink":"/tags/roles","allTagsPath":"/tags","count":1}')}}]);

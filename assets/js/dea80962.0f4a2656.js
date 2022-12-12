@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[57001],{8546:s=>{s.exports=JSON.parse('{"label":"serverless","permalink":"/tags/serverless","allTagsPath":"/tags","count":2}')}}]);

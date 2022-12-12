@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[37153],{72005:l=>{l.exports=JSON.parse('{"label":"cloudwatch","permalink":"/tags/cloudwatch","allTagsPath":"/tags","count":1}')}}]);

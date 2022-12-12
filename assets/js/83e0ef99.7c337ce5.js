@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[46072],{65442:function(s){s.exports=JSON.parse('{"label":"microsoft-azure","permalink":"/tags/microsoft-azure","allTagsPath":"/tags","count":4}')}}]);

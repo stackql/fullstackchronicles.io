@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[53013],{70050:a=>{a.exports=JSON.parse('{"label":"aws iam","permalink":"/tags/aws-iam","allTagsPath":"/tags","count":1}')}}]);

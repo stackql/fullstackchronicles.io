@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[63609],{14167:function(s){s.exports=JSON.parse('{"label":"ipython","permalink":"/tags/ipython","allTagsPath":"/tags","count":1}')}}]);

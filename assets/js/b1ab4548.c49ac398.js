@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[55342],{35440:function(e){e.exports=JSON.parse('{"label":"vercel","permalink":"/tags/vercel","allTagsPath":"/tags","count":1}')}}]);

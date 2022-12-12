@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[95406],{57193:a=>{a.exports=JSON.parse('{"label":"kafka","permalink":"/tags/kafka","allTagsPath":"/tags","count":2}')}}]);

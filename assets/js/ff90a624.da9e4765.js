@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[51022],{39191:s=>{s.exports=JSON.parse('{"label":"devops","permalink":"/tags/devops","allTagsPath":"/tags","count":1}')}}]);

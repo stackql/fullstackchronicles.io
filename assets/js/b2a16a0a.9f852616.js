@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[41540],{87278:function(l){l.exports=JSON.parse('{"label":"gitlab","permalink":"/tags/gitlab","allTagsPath":"/tags","count":4}')}}]);

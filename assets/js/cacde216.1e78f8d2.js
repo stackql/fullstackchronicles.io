@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[36673],{75593:function(e){e.exports=JSON.parse('{"label":"kubernetes","permalink":"/tags/kubernetes","allTagsPath":"/tags","count":3}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[14306],{25167:s=>{s.exports=JSON.parse('{"label":"service-mesh","permalink":"/tags/service-mesh","allTagsPath":"/tags","count":2}')}}]);

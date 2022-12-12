@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[10240],{80897:function(e){e.exports=JSON.parse('{"permalink":"/page/14","page":14,"postsPerPage":5,"totalPages":14,"totalCount":66,"previousPage":"/page/13","blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);

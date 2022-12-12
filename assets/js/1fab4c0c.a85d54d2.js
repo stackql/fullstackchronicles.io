@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[52889],{94013:function(s){s.exports=JSON.parse('{"label":"spark","permalink":"/tags/spark","allTagsPath":"/tags","count":7}')}}]);

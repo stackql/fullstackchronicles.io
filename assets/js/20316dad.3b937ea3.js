@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[31063],{89206:function(c){c.exports=JSON.parse('{"label":"certification","permalink":"/tags/certification","allTagsPath":"/tags","count":1}')}}]);

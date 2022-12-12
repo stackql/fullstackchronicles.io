@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[72757],{53946:function(l){l.exports=JSON.parse('{"label":"molecule","permalink":"/tags/molecule","allTagsPath":"/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[70002],{93525:function(a){a.exports=JSON.parse('{"label":"api-management","permalink":"/tags/api-management","allTagsPath":"/tags","count":1}')}}]);

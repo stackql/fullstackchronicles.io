@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[53205],{87737:function(s){s.exports=JSON.parse('{"label":"hocon","permalink":"/tags/hocon","allTagsPath":"/tags","count":1}')}}]);

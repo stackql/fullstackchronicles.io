@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[14836],{70555:l=>{l.exports=JSON.parse('{"label":"tailcall","permalink":"/tags/tailcall","allTagsPath":"/tags","count":1}')}}]);

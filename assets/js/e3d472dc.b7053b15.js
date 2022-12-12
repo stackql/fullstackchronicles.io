@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[1645],{17929:a=>{a.exports=JSON.parse('{"label":"streaming-analytics","permalink":"/tags/streaming-analytics","allTagsPath":"/tags","count":1}')}}]);
