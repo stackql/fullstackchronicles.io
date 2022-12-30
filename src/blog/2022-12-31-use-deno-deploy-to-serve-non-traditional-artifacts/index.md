@@ -4,7 +4,7 @@ title: "Use Deno Deploy to Serve Non-Traditional Artifacts"
 authors:  
   - jeffreyaven
 draft: false
-image: "/img/blog/apache-beam-in-five-minutes.png"
+image: "/img/blog/use-deno-deploy-to-serve-non-traditional-artifacts.png"
 tags: 
   - "deno deploy"  
   - "deno"
