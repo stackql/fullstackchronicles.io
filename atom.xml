@@ -2,11 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fullstackchronicles.io/</id>
     <title>Full Stack Chronicles Blog Feed</title>
-    <updated>2022-12-12T00:00:00.000Z</updated>
+    <updated>2022-12-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fullstackchronicles.io/"/>
     <subtitle>Full stack design patterns</subtitle>
     <icon>https://fullstackchronicles.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Use Deno Deploy to Serve Non-Traditional Artifacts]]></title>
+        <id>use-deno-deploy-to-serve-non-traditional-artifacts</id>
+        <link href="https://fullstackchronicles.io/use-deno-deploy-to-serve-non-traditional-artifacts"/>
+        <updated>2022-12-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This article demonstrates the use of Deno Deploy to serve static text files as non-traditional development artifacts.]]></summary>
+        <content type="html"><![CDATA[<p>In the <a href="https://github.com/stackql/stackql" target="_blank" rel="noopener noreferrer"><strong>stackql</strong></a> project we needed an API to serve configuration file packages (stackql providers) to the stackql application at runtime.  </p><p>Traditional artifact repositories or package managers were unsuitable as they were mainly designed for container images, JavaScript modules, Python packages etc.  The artifacts, in this case, are signed tarball sets of OpenAPI specification documents (text files).  </p><p>We have recently moved our provider registry (<a href="https://github.com/stackql/stackql-provider-registry" target="_blank" rel="noopener noreferrer"><strong>stackql-provider-registry</strong></a>) to use <a href="https://deno.com/deploy" target="_blank" rel="noopener noreferrer"><strong>Deno Deploy</strong></a> as the serving layer (the API).  </p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-code">The code<a class="hash-link" href="#the-code" title="Direct link to heading">​</a></h2><p>The code is reasonably straightforward as shown here:  </p><iframe width="100%" frameborder="0" id="gist-8747fa98e61e411373a95dbe2e261bd6"></iframe><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="the-deployment">The deployment<a class="hash-link" href="#the-deployment" title="Direct link to heading">​</a></h2><p>We are using GitHub Actions to push assets and code to Deno Deploy, this was straightforward as well as you can see here:  </p><iframe width="100%" frameborder="0" id="gist-e4e98f427c80ecee4f82fb8731565289"></iframe>]]></content>
+        <author>
+            <name>Jeffrey Aven</name>
+            <uri>https://www.linkedin.com/in/jeffreyaven/</uri>
+        </author>
+        <category label="deno deploy" term="deno deploy"/>
+        <category label="deno" term="deno"/>
+        <category label="javascript" term="javascript"/>
+        <category label="typescript" term="typescript"/>
+        <category label="api" term="api"/>
+        <category label="openapi" term="openapi"/>
+        <category label="stackql" term="stackql"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Apache Beam in Five Minutes]]></title>
         <id>apache-beam-in-five-minutes</id>
