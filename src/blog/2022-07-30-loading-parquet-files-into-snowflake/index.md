@@ -22,8 +22,6 @@ keywords:
 description: This article demonstrates how to automate and streamline the ingestion of Parquet formatted files into Snowflake.
 ---
 
-import Gist from 'react-gist';
-
 Loading Parquet format files into BigQuery is straightforward, you just need to specify the file location (local, Google Cloud Storage, Drive, Amazon S3 or Azure Blob storage) and thats pretty much it, BigQuery works the rest out from there.  
 
 ```
