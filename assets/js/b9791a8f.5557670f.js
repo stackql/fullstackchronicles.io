@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[66139],{69504:s=>{s.exports=JSON.parse('{"label":"bitbucket","permalink":"/tags/bitbucket","allTagsPath":"/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[74958],{33640:s=>{s.exports=JSON.parse('{"label":"semver","permalink":"/tags/semver","allTagsPath":"/tags","count":1}')}}]);

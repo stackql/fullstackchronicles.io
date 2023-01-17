@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[26607],{79718:l=>{l.exports=JSON.parse('{"label":"gitflow","permalink":"/tags/gitflow","allTagsPath":"/tags","count":1}')}}]);

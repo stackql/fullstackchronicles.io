@@ -2,11 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fullstackchronicles.io/</id>
     <title>Full Stack Chronicles Blog Feed</title>
-    <updated>2022-12-31T00:00:00.000Z</updated>
+    <updated>2023-01-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fullstackchronicles.io/"/>
     <subtitle>Full stack design patterns</subtitle>
     <icon>https://fullstackchronicles.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Introducing GitVer - an alternative versioning scheme]]></title>
+        <id>gitver-an-alternative-versioning-scheme-to-semver-or-calver</id>
+        <link href="https://fullstackchronicles.io/gitver-an-alternative-versioning-scheme-to-semver-or-calver"/>
+        <updated>2023-01-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This article demonstrates the use of Deno Deploy to serve static text files as non-traditional development artifacts.]]></summary>
+        <content type="html"><![CDATA[<p>With our StackQL Provider Registry, we had an interesting challenge:  </p><ol><li>Maintain different versions for one or more different documents in the same repo(which were decoupled from releases)</li><li>Provide dynamic versioning (with no user input required and not dictated by tags)</li><li>Maintain some traceability to the source repo (pull requests, commit shas, etc)</li></ol><p><a href="https://semver.org/" target="_blank" rel="noopener noreferrer">SemVer</a> required users to make arbitrary decisions on major, minor, and build numbers.  </p><p>Although <a href="https://calver.org/" target="_blank" rel="noopener noreferrer">CalVer</a> required less user discretion for the major and minor components, the micro-component was still an arbitrary number.  This was not ideal for our use case.  </p><p>As our document versioning was not related to tags, and we have implemented GitFlow (specifically based upon PRs to dev or main) as our release path, we created a new variant scheme... <strong>GitVer</strong>.  </p><p>This scheme is implemented using GitHub as the remote but could easily be adapted to GitLab, Bitbucket, etc.  </p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="how-it-works">How it works<a class="hash-link" href="#how-it-works" title="Direct link to heading">​</a></h2><p>Each pull request is assigned a version based on the date the PR was raised or merged, and the PR number.   This version (the GitVer) can then be used to version artifacts (which could be pushed to releases if desired).  </p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="workflow-example-code">Workflow Example Code<a class="hash-link" href="#workflow-example-code" title="Direct link to heading">​</a></h2><p>This is an example using GitHub actions.  The version is determined automatically within the workflow.  </p><p><code>main.yml</code> example:  </p><iframe width="100%" frameborder="0" id="gist-94bcf43ba5deaf088a271d54d2a9c33e"></iframe><p>The code used to get the relevant PR info is here (<code>setup-job.js</code>), the tricky bit is that the PR number presents differently for a pull request open or sync (pushing changes to an open PR) and a merge commit (which is simply a push to a protetcted branch).  See the code below:</p><iframe width="100%" frameborder="0" id="gist-bec7982143a9637f866b7239e8c18130"></iframe><div class="theme-admonition theme-admonition-tip alert alert--success admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_S0QG"><p>you can export some other metadata while you are here like the commit sha, source and target branch, (PR) action, etc.</p></div></div><p>The code to generate the GitVer for the PR is here (<code>get-version.js</code>):  </p><iframe width="100%" frameborder="0" id="gist-659b56d2474ed1fb8944e1c816b28f49"></iframe><p>You can see it at work here <a href="https://github.com/stackql/stackql-provider-registry/blob/dev/.github/workflows/main.yml" target="_blank" rel="noopener noreferrer">stackql/stackql-provider-registry</a> which builds and deploys <a href="https://registry.stackql.io/" target="_blank" rel="noopener noreferrer">providers for StackQL</a>.   </p><p>Thoughts?</p>]]></content>
+        <author>
+            <name>Jeffrey Aven</name>
+            <uri>https://www.linkedin.com/in/jeffreyaven/</uri>
+        </author>
+        <category label="gitver" term="gitver"/>
+        <category label="semver" term="semver"/>
+        <category label="calver" term="calver"/>
+        <category label="gitops" term="gitops"/>
+        <category label="versioning" term="versioning"/>
+        <category label="git" term="git"/>
+        <category label="github" term="github"/>
+        <category label="gitlab" term="gitlab"/>
+        <category label="bitbucket" term="bitbucket"/>
+        <category label="gitflow" term="gitflow"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Use Deno Deploy to Serve Non-Traditional Artifacts]]></title>
         <id>use-deno-deploy-to-serve-non-traditional-artifacts</id>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[6217],{4307:s=>{s.exports=JSON.parse('{"label":"gitver","permalink":"/tags/gitver","allTagsPath":"/tags","count":1}')}}]);

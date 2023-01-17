@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[37337],{44496:s=>{s.exports=JSON.parse('{"label":"gitops","permalink":"/tags/gitops","allTagsPath":"/tags","count":1}')}}]);

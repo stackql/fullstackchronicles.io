@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[99617],{56808:l=>{l.exports=JSON.parse('{"label":"calver","permalink":"/tags/calver","allTagsPath":"/tags","count":1}')}}]);
