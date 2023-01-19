@@ -77,7 +77,7 @@ const TwitterSvg =
         sitemap: {
           changefreq: 'weekly',
           priority: 0.5,
-          ignorePatterns: ['/blog/tags/**', '/search', '/blog/page/**'],
+          ignorePatterns: ['/blog/tags/**', '/tags/**', '/search', '/blog/page/**', '/page/**'],
           filename: 'sitemap.xml',          
         },
         blog: {
