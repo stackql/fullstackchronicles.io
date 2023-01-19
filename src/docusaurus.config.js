@@ -13,15 +13,73 @@ const TwitterSvg =
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: '/favicon.ico',
   organizationName: 'stackql',
   projectName: 'fullstackchronicles.io',
   trailingSlash: false,
+  baseUrlIssueBanner: false,
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
+    },   
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png',
+      },
+    },    
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'manifest',
+        href: '/site.webmanifest',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'mask-icon',
+        href: '/safari-pinned-tab.svg',
+        color: '#0f4c81',
+      },
+    },
+  ],
+  plugins: [
+    '@stackql/docusaurus-plugin-structured-data',
+    '@docusaurus/plugin-ideal-image',
+  ],  
   presets: [
     [
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        gtag: {
+          trackingID: 'G-0FVDC1E8G6',
+          anonymizeIP: false,
+        },        
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/blog/tags/**', '/search', '/blog/page/**'],
+          filename: 'sitemap.xml',          
+        },
         blog: {
           routeBasePath: '/',
           showReadingTime: true,
@@ -31,7 +89,7 @@ const TwitterSvg =
             blogDescription: 'Full stack design patterns and random musings',
             postsPerPage: 5,
             blogSidebarTitle: 'Recent Posts',
-            blogSidebarCount: 10,
+            blogSidebarCount: 15,
             feedOptions: {
               type: 'all',
               title: 'Full Stack Chronicles Blog Feed',
@@ -41,11 +99,6 @@ const TwitterSvg =
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        sitemap: {},
-        gtag: {
-          trackingID: 'G-0FVDC1E8G6',
-          anonymizeIP: false,
-        },        
       }),
     ],
   ],
@@ -58,6 +111,16 @@ const TwitterSvg =
         additionalLanguages: ['mermaid'],
       },
       image: '/img/fullstackchronicles-cover-image.png',
+      metadata: [
+        {name: 'robots', content: 'index,follow'},
+        {name: 'twitter:site', content: '@fschronicles1'},
+        {name: 'twitter:creator', content: '@fschronicles1'},
+        {name: 'og:type', content: 'website'},
+        {name: 'og:locale', content: 'en_US'},
+        {name: 'og:site_name', content: 'Full Stack Chronicles'},
+        {name: 'msapplication-TileColor', content: '#2d89ef'},
+        {name: 'theme-color', content: '#ffffff'},
+      ],
       // announcementBar: {
       //   id: 'support_us',
       //   content:
@@ -66,6 +129,19 @@ const TwitterSvg =
       //   textColor: '#1A4E82',
       //   isCloseable: true,
       // },
+      structuredData: {
+        excludedRoutes: [],
+        verbose: true,
+        organization: {},
+        website: {
+          inLanguage: 'en-US',
+        },
+        webpage: {
+          inLanguage: 'en-US',
+          datePublished: '2019-01-01',
+        },
+        breadcrumbLabelMap: {}
+      },      
       algolia: {
         appId: 'MZCGVO503N',
         apiKey: 'd1632c325880eee872b1081d9cde1081',
