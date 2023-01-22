@@ -3777,9 +3777,9 @@
     webpack-sources "^3.2.2"
 
 "@stackql/docusaurus-plugin-structured-data@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@stackql/docusaurus-plugin-structured-data/-/docusaurus-plugin-structured-data-1.0.4.tgz#3de839ac6dd1e8334b105af74882ee7bde673fed"
-  integrity sha512-c2RNZJeagYeoTQeHv2vXKWTy6gGb9JdvUrRPnJ4BbBxU1Vu9WRiyhmQ7jdIw+gylkvC9KfYVDA1RPEsW48ndeA==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stackql/docusaurus-plugin-structured-data/-/docusaurus-plugin-structured-data-1.1.0.tgz#dd1746afe4fd71342acc460a12bdbb7c58d458ae"
+  integrity sha512-nCtXjWcF4jFbtL2eD/xheZcr40RdV+XXSAZAlFB4W8vlbEj/YNBm+Vu0/fyBUYg0Zj4zQuV7X7wh0GElOTxhvA==
   dependencies:
     jsdom "^21.0.0"
 
@@ -6724,9 +6724,9 @@ estraverse@^4.1.1:
   integrity sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==
 
 estraverse@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-5.2.0.tgz#307df42547e6cc7324d3cf03c155d5cdb8c53880"
-  integrity sha512-BxbNGGNm0RyRYvUdHpIwv9IWzeM9XClbOxwoATuFdOE7ZE6wHL+HQ5T8hoPM+zHvmKzzsEqhgy0GrQ5X13afiQ==
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-5.3.0.tgz#2eea5290702f26ab8fe5370370ff86c965d21123"
+  integrity sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==
 
 esutils@^2.0.2:
   version "2.0.3"
@@ -9542,9 +9542,9 @@ punycode@^2.1.0:
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
 punycode@^2.1.1:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.2.0.tgz#2092cc57cd2582c38e4e7e8bb869dc8d3148bc74"
-  integrity sha512-LN6QV1IJ9ZhxWTNdktaPClrNfp8xdSAYS0Zk2ddX7XsXZAxckMHPCBcHRo0cTcEIgYPRiGEkmji3Idkh2yFtYw==
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
+  integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
 
 pupa@^2.1.1:
   version "2.1.1"
@@ -10033,7 +10033,7 @@ require-from-string@^2.0.2:
 requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
-  integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+  integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
 resolve-from@^4.0.0:
   version "4.0.0"
