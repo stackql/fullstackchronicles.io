@@ -121,17 +121,76 @@ const TwitterSvg =
         {name: 'msapplication-TileColor', content: '#2d89ef'},
         {name: 'theme-color', content: '#ffffff'},
       ],
-      // announcementBar: {
-      //   id: 'support_us',
-      //   content:
-      //     `<b>If you find our content useful, give it a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/stackql/fullstackchronicles.io">GitHub</a>, if you want to contribute and become an author, submit a PR</b>`,
-      //   backgroundColor: '#A9BCD0',
-      //   textColor: '#1A4E82',
-      //   isCloseable: true,
-      // },
+      announcementBar: {
+        id: 'support_us',
+        content:
+          `<b>If you find our content useful, follow us on <a target="_blank" rel="noopener noreferrer" href="https://github.com/stackql">GitHub</a>, if you have some content to share, reach out</b>`,
+        backgroundColor: '#A9BCD0',
+        textColor: '#1A4E82',
+        isCloseable: true,
+      },
       structuredData: {
         excludedRoutes: [],
         verbose: true,
+        featuredImageDimensions: {
+          width: 1200,
+          height: 627,
+        },
+        authors:{
+          'Jeffrey Aven': {
+            authorId: '1',
+            url: 'https://www.linkedin.com/in/jeffreyaven/',
+            imageUrl: 'https://s.gravatar.com/avatar/f96573d092470c74be233e1dded5376f?s=80',
+            sameAs: [
+              'https://www.amazon.com/stores/Jeffrey-Aven/author/B0BSP78VVL',
+              'https://developers.google.com/community/experts/directory/profile/profile-jeffrey-aven',
+              'https://www.linkedin.com/in/jeffreyaven/',
+              'https://www.crunchbase.com/person/jeffrey-aven',
+              'https://github.com/jeffreyaven',
+              'https://dev.to/jeffreyaven',
+            ],
+          },
+          'Tom Klimovski': {
+            authorId: '2',
+            url: 'https://github.com/tomklimovskigamma',
+            imageUrl: 'http://2.gravatar.com/avatar/58faa98ad68138dd1997f828f00a882e?s=80',
+            sameAs: [
+              'https://github.com/tomklimovskigamma',
+            ],
+          },
+          'Chris Ottinger': {
+            authorId: '3',
+            url: 'https://github.com/datwiz',
+            imageUrl: 'http://0.gravatar.com/avatar/f9af9c3fae755ac170c5798c53c5267d?s=80',
+            sameAs: [
+              'https://github.com/datwiz',
+            ],
+          },
+          'Mark Stella': {
+            authorId: '4',
+            url: 'https://github.com/mpstella',
+            imageUrl: 'http://1.gravatar.com/avatar/9a7465656212285f24f64326cd38d6c9?s=80',
+            sameAs: [
+              'https://github.com/mpstella',
+            ],
+          },
+          'Daniel Hussey': {
+            authorId: '5',
+            url: 'https://www.linkedin.com/in/daniel-hussey/',
+            imageUrl: 'http://2.gravatar.com/avatar/b0daeaf079c3665ee65a250adba487ee?s=80',
+            sameAs: [
+              'https://www.linkedin.com/in/daniel-hussey/',
+            ],
+          },
+          'Yuncheng Yang': {
+            authorId: '6',
+            url: 'https://www.linkedin.com/in/yuncheng-fabio-yang/',
+            imageUrl: 'https://en.gravatar.com/userimage/195643035/72fc562ee87d0c67847c8989d2808129.jpg?size=80',
+            sameAs: [
+              'https://www.linkedin.com/in/yuncheng-fabio-yang/',
+            ],
+          },
+        },          
         organization: {},
         website: {
           inLanguage: 'en-US',

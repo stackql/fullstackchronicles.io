@@ -19,6 +19,7 @@ keywords:
   - "googlecloud"
   - "gcp"
   - "swagger"  
+description: This article demonstrates how to generate OpenAPI3 specification documents for Google Cloud services.  
 ---
 
 import Gist from 'react-gist';

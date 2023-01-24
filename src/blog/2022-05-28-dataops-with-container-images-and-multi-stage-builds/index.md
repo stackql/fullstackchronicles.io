@@ -17,6 +17,7 @@ keywords:
   - "ci-cd"
   - "data engineering"
   - "poetry"  
+description: This article demonstrates how multi-stage builds and tools can automate and simplify container maintenance.
 ---
 
 import Tabs from '@theme/Tabs';
