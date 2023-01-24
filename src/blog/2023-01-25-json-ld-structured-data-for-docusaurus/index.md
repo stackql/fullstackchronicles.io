@@ -4,7 +4,7 @@ title: "Yoast (like) JSON-LD Structured Data for Docusaurus"
 authors:  
   - jeffreyaven
 draft: false
-image: "/img/blog/gitver-an-alternative-versioning-scheme-to-semver-or-calver.png"
+image: "/img/blog/json-ld-structured-data-for-docusaurus.png"
 tags: 
   - "structured data"  
   - "docusaurus"
