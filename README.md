@@ -33,8 +33,9 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-```
+```powershell
 cd src
+# set env vars for ALGOLIA_APP_ID, ALGOLIA_API_KEY, ALGOLIA_INDEX_NAME
 cmd /C 'set "GIT_USER=jeffreyaven" && set "USE_SSH=true" && set "DEPLOYMENT_BRANCH=gh-pages" && set "CURRENT_BRANCH=main" && yarn deploy'
 ```
 

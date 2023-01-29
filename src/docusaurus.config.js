@@ -18,6 +18,10 @@ const TwitterSvg =
   projectName: 'fullstackchronicles.io',
   trailingSlash: false,
   baseUrlIssueBanner: false,
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   headTags: [
     {
       tagName: 'link',
@@ -202,9 +206,9 @@ const TwitterSvg =
         breadcrumbLabelMap: {}
       },      
       algolia: {
-        appId: 'MZCGVO503N',
-        apiKey: 'd1632c325880eee872b1081d9cde1081',
-        indexName: 'cloudywithachanceofbigdata',
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
 
         // Optional: see doc section below
         contextualSearch: false,
