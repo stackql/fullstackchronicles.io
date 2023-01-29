@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[84465],{96609:a=>{a.exports=JSON.parse('{"label":"change data capture","permalink":"/tags/change-data-capture","allTagsPath":"/tags","count":1}')}}]);

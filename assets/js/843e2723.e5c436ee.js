@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[50062],{14556:s=>{s.exports=JSON.parse('{"label":"bigquery","permalink":"/tags/bigquery","allTagsPath":"/tags","count":6}')}}]);
