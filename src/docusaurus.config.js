@@ -88,7 +88,7 @@ const TwitterSvg =
           routeBasePath: '/',
           showReadingTime: true,
           editUrl:
-            'https://github.com/stackql/fullstackchronicles.io/edit/main/',
+            'https://github.com/stackql/fullstackchronicles.io/edit/main/src/',
             blogTitle: 'Full Stack Chronicles',
             blogDescription: 'Full stack design patterns and random musings',
             postsPerPage: 5,
