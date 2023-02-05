@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[47168],{46729:s=>{s.exports=JSON.parse('{"permalink":"/tags/jam-stack","page":1,"postsPerPage":5,"totalPages":1,"totalCount":1,"blogDescription":"Full stack design patterns and random musings","blogTitle":"Full Stack Chronicles"}')}}]);
