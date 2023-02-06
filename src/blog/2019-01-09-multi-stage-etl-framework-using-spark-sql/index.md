@@ -75,3 +75,5 @@ spark-submit process_sql_statements.py config.yml
 ```
 
 > *Full source code can be found at: [__https://github.com/avensolutions/spark-sql-etl-framework__](https://github.com/avensolutions/spark-sql-etl-framework)*
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

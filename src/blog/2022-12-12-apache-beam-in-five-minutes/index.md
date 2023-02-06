@@ -102,3 +102,5 @@ Google-provided templates are available for batch, streaming, and utility pipeli
 - and more
 
 5 minutes is up!  I hope you enjoyed this quick introduction to Apache Beam.  If you want to learn more, check out the [Apache Beam documentation](https://beam.apache.org/documentation/).  
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

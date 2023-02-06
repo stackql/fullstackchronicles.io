@@ -171,3 +171,5 @@ AWS WAF | Cloud Armour
 AWS Shield | Cloud Armour
 
 † No direct equivalent, this is the closest equivalent
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

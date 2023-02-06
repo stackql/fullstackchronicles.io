@@ -526,3 +526,5 @@ Now that we have established bi-directional connectivity between the two clouds,
 4. Now test connectivity to Google APIs, for example to test access to Google Cloud Storage using `gsutil`, or test access to Big Query using the `bq` command
 
 Congratulations! You are now a multi cloud ninja!
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

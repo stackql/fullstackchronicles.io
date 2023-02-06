@@ -118,3 +118,5 @@ As mentioned, we are using the `tablewriter` package to render the output of the
 Although it is a bit more involved than some other languages, once you get your head around processing JSON in Go, the possibilities are endless!
 
 > Full source code can be found at: [https://github.com/gamma-data/json-wrangling-with-golang](https://github.com/gamma-data/json-wrangling-with-golang)
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

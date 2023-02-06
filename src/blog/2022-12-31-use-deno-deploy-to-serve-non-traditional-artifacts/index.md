@@ -46,6 +46,7 @@ We are using GitHub Actions to push assets and code to Deno Deploy, this was str
 <Gist id="e4e98f427c80ecee4f82fb8731565289"
 />
 
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!
 
 
 

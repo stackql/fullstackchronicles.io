@@ -60,3 +60,5 @@ That’s it! You can now access your function via the API gateway using the gate
 [![Function App API in API Management in the Azure Portal](images/apimamanagement-test-api.png)](images/apimamanagement-test-api.png)
 
 [![Function App API in the Dev Portal](images/apimamanagement-dev-portal.png)](images/apimamanagement-dev-portal.png)
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

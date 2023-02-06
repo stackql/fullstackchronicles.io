@@ -84,3 +84,5 @@ terraform apply
 ```
 
 > *Full source code can be found at: [__https://github.com/avensolutions/simple-notifications-with-lambda-and-ses__](https://github.com/avensolutions/simple-notifications-with-lambda-and-ses)*
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

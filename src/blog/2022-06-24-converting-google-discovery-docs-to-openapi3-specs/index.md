@@ -52,4 +52,4 @@ Now each method can be processed yielding an operation (combination of `path` an
 
 Full source code can be found at [__stackql/google-discovery-to-openapi__](https://github.com/stackql/google-discovery-to-openapi).
 
-
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

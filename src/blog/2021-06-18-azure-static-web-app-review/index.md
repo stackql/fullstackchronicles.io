@@ -93,3 +93,5 @@ Routes (for SPAs) need to be provided to Azure by using a file named `staticweba
 - Integration with other VCS/CI/CD systems like GitLab would need to be custom built (GitHub and Azure DevOps is integrated)
 
 Overall, this is a good feature for deploying SPAs or PWAs in Azure.
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

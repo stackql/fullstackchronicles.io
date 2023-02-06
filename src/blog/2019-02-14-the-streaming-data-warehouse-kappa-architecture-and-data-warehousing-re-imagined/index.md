@@ -56,3 +56,5 @@ In addition, data sinks can operate concurrently to sink datasets to S3 or Googl
 In the Streaming Data Warehouse architecture Kafka is much more than a messaging platform it is a distributed data platform, which could easily replace major components of a legacy (or even a modern) data architecture.  
 
 It just takes a little imagination…
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

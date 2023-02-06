@@ -148,3 +148,5 @@ altText="Promoted Cloud SQL instance"
 Some of the options you would normally configure with a master instance would need to be configured on the promoted replica instance - such as high availability, maintenance and scheduled backups - but in the event of a zonal failure you would be back up and running with virtually no data loss!
 
 > Full source code for this article is available at: [https://github.com/gamma-data/cloud-sql-postgres-availability-tutorial](https://github.com/gamma-data/cloud-sql-postgres-availability-tutorial)
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

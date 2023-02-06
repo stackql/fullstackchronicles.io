@@ -168,3 +168,5 @@ gcloud beta emulators bigtable start
 In the next article in this series we will demonstrate admin and data functions as well as the local emulator.
 
 > Next Up : Part II - Row Key Selection and Schema Design in Bigtable
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

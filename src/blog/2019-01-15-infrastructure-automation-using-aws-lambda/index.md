@@ -76,4 +76,4 @@ terraform apply
 
 > *Full source code can be found at: [__https://github.com/avensolutions/simple-lambda-ec2-scheduler__](https://github.com/avensolutions/simple-lambda-ec2-scheduler)*
 
-Stay tuned for more simple Terraform deployment recipes in coming posts…
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

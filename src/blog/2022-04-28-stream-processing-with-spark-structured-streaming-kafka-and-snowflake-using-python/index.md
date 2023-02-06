@@ -163,3 +163,5 @@ Note that I have included the `processingTime` trigger of `30 seconds` (this is 
 [![Spark Structured Streaming into Snowflake](images/snowflake-screenshot.png)](images/snowflake-screenshot.png)
 
 Enjoy!  
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

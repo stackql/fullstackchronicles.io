@@ -153,3 +153,5 @@ Error: Invalid value for '-e' / '--environment': 'prd3' is not one of 'dev', 'pr
 ```
 
 This is only the tip of what Jsonnet can provide, I am continually learning more about the templating engine and the tool.
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

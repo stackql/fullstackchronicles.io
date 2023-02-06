@@ -160,3 +160,5 @@ An example is shown here:
 [![Using a Custom Jupyter Magic Command](images/custom-jupyter-magic-command.png)](images/custom-jupyter-magic-command.png)
 
 The complete code can be found at [__stackql/stackql-jupyter-demo__](https://github.com/stackql/stackql-jupyter-demo).
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

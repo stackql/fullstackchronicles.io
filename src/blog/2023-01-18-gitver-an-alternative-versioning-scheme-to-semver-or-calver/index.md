@@ -82,3 +82,5 @@ You can see it at work here [stackql/stackql-provider-registry](https://github.c
 
 Thoughts?
 
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!
+

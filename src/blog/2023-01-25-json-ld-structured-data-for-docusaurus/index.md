@@ -327,4 +327,4 @@ Once you have built and deployed your site (using `yarn build`), you can use the
 
 Pull requests or issues are welcome.  Please feel free to contribute. Thanks!    
 
-
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

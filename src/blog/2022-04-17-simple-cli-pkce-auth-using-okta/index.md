@@ -84,3 +84,5 @@ The access token can be used to get the user profile, this is done by calling th
 - [oktadev/okta-node-cli-example](https://github.com/oktadev/okta-node-cli-example)
 - [Build a Command Line Application with Node.js](https://developer.okta.com/blog/2019/06/18/command-line-app-with-nodejs)
 - [About the Authorization Code grant with PKCE](https://developer.okta.com/docs/guides/implement-grant-type/authcodepkce/main/#about-the-authorization-code-grant-with-pkce)
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

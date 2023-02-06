@@ -116,3 +116,5 @@ roles/bigquery.connectionUser     (BigQuery Connection User)
 Now the connection to Cloud SQL can be accessed using the **`EXTERNAL_QUERY`** function in Big Query, as shown here:
 
 [![Querying Cloud SQL from Big Query](images/cloud-sql-federated-queries-screenshot.png)](images/cloud-sql-federated-queries-screenshot.png)
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

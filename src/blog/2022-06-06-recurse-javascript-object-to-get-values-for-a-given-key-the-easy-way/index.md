@@ -121,3 +121,5 @@ function getRespSchemaName(op){
 You can find this implementation in [__`openapi-doc-util`__](https://github.com/stackql/openapi-doc-util) and [__`@stackql/openapi-doc-util`__](https://www.npmjs.com/package/@stackql/openapi-doc-util).  
 
 simple!
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

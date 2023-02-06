@@ -150,3 +150,5 @@ It is worth noting that nothing comes for free! When you run in REGIONAL or High
 > More information can be found at: [https://cloud.google.com/sql/docs/postgres/high-availability](https://cloud.google.com/sql/docs/postgres/high-availability)
 
 Next up we will look at read replicas (and their ability to be promoted) as another high availability alternative in Cloud SQL.
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

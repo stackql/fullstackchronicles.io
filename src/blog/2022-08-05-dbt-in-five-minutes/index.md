@@ -165,3 +165,5 @@ This will run all of the tests associated with your model(s) - in this case, `no
 ## Other Stuff
 
 There is some other stuff in DBT you should be aware of, like `seeds`, `snapshots`, `analyses`, `macros`, and more but our five minutes is up :smiley:.  We can discuss these next time; you are up and running with the basics of DBT now, get transforming!  
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

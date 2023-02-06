@@ -70,3 +70,5 @@ An example Slack message is shown here:
 [![Slack Notification for Sensitive Data Detected in a Newly Created GCS Object](images/gcs-dlp-results-slack-notification.png)](images/gcs-dlp-results-slack-notification.png)
 
 > Full source code can be found at: [https://github.com/gamma-data/automated-gcs-object-scanning-using-dlp-with-notifications-using-slack](https://github.com/gamma-data/automated-gcs-object-scanning-using-dlp-with-notifications-using-slack)
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

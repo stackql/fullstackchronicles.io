@@ -58,3 +58,5 @@ __IMPORTANT__
 This query **must** be the next statement run immediately after the `CALL` statement and cannot be run again until you run another `CALL` statement.
 
 More adventures with Snowflake soon!
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

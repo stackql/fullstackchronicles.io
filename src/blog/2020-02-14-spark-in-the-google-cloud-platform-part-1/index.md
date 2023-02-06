@@ -113,3 +113,5 @@ From this example you can see that I accessed source data from a GCS bucket and 
 Furthermore, notebooks are automagically saved in your integrated Cloud Storage DataProc staging bucket and can be shared amongst analysts or accessed at a later time. These notebooks also persist beyond the lifespan of the cluster.
 
 Next up we will look at deploying a Spark Standalone cluster on a GKE cluster, see you then!
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

@@ -170,3 +170,5 @@ Also you could add a key to the column config to configure a column to be nullab
 Happy CDCing!
 
 > Full source code for this article can be found at: [https://github.com/avensolutions/cdc-at-scale-using-spark](https://github.com/avensolutions/cdc-at-scale-using-spark)
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

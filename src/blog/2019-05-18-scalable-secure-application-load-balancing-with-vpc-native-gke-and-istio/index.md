@@ -70,3 +70,5 @@ The service should then be resolvable and routable from authorized internal netw
 2. Istio provides service discovery and routing using names and namespaces.
 3. The Ingress Gateway service and ingress gateway node pool can be scaled as required to meet demand.
 4. The Ingress Gateway is multi zonal for greater availability
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

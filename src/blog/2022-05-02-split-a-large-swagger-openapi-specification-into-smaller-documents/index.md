@@ -51,3 +51,5 @@ The net result is 59 self-contained, service scoped documents, containing only t
 You can access this utility via [__NPMJS__](https://www.npmjs.com/package/@stackql/openapi-doc-util) or via [__GitHub__](https://github.com/stackql/openapi-doc-util).  
 
 Splitting up a large open API spec document, is the first stage in developing a [__StackQL__](https://github.com/stackql/stackql) provider which we will discuss next time!
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!

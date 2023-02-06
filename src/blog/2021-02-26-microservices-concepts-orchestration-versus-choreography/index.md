@@ -33,3 +33,5 @@ By contrast, in the Choreography model, each service works independently and int
 [![Choreography model](images/choreography.png)](images/choreography.png)
 
 We will post subsequent articles with implementations of these patterns, but it is worthwhile getting a foundational understanding first.
+
+> if you have enjoyed this post, please consider [__buying me a coffee ☕__](https://www.buymeacoffee.com/jeffreyaven) to help me keep writing!
