@@ -1,0 +1,29 @@
+@startuml DatabricksArchitecture
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/latest/C4_Container.puml
+
+Person(user, "User/Developer", "Interacts with Databricks Platform")
+
+System_Boundary(databricks, "Databricks Platform") {
+    System_Boundary(controlPlane, "Control Plane") {
+        Container(webAPIs, "Web Application & APIs", "Interfaces for interaction and management")
+        Container(notebooks, "Notebooks", "Interactive environments for developing and running code")
+        Container(jobManagement, "Job Management", "Schedules and oversees execution of jobs")
+        Container(clusterManagement, "Cluster Management", "Manages lifecycle of Spark clusters")
+    }
+
+    System_Boundary(dataPlane, "Customer Data Plane (AWS/Azure/GCP)") {
+        ContainerDb(dataStorage, "Data Storage", "Stores customer data")
+        Container(sparkClusters, "Spark Clusters", "Executes Spark jobs")
+    }
+}
+
+Rel_D(user, webAPIs, " ")
+Rel_D(webAPIs, notebooks, " ")
+Rel_D(webAPIs, jobManagement, " ")
+Rel_D(webAPIs, clusterManagement, " ")
+Rel_D(jobManagement, sparkClusters, "uses")
+Rel_R(sparkClusters, dataStorage, " ")
+Rel_L(dataStorage, sparkClusters, " ")
+
+@enduml
+
