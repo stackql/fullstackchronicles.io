@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[65611],{56034:a=>{a.exports=JSON.parse('{"label":"databricks","permalink":"/tags/databricks","allTagsPath":"/tags","count":1}')}}]);

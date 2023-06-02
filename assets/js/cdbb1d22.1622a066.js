@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfull_stack_chronicles=self.webpackChunkfull_stack_chronicles||[]).push([[94331],{92617:a=>{a.exports=JSON.parse('{"label":"data science","permalink":"/tags/data-science","allTagsPath":"/tags","count":1}')}}]);
